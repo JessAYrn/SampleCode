@@ -1,28 +1,34 @@
-import React, {useState, useMemo} from 'react';
+import React, {useState} from 'react';
+import "./InputBox.scss";
 
 
 const InputBox = (props) => {
     const inputRef = React.useRef();
-    const textValue = inputRef.current.value.toString();
-    const [disabled, setDisabled] = useSate(true);
+    console.log(inputRef);
+    let textValue; 
+    const [className,setClassName] = useState("enabled");
     const {
-        label
+        label,
+        disabled
         // dispatchAction //the action that is to take place in order to dispatch the field change to the redux store
     } = props;
 
     const onBlur = () => {
-        setDisabled(true);
+        textValue = inputRef.current.value;
+        setClassName("disabled");
 
 
     };
     const onFocus = () => {
-        setDisabled(false);
+        setClassName("enabled");
+        
     };
 
     return(
-        <div className={label}>
-            <label htmlFor='Label'> `${label}`  &nbsp;</label>
+        <div className={"inputBox " + label}>
+            <label htmlFor='Label'> {label}  &nbsp;</label>
             <input 
+                className={className}
                 type="text" 
                 alt={label} 
                 ref={inputRef} 

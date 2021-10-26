@@ -1,0 +1,13 @@
+.inputBox{
+    .enabled{
+        outline: 0;
+        border-width: 0 0 2px;
+        border-color: rgb(247, 247, 247);
+    }
+    
+    .disabled{
+        outline: 0;
+        border-width: 0 0 2px;
+        border-color: rgb(175, 99, 0);
+    }
+}
