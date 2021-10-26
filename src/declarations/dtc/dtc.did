@@ -1,0 +1,79 @@
+type User = 
+ service {
+   create: (ProfileInput) -> (Result);
+   delete: () -> (Result);
+   readEntry: (EntryKey) -> (Result_2);
+   readJournal: () -> (Result_1);
+   updateJournal: (opt EntryKey, opt JournalEntry) -> (Result);
+   updateProfile: (ProfileInput) -> (Result);
+ };
+type Trie = 
+ variant {
+   branch: Branch;
+   "empty";
+   leaf: Leaf;
+ };
+type Result_2 = 
+ variant {
+   err: Error;
+   ok: JournalEntry;
+ };
+type Result_1 = 
+ variant {
+   err: Error;
+   ok: Trie;
+ };
+type Result = 
+ variant {
+   err: Error;
+   ok;
+ };
+type ProfileInput = record {userName: text;};
+type List = 
+ opt record {
+       record {
+         Key;
+         JournalEntry;
+       };
+       List;
+     };
+type Leaf = 
+ record {
+   keyvals: AssocList;
+   size: nat;
+ };
+type Key = 
+ record {
+   hash: Hash;
+   key: nat;
+ };
+type JournalEntry = 
+ record {
+   date: text;
+   location: text;
+   "text": text;
+ };
+type Hash = nat32;
+type Error = 
+ variant {
+   AlreadyExists;
+   NoInputGiven;
+   NotAuthorized;
+   NotFound;
+ };
+type EntryKey = record {entryKey: nat;};
+type Branch = 
+ record {
+   left: Trie;
+   right: Trie;
+   size: nat;
+ };
+type AssocList = 
+ opt record {
+       record {
+         Key;
+         JournalEntry;
+       };
+       List;
+     };
+service : () -> User

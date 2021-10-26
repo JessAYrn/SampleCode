@@ -1,0 +1,35 @@
+{
+  "canisters": {
+    "dtc": {
+      "main": "src/dtc/main.mo",
+      "type": "motoko"
+    },
+    "dtc_assets": {
+      "dependencies": [
+        "dtc"
+      ],
+      "frontend": {
+        "entrypoint": "src/dtc_assets/src/index.html"
+      },
+      "source": [
+        "src/dtc_assets/assets",
+        "dist/dtc_assets/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "dfx": "0.8.3",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
