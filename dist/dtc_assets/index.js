@@ -47352,13 +47352,16 @@ var __importStar = (this && this.__importStar) || function (mod) {
     __setModuleDefault(result, mod);
     return result;
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const React = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
 const dtc_1 = __webpack_require__(/*! ../../declarations/dtc */ "./src/declarations/dtc/index.js");
+const InputBox_1 = __importDefault(__webpack_require__(/*! ./Components/Fields/InputBox */ "./src/dtc_assets/src/Components/Fields/InputBox.js"));
 const App = () => {
     const [greeting, setGreeting] = React.useState("");
     const [pending, setPending] = React.useState(false);
-    const inputRef = React.useRef();
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (pending)
@@ -47390,8 +47393,7 @@ const App = () => {
     return (React.createElement("main", null,
         React.createElement("img", { src: "logo.png", alt: "DFINITY logo" }),
         React.createElement("form", { onSubmit: handleSubmit },
-            React.createElement("label", { htmlFor: "name" }, "Enter your name: \u00A0"),
-            React.createElement("input", { id: "name", alt: "Name", type: "text", ref: inputRef }),
+            React.createElement(InputBox_1.default, { label: "Enter Something" }),
             React.createElement("button", { id: "clickMeBtn", type: "submit", disabled: pending }, "Click Me!")),
         React.createElement("section", { id: "greeting" }, greeting)));
 };
@@ -47557,6 +47559,16 @@ const canisterId = "rrkah-fqaaa-aaaaa-aaaaq-cai";
  */
  const dtc = createActor(canisterId);
 
+
+/***/ }),
+
+/***/ "./src/dtc_assets/src/Components/Fields/InputBox.js":
+/*!**********************************************************!*\
+  !*** ./src/dtc_assets/src/Components/Fields/InputBox.js ***!
+  \**********************************************************/
+/***/ (() => {
+
+throw new Error("Module parse failed: Unexpected token (23:8)\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\n| \n|     return(\n>         <div className={label}>\n|             <label htmlFor='Label'> `${label}`  &nbsp;</label>\n|             <input ");
 
 /***/ })
 

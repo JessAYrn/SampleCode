@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { dtc } from "../../declarations/dtc"
+import InputBox from './Components/Fields/InputBox';
 
 const App = () => {
     const [greeting, setGreeting] = React.useState("");
     const [pending, setPending] = React.useState(false);
-    const inputRef = React.useRef();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -37,8 +37,9 @@ const App = () => {
         <main>
             <img src="logo.png" alt="DFINITY logo" />
             <form onSubmit={handleSubmit}>
-                <label htmlFor="name">Enter your name: &nbsp;</label>
-                <input id="name" alt="Name" type="text" ref={inputRef} />
+                <InputBox
+                    label={"Enter Something"} 
+                />
                 <button id="clickMeBtn" type="submit" disabled={pending}>Click Me!</button>
             </form>
             <section id="greeting">{greeting}</section>
