@@ -1,5 +1,7 @@
 body {
     font-family: sans-serif;
+    font-family: 'Julius Sans One', sans-serif;
+    font-family: 'Merriweather', serif;
     font-size: 1.5rem;
 }
 
@@ -12,13 +14,13 @@ img {
 form {
     display: flex;
     flex-flow: row wrap;
-    max-width: 40vw;
+    max-width: 100%;
     margin: auto;
     align-items: baseline;
 }
 
 #clickMeBtn {
-    padding: 5px 20px;
+    padding: 1rem;
     margin: 10px auto;
     float: right;
 }
