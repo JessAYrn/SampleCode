@@ -26,7 +26,10 @@ const InputBox = (props) => {
 
     return(
         <div className={"inputBox " + label}>
-            <label htmlFor='Label'> {label}  &nbsp;</label>
+            <div className={'label-element-div'}>
+                <label className={"label__"+className} htmlFor='Label'> {label}  &nbsp; </label>
+            </div>
+            <div className={"input-element-div"}>
             <input 
                 className={className}
                 type="text" 
@@ -36,6 +39,7 @@ const InputBox = (props) => {
                 onFocus={onFocus}
                 onBlur={onBlur}
             />
+            </div>
         </div>
 
         
