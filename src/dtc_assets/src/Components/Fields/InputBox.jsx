@@ -4,7 +4,6 @@ import "./InputBox.scss";
 
 const InputBox = (props) => {
     const inputRef = React.useRef();
-    console.log(inputRef);
     let textValue; 
     const [className,setClassName] = useState("enabled");
     const {

@@ -15826,7 +15826,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".inputBox .disabled {\n  outline: 0;\n  border-width: 0 0 2px;\n  border-color: grey;\n}\n.inputBox .enabled {\n  outline: 0;\n  border-width: 0 0 2px;\n  border-color: #fd960f;\n}", "",{"version":3,"sources":["webpack://./src/dtc_assets/src/Components/Fields/InputBox.scss"],"names":[],"mappings":"AACI;EACI,UAAA;EACA,qBAAA;EACA,kBAAA;AAAR;AAGI;EACI,UAAA;EACA,qBAAA;EACA,qBAAA;AADR","sourcesContent":[".inputBox{\n    .disabled{\n        outline: 0;\n        border-width: 0 0 2px;\n        border-color: grey;\n    }\n    \n    .enabled{\n        outline: 0;\n        border-width: 0 0 2px;\n        border-color: rgb(253, 150, 15);\n    }\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".inputBox {\n  width: 40%;\n}\n.inputBox .label__disabled {\n  font-family: \"Julius Sans One\", sans-serif;\n  font-size: 0.8rem;\n  color: #bebebe;\n}\n.inputBox .label__enabled {\n  font-family: \"Julius Sans One\", sans-serif;\n  font-size: 0.95rem;\n  color: black;\n}\n.inputBox .enabled {\n  font-family: \"Merriweather\", serif;\n  outline: 0;\n  border-width: 0 0 2px;\n  border-color: black;\n  width: 100%;\n}\n.inputBox .disabled {\n  font-family: \"Merriweather\", serif;\n  outline: 0;\n  border-width: 0 0 2px;\n  color: #bebebe;\n  width: 95%;\n}", "",{"version":3,"sources":["webpack://./src/dtc_assets/src/Components/Fields/InputBox.scss"],"names":[],"mappings":"AAAA;EACI,UAAA;AACJ;AAEQ;EACI,0CAAA;EACA,iBAAA;EACA,cAAA;AAAZ;AAEQ;EACI,0CAAA;EACA,kBAAA;EACA,YAAA;AAAZ;AAGI;EACI,kCAAA;EACA,UAAA;EACA,qBAAA;EACA,mBAAA;EACA,WAAA;AADR;AAII;EACI,kCAAA;EACA,UAAA;EACA,qBAAA;EACA,cAAA;EACA,UAAA;AAFR","sourcesContent":[".inputBox{\n    width: 40%;\n    .label{\n\n        &__disabled{\n            font-family: 'Julius Sans One', sans-serif;\n            font-size: .80rem;\n            color: rgb(190, 190, 190);\n        }\n        &__enabled{\n            font-family: 'Julius Sans One', sans-serif;\n            font-size: .95rem;\n            color: rgb(0, 0, 0);\n        }\n    }\n    .enabled{\n        font-family: 'Merriweather', serif;\n        outline: 0;\n        border-width: 0 0 2px;\n        border-color: rgb(0, 0, 0);\n        width: 100%;\n    }\n    \n    .disabled{\n        font-family: 'Merriweather', serif;\n        outline: 0;\n        border-width: 0 0 2px;\n        color: rgb(190, 190, 190);\n        width: 95%;\n    }\n}\n\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -47985,12 +47985,14 @@ const InputBox = (props) => {
     const onFocus = () => {
         setClassName("enabled");
     };
-    return (react_1.default.createElement("div", { className: label },
-        react_1.default.createElement("label", { htmlFor: 'Label' },
-            " ",
-            label,
-            "  \u00A0"),
-        react_1.default.createElement("input", { className: className, type: "text", alt: label, ref: inputRef, disabled: disabled, onFocus: onFocus, onBlur: onBlur })));
+    return (react_1.default.createElement("div", { className: "inputBox " + label },
+        react_1.default.createElement("div", { className: 'label-element-div' },
+            react_1.default.createElement("label", { className: "label__" + className, htmlFor: 'Label' },
+                " ",
+                label,
+                "  \u00A0 ")),
+        react_1.default.createElement("div", { className: "input-element-div" },
+            react_1.default.createElement("input", { className: className, type: "text", alt: label, ref: inputRef, disabled: disabled, onFocus: onFocus, onBlur: onBlur }))));
 };
 exports["default"] = InputBox;
 

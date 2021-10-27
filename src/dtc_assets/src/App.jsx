@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { dtc } from "../../declarations/dtc"
 import InputBox from './Components/Fields/InputBox';
+import ImageUpload from './Components/Fields/ImageUpload';
 
 const App = () => {
     const [greeting, setGreeting] = React.useState("");
@@ -21,7 +22,6 @@ const App = () => {
 
         // Interact with hello actor, calling the greet method
         const greeting = await dtc.updateJournal([], [entry]);
-        console.log(greeting);
         let msg;
         if(greeting.ok === null){
             msg = "Journal Created";
@@ -36,6 +36,9 @@ const App = () => {
     return (
         <main>
             <img src="logo.png" alt="DFINITY logo" />
+            <ImageUpload
+                    label={'Test Image'}
+                />
             <form onSubmit={handleSubmit}>
                 <InputBox
                     label={"Enter Something"} 
