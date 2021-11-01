@@ -1,0 +1,25 @@
+.imageDiv{
+    max-width: 20rem;
+    margin: 2.25rem;
+
+
+    .imageLabelDiv{
+        padding-left: 5.5rem;
+        font-family: 'Merriweather', serif;
+    }
+
+    .imagePreview{
+        max-width: 30rem;
+        max-height: 30rem;
+
+        .imageInputButton{
+                padding-left: 2rem;
+            }
+
+        &__image{
+            max-width: 18rem;
+            max-height: 25rem;
+        }
+    
+    }
+}
