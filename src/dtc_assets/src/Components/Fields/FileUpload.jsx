@@ -44,8 +44,10 @@ const FileUpload = (props) => {
                 { 
                     (fileType === "image") ? 
                         <img src={fileSrc} alt="image preview" className="imagePreview__image"/> :
-                        <video width="240" height="320" controls className="imagePreview__video">
-                            <source src={fileSrc} type="video/mp4"/>
+                        <video width="320" height="240" controls className="imagePreview__video">
+                            <source src={fileSrc} type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'/>
+                            <source src={fileSrc} type='video/ogg; codecs="theora, vorbis"'/>
+                            <source src={fileSrc} type='video/webm'/>
                             Your browser does not support the video tag.
                         </video>                
                 }
