@@ -1,0 +1,49 @@
+.imageDiv{
+    max-width: 20rem;
+    margin: 2.25rem;
+    border: solid;
+    background-color: rgb(245, 245, 245);
+
+
+    .imageLabelDiv{
+        padding-left: 5.5rem;
+        font-family: 'Merriweather', serif;
+    }
+
+    .imagePreview{
+        max-width: 30rem;
+        max-height: 35rem;
+
+        .inputBox{
+            padding-left: 2.75rem;
+            width: 15.05rem;
+            .disabled{
+                background-color: rgb(245, 245, 245);
+            }
+            .enabled{
+                background-color: rgb(245, 245, 245);
+            }
+        }
+
+        .imageInputButton{
+            padding-left: 7.25rem;
+            width: 5.5rem;
+            margin-bottom: 1rem;
+        }
+
+        &__image{
+            max-width: 18rem;
+            max-height: 25rem;
+            margin-top: 1rem;
+        }
+
+        &__video{
+            max-width: 18rem;
+            max-height: 25rem;
+            margin-top: 1rem;
+            padding-left: 2.5rem;
+            padding-right: 2.5rem;
+        }
+    
+    }
+}

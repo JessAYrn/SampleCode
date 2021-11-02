@@ -8,6 +8,7 @@ const InputBox = (props) => {
     const [className,setClassName] = useState("enabled");
     const {
         label,
+        maxLength,
         disabled
         // dispatchAction //the action that is to take place in order to dispatch the field change to the redux store
     } = props;
@@ -30,6 +31,7 @@ const InputBox = (props) => {
             </div>
             <div className={"input-element-div"}>
             <input 
+                maxLength={maxLength}
                 className={className}
                 type="text" 
                 alt={label} 

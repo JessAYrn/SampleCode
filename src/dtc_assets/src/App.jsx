@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { dtc } from "../../declarations/dtc"
 import InputBox from './Components/Fields/InputBox';
-import ImageUpload from './Components/Fields/ImageUpload';
+import FileUpload from './Components/Fields/FileUpload';
 
 const App = () => {
     const [greeting, setGreeting] = React.useState("");
@@ -36,7 +36,7 @@ const App = () => {
     return (
         <main>
             <img src="logo.png" alt="DFINITY logo" />
-            <ImageUpload
+            <FileUpload
                     label={'Test Image'}
                 />
             <form onSubmit={handleSubmit}>
