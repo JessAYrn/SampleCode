@@ -16,8 +16,8 @@
         max-height: 35rem;
 
         .inputBox{
-            padding-left: 4rem;
-            width: 15.05rem;
+            padding-left: 2.5rem;
+            width: 75%;
             .disabled{
                 background-color: rgb(245, 245, 245);
             }
@@ -27,15 +27,15 @@
         }
 
         .imageInputButton{
-            padding-left: 9rem;
-            width: 5.5rem;
+            padding-left: 37%;
+            width: 5rem;
             margin-bottom: 1rem;
         }
 
         &__image{
             max-width: 18rem;
             max-height: 25rem;
-            padding-top: 1rem;
+            padding: 1rem;
         }
 
         &__video{

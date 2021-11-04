@@ -1,8 +1,6 @@
 import * as React from 'react';
 import { dtc } from "../../declarations/dtc"
-import InputBox from './Components/Fields/InputBox';
-import FileUpload from './Components/Fields/FileUpload';
-import Slider from './Components/Fields/Slider';
+import JournalPage from './Components/JournalPage';
 
 const App = () => {
     const [greeting, setGreeting] = React.useState("");
@@ -37,20 +35,8 @@ const App = () => {
     return (
         <main>
             <img src="logo.png" alt="DFINITY logo" />
-            <FileUpload
-                    label={'Test Image'}
-                />
-            <form onSubmit={handleSubmit}>
-                <InputBox
-                    label={"Enter Something"} 
-                />
-                <Slider
-                    min={"3"}
-                    max={"120"}
-                    value={"0"}
-                />
-                <button id="clickMeBtn" type="submit" disabled={pending}>Click Me!</button>
-            </form>
+                <JournalPage/>
+                {/* <button id="clickMeBtn" type="submit" disabled={pending}>Click Me!</button> */}
             <section id="greeting">{greeting}</section>
         </main>
     )

@@ -1,19 +1,35 @@
-// import React from "react";
+import React from "react";
+import FileUpload from "./Fields/FileUpload";
+import InputBox from "./Fields/InputBox";
+import Slider from "./Fields/Slider";
+import "./JournalPage.scss";
 
-// const JournalPage = (props) => {
-//     // TODO: Make <InputBox/> = A Component that returns a precreated, standardized inputBox with label and submit button and styling
-//     // Must feature disabled mode in which editability is deactivated
-//     // Must work for mobile as well
 
-//     // TODO: Make <CapsuleLockTime/> = A component that returns a slider for setting capsuleLockTime when editable and just a dispaly for 
-//     // the time remaining until unlocked when disabled
+const JournalPage = (props) => {
+   
+    return (
+        <div className={"journalPageContainer"}>
+            <InputBox
+                label={"Date: "}
+            />
+            <InputBox
+                label={"Location: "}
+            />
+            <InputBox
+                label={"Entry: "}
+            />
+            <FileUpload
+                label={'file1'}
+            />
+            <FileUpload
+                label={'file2'}
+            />
+            <FileUpload
+                label={'file3'}
+            />
+        </div>
+    )
+};
 
-//     return (
-//         //Cover Picture for Journal Entry
-//         // <InputBox/> (Date) 
-//         // <InputBox/> (Location)
-//         // <InputBox/>  (Text)
-//         // <CapsuleLockTime/>
-//     )
-// };
+export default JournalPage;
 
