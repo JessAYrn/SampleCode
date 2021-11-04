@@ -15806,6 +15806,33 @@ function BufferBigIntNotDefined () {
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/dtc_assets/src/Components/Fields/FileUpload.scss":
+/*!*******************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/dtc_assets/src/Components/Fields/FileUpload.scss ***!
+  \*******************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../node_modules/css-loader/dist/runtime/sourceMaps.js */ "./node_modules/css-loader/dist/runtime/sourceMaps.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".imageDiv {\n  max-width: 23rem;\n  margin: 2.25rem;\n  border: solid;\n  background-color: whitesmoke;\n}\n.imageDiv .imageLabelDiv {\n  padding-left: 5.5rem;\n  font-family: \"Merriweather\", serif;\n}\n.imageDiv .imagePreview {\n  max-width: 30rem;\n  max-height: 35rem;\n}\n.imageDiv .imagePreview .inputBox {\n  padding-left: 4rem;\n  width: 15.05rem;\n}\n.imageDiv .imagePreview .inputBox .disabled {\n  background-color: whitesmoke;\n}\n.imageDiv .imagePreview .inputBox .enabled {\n  background-color: whitesmoke;\n}\n.imageDiv .imagePreview .imageInputButton {\n  padding-left: 9rem;\n  width: 5.5rem;\n  margin-bottom: 1rem;\n}\n.imageDiv .imagePreview__image {\n  max-width: 18rem;\n  max-height: 25rem;\n  margin-top: 1rem;\n}\n.imageDiv .imagePreview__video {\n  max-width: 18rem;\n  max-height: 25rem;\n  margin-top: 1rem;\n  padding-left: 2.5rem;\n  padding-right: 2.5rem;\n}", "",{"version":3,"sources":["webpack://./src/dtc_assets/src/Components/Fields/FileUpload.scss"],"names":[],"mappings":"AAAA;EACI,gBAAA;EACA,eAAA;EACA,aAAA;EACA,4BAAA;AACJ;AAEI;EACI,oBAAA;EACA,kCAAA;AAAR;AAGI;EACI,gBAAA;EACA,iBAAA;AADR;AAGQ;EACI,kBAAA;EACA,eAAA;AADZ;AAEY;EACI,4BAAA;AAAhB;AAEY;EACI,4BAAA;AAAhB;AAIQ;EACI,kBAAA;EACA,aAAA;EACA,mBAAA;AAFZ;AAKQ;EACI,gBAAA;EACA,iBAAA;EACA,gBAAA;AAHZ;AAMQ;EACI,gBAAA;EACA,iBAAA;EACA,gBAAA;EACA,oBAAA;EACA,qBAAA;AAJZ","sourcesContent":[".imageDiv{\n    max-width: 23rem;\n    margin: 2.25rem;\n    border: solid;\n    background-color: rgb(245, 245, 245);\n\n\n    .imageLabelDiv{\n        padding-left: 5.5rem;\n        font-family: 'Merriweather', serif;\n    }\n\n    .imagePreview{\n        max-width: 30rem;\n        max-height: 35rem;\n\n        .inputBox{\n            padding-left: 4rem;\n            width: 15.05rem;\n            .disabled{\n                background-color: rgb(245, 245, 245);\n            }\n            .enabled{\n                background-color: rgb(245, 245, 245);\n            }\n        }\n\n        .imageInputButton{\n            padding-left: 9rem;\n            width: 5.5rem;\n            margin-bottom: 1rem;\n        }\n\n        &__image{\n            max-width: 18rem;\n            max-height: 25rem;\n            margin-top: 1rem;\n        }\n\n        &__video{\n            max-width: 18rem;\n            max-height: 25rem;\n            margin-top: 1rem;\n            padding-left: 2.5rem;\n            padding-right: 2.5rem;\n        }\n    \n    }\n}"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/dtc_assets/src/Components/Fields/InputBox.scss":
 /*!*****************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/dtc_assets/src/Components/Fields/InputBox.scss ***!
@@ -15826,7 +15853,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".inputBox {\n  width: 40%;\n}\n.inputBox .label__disabled {\n  font-family: \"Julius Sans One\", sans-serif;\n  font-size: 0.8rem;\n  color: #bebebe;\n}\n.inputBox .label__enabled {\n  font-family: \"Julius Sans One\", sans-serif;\n  font-size: 0.95rem;\n  color: black;\n}\n.inputBox .enabled {\n  font-family: \"Merriweather\", serif;\n  outline: 0;\n  border-width: 0 0 2px;\n  border-color: black;\n  width: 100%;\n}\n.inputBox .disabled {\n  font-family: \"Merriweather\", serif;\n  outline: 0;\n  border-width: 0 0 2px;\n  color: #bebebe;\n  width: 95%;\n}", "",{"version":3,"sources":["webpack://./src/dtc_assets/src/Components/Fields/InputBox.scss"],"names":[],"mappings":"AAAA;EACI,UAAA;AACJ;AAEQ;EACI,0CAAA;EACA,iBAAA;EACA,cAAA;AAAZ;AAEQ;EACI,0CAAA;EACA,kBAAA;EACA,YAAA;AAAZ;AAGI;EACI,kCAAA;EACA,UAAA;EACA,qBAAA;EACA,mBAAA;EACA,WAAA;AADR;AAII;EACI,kCAAA;EACA,UAAA;EACA,qBAAA;EACA,cAAA;EACA,UAAA;AAFR","sourcesContent":[".inputBox{\n    width: 40%;\n    .label{\n\n        &__disabled{\n            font-family: 'Julius Sans One', sans-serif;\n            font-size: .80rem;\n            color: rgb(190, 190, 190);\n        }\n        &__enabled{\n            font-family: 'Julius Sans One', sans-serif;\n            font-size: .95rem;\n            color: rgb(0, 0, 0);\n        }\n    }\n    .enabled{\n        font-family: 'Merriweather', serif;\n        outline: 0;\n        border-width: 0 0 2px;\n        border-color: rgb(0, 0, 0);\n        width: 100%;\n    }\n    \n    .disabled{\n        font-family: 'Merriweather', serif;\n        outline: 0;\n        border-width: 0 0 2px;\n        color: rgb(190, 190, 190);\n        width: 95%;\n    }\n}\n\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".inputBox {\n  width: 40%;\n}\n.inputBox .label__disabled {\n  font-family: \"Julius Sans One\", sans-serif;\n  font-size: 0.8rem;\n  color: #7a7a7a;\n}\n.inputBox .label__enabled {\n  font-family: \"Julius Sans One\", sans-serif;\n  font-size: 0.95rem;\n  color: black;\n}\n.inputBox .enabled {\n  font-family: \"Merriweather\", serif;\n  outline: 0;\n  border-width: 0 0 2px;\n  border-color: black;\n  width: 100%;\n}\n.inputBox .disabled {\n  font-family: \"Merriweather\", serif;\n  outline: 0;\n  border-width: 0 0 2px;\n  color: #7a7a7a;\n  width: 95%;\n}", "",{"version":3,"sources":["webpack://./src/dtc_assets/src/Components/Fields/InputBox.scss"],"names":[],"mappings":"AAAA;EACI,UAAA;AACJ;AAEQ;EACI,0CAAA;EACA,iBAAA;EACA,cAAA;AAAZ;AAEQ;EACI,0CAAA;EACA,kBAAA;EACA,YAAA;AAAZ;AAGI;EACI,kCAAA;EACA,UAAA;EACA,qBAAA;EACA,mBAAA;EACA,WAAA;AADR;AAII;EACI,kCAAA;EACA,UAAA;EACA,qBAAA;EACA,cAAA;EACA,UAAA;AAFR","sourcesContent":[".inputBox{\n    width: 40%;\n    .label{\n\n        &__disabled{\n            font-family: 'Julius Sans One', sans-serif;\n            font-size: .80rem;\n            color: rgb(122, 122, 122);\n        }\n        &__enabled{\n            font-family: 'Julius Sans One', sans-serif;\n            font-size: .95rem;\n            color: rgb(0, 0, 0);\n        }\n    }\n    .enabled{\n        font-family: 'Merriweather', serif;\n        outline: 0;\n        border-width: 0 0 2px;\n        border-color: rgb(0, 0, 0);\n        width: 100%;\n    }\n    \n    .disabled{\n        font-family: 'Merriweather', serif;\n        outline: 0;\n        border-width: 0 0 2px;\n        color: rgb(122, 122, 122);\n        width: 95%;\n    }\n}\n\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -47496,6 +47523,61 @@ exports.undefined_ = undefined_;
 
 /***/ }),
 
+/***/ "./src/dtc_assets/src/Components/Fields/FileUpload.scss":
+/*!**************************************************************!*\
+  !*** ./src/dtc_assets/src/Components/Fields/FileUpload.scss ***!
+  \**************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../../../node_modules/style-loader/dist/runtime/styleDomAPI.js */ "./node_modules/style-loader/dist/runtime/styleDomAPI.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../../node_modules/style-loader/dist/runtime/insertBySelector.js */ "./node_modules/style-loader/dist/runtime/insertBySelector.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../../../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js */ "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! !../../../../../node_modules/style-loader/dist/runtime/insertStyleElement.js */ "./node_modules/style-loader/dist/runtime/insertStyleElement.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! !../../../../../node_modules/style-loader/dist/runtime/styleTagTransform.js */ "./node_modules/style-loader/dist/runtime/styleTagTransform.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_FileUpload_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../../../../../node_modules/css-loader/dist/cjs.js!../../../../../node_modules/sass-loader/dist/cjs.js!./FileUpload.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/dtc_assets/src/Components/Fields/FileUpload.scss");
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var options = {};
+
+options.styleTagTransform = (_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default());
+options.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default());
+
+      options.insert = _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, "head");
+    
+options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
+options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_FileUpload_scss__WEBPACK_IMPORTED_MODULE_6__["default"], options);
+
+
+
+
+       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_FileUpload_scss__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_FileUpload_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_FileUpload_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
+
+
+/***/ }),
+
 /***/ "./src/dtc_assets/src/Components/Fields/InputBox.scss":
 /*!************************************************************!*\
   !*** ./src/dtc_assets/src/Components/Fields/InputBox.scss ***!
@@ -47897,6 +47979,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 const React = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
 const dtc_1 = __webpack_require__(/*! ../../declarations/dtc */ "./src/declarations/dtc/index.js");
 const InputBox_1 = __importDefault(__webpack_require__(/*! ./Components/Fields/InputBox */ "./src/dtc_assets/src/Components/Fields/InputBox.jsx"));
+const FileUpload_1 = __importDefault(__webpack_require__(/*! ./Components/Fields/FileUpload */ "./src/dtc_assets/src/Components/Fields/FileUpload.jsx"));
 const App = () => {
     const [greeting, setGreeting] = React.useState("");
     const [pending, setPending] = React.useState(false);
@@ -47915,7 +47998,6 @@ const App = () => {
         };
         // Interact with hello actor, calling the greet method
         const greeting = await dtc_1.dtc.updateJournal([], [entry]);
-        console.log(greeting);
         let msg;
         if (greeting.ok === null) {
             msg = "Journal Created";
@@ -47930,12 +48012,95 @@ const App = () => {
     };
     return (React.createElement("main", null,
         React.createElement("img", { src: "logo.png", alt: "DFINITY logo" }),
+        React.createElement(FileUpload_1.default, { label: 'Test Image' }),
         React.createElement("form", { onSubmit: handleSubmit },
             React.createElement(InputBox_1.default, { label: "Enter Something" }),
             React.createElement("button", { id: "clickMeBtn", type: "submit", disabled: pending }, "Click Me!")),
         React.createElement("section", { id: "greeting" }, greeting)));
 };
 exports["default"] = App;
+
+
+/***/ }),
+
+/***/ "./src/dtc_assets/src/Components/Fields/FileUpload.jsx":
+/*!*************************************************************!*\
+  !*** ./src/dtc_assets/src/Components/Fields/FileUpload.jsx ***!
+  \*************************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const react_1 = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+const InputBox_1 = __importDefault(__webpack_require__(/*! ./InputBox */ "./src/dtc_assets/src/Components/Fields/InputBox.jsx"));
+__webpack_require__(/*! ./FileUpload.scss */ "./src/dtc_assets/src/Components/Fields/FileUpload.scss");
+const FileUpload = (props) => {
+    const { label, disabled } = props;
+    let inputRef = (0, react_1.useRef)();
+    const [fileSrc, setFileSrc] = (0, react_1.useState)("../../../assets/AddImageIcon.png");
+    const [fileType, setFileType] = (0, react_1.useState)("image");
+    const displayUploadedFile = (inputFile) => {
+        const reader = new FileReader();
+        return new Promise((resolve, reject) => {
+            reader.onload = () => {
+                resolve(reader.result);
+            };
+            reader.readAsDataURL(inputFile);
+        });
+    };
+    const handleUpload = async () => {
+        const file = inputRef.current.files[0];
+        try {
+            if (file.type.includes("image")) {
+                setFileType("image");
+            }
+            else if (file.type.includes("video")) {
+                setFileType("video");
+            }
+            setFileSrc(await displayUploadedFile(file));
+        }
+        catch (e) {
+            console.warn(e.message);
+        }
+    };
+    return (react_1.default.createElement("div", { className: 'imageDiv' },
+        react_1.default.createElement("div", { className: "imagePreview", id: "imagePreview" },
+            (fileType === "image") ?
+                react_1.default.createElement("img", { src: fileSrc, alt: "image preview", className: "imagePreview__image" }) :
+                react_1.default.createElement("video", { width: "320", height: "240", controls: true, className: "imagePreview__video" },
+                    react_1.default.createElement("source", { src: fileSrc, type: 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"' }),
+                    react_1.default.createElement("source", { src: fileSrc, type: 'video/ogg; codecs="theora, vorbis"' }),
+                    react_1.default.createElement("source", { src: fileSrc, type: 'video/webm' }),
+                    "Your browser does not support the video tag."),
+            react_1.default.createElement(InputBox_1.default, { maxLength: "34", label: "" }),
+            !fileSrc &&
+                react_1.default.createElement("span", { className: "imagePreview__default-display" }, "Image Preview"),
+            react_1.default.createElement("input", { id: 'uploadedImaged', type: "file", className: 'imageInputButton', ref: inputRef, onChange: handleUpload }))));
+};
+exports["default"] = FileUpload;
 
 
 /***/ }),
@@ -47972,10 +48137,9 @@ const react_1 = __importStar(__webpack_require__(/*! react */ "./node_modules/re
 __webpack_require__(/*! ./InputBox.scss */ "./src/dtc_assets/src/Components/Fields/InputBox.scss");
 const InputBox = (props) => {
     const inputRef = react_1.default.useRef();
-    console.log(inputRef);
     let textValue;
     const [className, setClassName] = (0, react_1.useState)("enabled");
-    const { label, disabled
+    const { label, maxLength, disabled
     // dispatchAction //the action that is to take place in order to dispatch the field change to the redux store
      } = props;
     const onBlur = () => {
@@ -47992,7 +48156,7 @@ const InputBox = (props) => {
                 label,
                 "  \u00A0 ")),
         react_1.default.createElement("div", { className: "input-element-div" },
-            react_1.default.createElement("input", { className: className, type: "text", alt: label, ref: inputRef, disabled: disabled, onFocus: onFocus, onBlur: onBlur }))));
+            react_1.default.createElement("input", { maxLength: maxLength, className: className, type: "text", alt: label, ref: inputRef, disabled: disabled, onFocus: onFocus, onBlur: onBlur }))));
 };
 exports["default"] = InputBox;
 

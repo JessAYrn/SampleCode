@@ -2,6 +2,7 @@
     max-width: 23rem;
     margin: 2.25rem;
     border: solid;
+    border:rgb(37, 37, 37);
     background-color: rgb(245, 245, 245);
 
 
@@ -34,7 +35,7 @@
         &__image{
             max-width: 18rem;
             max-height: 25rem;
-            margin-top: 1rem;
+            padding-top: 1rem;
         }
 
         &__video{
