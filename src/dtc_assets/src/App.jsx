@@ -2,6 +2,7 @@ import * as React from 'react';
 import { dtc } from "../../declarations/dtc"
 import InputBox from './Components/Fields/InputBox';
 import FileUpload from './Components/Fields/FileUpload';
+import Slider from './Components/Fields/Slider';
 
 const App = () => {
     const [greeting, setGreeting] = React.useState("");
@@ -42,6 +43,11 @@ const App = () => {
             <form onSubmit={handleSubmit}>
                 <InputBox
                     label={"Enter Something"} 
+                />
+                <Slider
+                    min={"3"}
+                    max={"300"}
+                    value={"0"}
                 />
                 <button id="clickMeBtn" type="submit" disabled={pending}>Click Me!</button>
             </form>
