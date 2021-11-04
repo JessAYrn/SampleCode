@@ -46,7 +46,7 @@ const App = () => {
                 />
                 <Slider
                     min={"3"}
-                    max={"300"}
+                    max={"120"}
                     value={"0"}
                 />
                 <button id="clickMeBtn" type="submit" disabled={pending}>Click Me!</button>
