@@ -9,6 +9,10 @@ const JournalPage = (props) => {
    
     return (
         <div className={"journalPageContainer"}>
+            <Slider
+                min={3}
+                max={120}
+            />
             <InputBox
                 label={"Date: "}
             />

@@ -4,8 +4,7 @@ import "./Slider.scss";
 const Slider = (props) => {
     const {
         min,
-        max,
-        value
+        max
     } = props;
 
     const inputRef = useRef();

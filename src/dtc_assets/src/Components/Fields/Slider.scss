@@ -1,11 +1,11 @@
 .sliderDiv{
-    width: 20rem;
+    width: 90%;
     .sliderLabelDiv{
         color: rgb(122, 122, 122);
         &__disabled{
             text-align: center;
             font-family: 'Julius Sans One', sans-serif;
-            font-size: .80rem;
+            font-size: 1.5rem;
             color: rgb(122, 122, 122);
         }
         &__enabled{
@@ -16,6 +16,7 @@
         }
     }
     .sliderInputDiv{
+        padding-left: 5%;
         width:100%;
         .slider{
             width: 100%;
