@@ -5,7 +5,7 @@ import "./InputBox.scss";
 const InputBox = (props) => {
     const inputRef = React.useRef();
     let textValue; 
-    const [className,setClassName] = useState("enabled");
+    const [disabledOrEnabled,setDisabledOrEnabled] = useState("enabled");
     const {
         label,
         maxLength,
@@ -15,24 +15,24 @@ const InputBox = (props) => {
 
     const onBlur = () => {
         textValue = inputRef.current.value;
-        setClassName("disabled");
+        setDisabledOrEnabled("disabled");
 
 
     };
     const onFocus = () => {
-        setClassName("enabled");
+        setDisabledOrEnabled("enabled");
         
     };
 
     return(
         <div className={"inputBox " + label}>
             <div className={'label-element-div'}>
-                <label className={"label__"+className} htmlFor='Label'> {label}  &nbsp; </label>
+                <label className={"label__"+disabledOrEnabled} htmlFor='Label'> {label}  &nbsp; </label>
             </div>
             <div className={"input-element-div"}>
             <input 
                 maxLength={maxLength}
-                className={className}
+                className={disabledOrEnabled}
                 type="text" 
                 alt={label} 
                 ref={inputRef} 
