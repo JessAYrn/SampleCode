@@ -9,7 +9,10 @@ const InputBox = (props) => {
     const {
         label,
         maxLength,
-        disabled
+        rows,
+        columns,
+        disabled,
+        divClassName
         // dispatchAction //the action that is to take place in order to dispatch the field change to the redux store
     } = props;
 
@@ -25,12 +28,14 @@ const InputBox = (props) => {
     };
 
     return(
-        <div className={"inputBox " + label}>
-            <div className={'label-element-div'}>
+        <div className={'inputBox'}>
+            <div className={'label-element-div '}>
                 <label className={"label__"+disabledOrEnabled} htmlFor='Label'> {label}  &nbsp; </label>
             </div>
-            <div className={"input-element-div"}>
-            <input 
+            <div className={`input-element-div + ${divClassName || " "}`}>
+            <textarea
+                rows={rows}
+                cols={columns}
                 maxLength={maxLength}
                 className={disabledOrEnabled}
                 type="text" 

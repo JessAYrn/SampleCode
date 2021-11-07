@@ -15,12 +15,18 @@ const JournalPage = (props) => {
             />
             <InputBox
                 label={"Date: "}
+                rows={"1"}
+                columns={"8"}
             />
             <InputBox
                 label={"Location: "}
+                rows={"1"}
+                columns={"30"}
             />
             <InputBox
+                divClassName={"entry"}
                 label={"Entry: "}
+                rows={"10"}
             />
             <FileUpload
                 label={'file1'}

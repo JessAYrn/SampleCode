@@ -3,4 +3,14 @@
         float: left;
         margin-left: 4%;
     }
+
+    .entry{
+        .enabled{
+            border-width: 0.5px 0.5px 2px;
+        }
+        .disabled{
+            border-width: 0.5px 0.5px 2px;
+        }
+        
+    }
 }

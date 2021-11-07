@@ -2,13 +2,13 @@
     width: 90%;
     .sliderLabelDiv{
         color: rgb(122, 122, 122);
-        &__disabled{
+        &__enabled{
             text-align: center;
             font-family: 'Julius Sans One', sans-serif;
-            font-size: 1.5rem;
+            font-size: .95rem;
             color: rgb(122, 122, 122);
         }
-        &__enabled{
+        &__disabled{
             text-align: center;
             font-family: 'Julius Sans One', sans-serif;
             font-size: .95rem;
