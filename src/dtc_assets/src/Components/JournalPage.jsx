@@ -13,21 +13,22 @@ const JournalPage = (props) => {
                 min={3}
                 max={120}
             />
+            <div className={"journalText"} >
             <InputBox
                 label={"Date: "}
                 rows={"1"}
-                columns={"8"}
             />
             <InputBox
                 label={"Location: "}
                 rows={"1"}
-                columns={"30"}
             />
             <InputBox
                 divClassName={"entry"}
                 label={"Entry: "}
-                rows={"10"}
+                rows={"49"}
             />
+            </div>
+            <div className={"journalImages"}>
             <FileUpload
                 label={'file1'}
             />
@@ -37,6 +38,11 @@ const JournalPage = (props) => {
             <FileUpload
                 label={'file3'}
             />
+            <FileUpload
+                label={'file4'}
+            />
+            </div>
+            
         </div>
     )
 };
