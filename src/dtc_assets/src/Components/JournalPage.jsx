@@ -25,7 +25,7 @@ const JournalPage = (props) => {
             <InputBox
                 divClassName={"entry"}
                 label={"Entry: "}
-                rows={"49"}
+                rows={"59"}
             />
             </div>
             <div className={"journalImages"}>
