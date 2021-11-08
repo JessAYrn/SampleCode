@@ -1,4 +1,4 @@
-const types ={
+export const types ={
     CHANGE_FILE_1: "CHANGE_FILE_1",
     CHANGE_FILE_2: "CHANGE_FILE_2",
     CHANGE_FILE_3: "CHANGE_FILE_3",
@@ -27,12 +27,12 @@ export const initialState = {
 
 const changeValue = (state = initialState, action) => {
 
-    const {type, payload, index } = action;
+    const {actionType, payload, index } = action;
 
     let updatedJournalPage;
     
 
-    switch (type){
+    switch (actionType){
         case types.CHANGE_FILE_1:
             updatedJournalPage = {
                 ... state.journal[index],

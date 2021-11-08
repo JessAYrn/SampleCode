@@ -5,7 +5,11 @@ import "./FileUpload.scss";
 const FileUpload = (props) => {
     const {
         label,
-        disabled
+        disabled,
+        dispatchAction,
+        dispatch,
+        index,
+        value
     } = props;
     let inputRef = useRef();
     const [fileSrc, setFileSrc]  = useState("../../../assets/AddImageIcon.png");
@@ -24,7 +28,7 @@ const FileUpload = (props) => {
     }; 
 
     const handleUpload = async () => {
-        const file = inputRef.current.files[0];
+        const file = inputRef.current.files[0] || value;
         try{
             if(file.type.includes("image")){
                 setFileType("image");
@@ -32,6 +36,11 @@ const FileUpload = (props) => {
                 setFileType("video");
             }
             setFileSrc(await displayUploadedFile(file));
+            dispatch({
+                payload: file,
+                actionType: dispatchAction,
+                index: index
+            });
         } catch(e) {
             console.warn(e.message);
         }

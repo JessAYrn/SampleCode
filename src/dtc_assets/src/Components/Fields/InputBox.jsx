@@ -1,10 +1,9 @@
-import React, {useState} from 'react';
+import React, {useState, useRef} from 'react';
 import "./InputBox.scss";
 
 
 const InputBox = (props) => {
-    const inputRef = React.useRef();
-    let textValue; 
+    const inputRef = useRef();
     const [disabledOrEnabled,setDisabledOrEnabled] = useState("enabled");
     const {
         label,
@@ -12,12 +11,16 @@ const InputBox = (props) => {
         rows,
         columns,
         disabled,
-        divClassName
+        divClassName,
+        dispatchAction,
+        dispatch,
+        index,
+        value
         // dispatchAction //the action that is to take place in order to dispatch the field change to the redux store
     } = props;
 
     const onBlur = () => {
-        textValue = inputRef.current.value;
+        
         setDisabledOrEnabled("disabled");
 
 
@@ -26,6 +29,14 @@ const InputBox = (props) => {
         setDisabledOrEnabled("enabled");
         
     };
+
+    const onChnage = () => {
+        dispatch({
+            payload: inputRef.current.value,
+            actionType: dispatchAction,
+            index: index
+        });
+    }
 
     return(
         <div className={'inputBox'}>
@@ -38,12 +49,14 @@ const InputBox = (props) => {
                 cols={columns}
                 maxLength={maxLength}
                 className={disabledOrEnabled}
+                value={value}
                 type="text" 
                 alt={label} 
                 ref={inputRef} 
                 disabled={disabled} 
                 onFocus={onFocus}
                 onBlur={onBlur}
+                onChange={onChnage}
             />
             </div>
         </div>

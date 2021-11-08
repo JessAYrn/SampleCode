@@ -1,12 +1,19 @@
-import React from "react";
+import React, {useReducer, useEffect} from "react";
 import FileUpload from "./Fields/FileUpload";
 import InputBox from "./Fields/InputBox";
 import Slider from "./Fields/Slider";
+import journalReducer, {types, initialState} from "../reducers/journalReducer";
 import "./JournalPage.scss";
 
 
 const JournalPage = (props) => {
    
+    const [journalPageState, dispatch] = useReducer(journalReducer, initialState );
+
+    useEffect(() => {
+        console.log(journalPageState.journal);
+    },[journalPageState])
+
     return (
         <div className={"journalPageContainer"}>
             <Slider
@@ -17,15 +24,27 @@ const JournalPage = (props) => {
             <InputBox
                 label={"Date: "}
                 rows={"1"}
+                dispatch={dispatch}
+                dispatchAction={types.CHANGE_DATE}
+                index={0}
+                value={journalPageState.journal[0].date}
             />
             <InputBox
                 label={"Location: "}
                 rows={"1"}
+                dispatch={dispatch}
+                dispatchAction={types.CHANGE_LOCATION}
+                index={0}
+                value={journalPageState.journal[0].location}
             />
             <InputBox
                 divClassName={"entry"}
                 label={"Entry: "}
                 rows={"59"}
+                dispatch={dispatch}
+                dispatchAction={types.CHANGE_ENTRY}
+                index={0}
+                value={journalPageState.journal[0].entry}
             />
             </div>
             <div className={"journalImages"}>
