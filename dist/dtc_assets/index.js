@@ -10414,7 +10414,7 @@ var hexSliceLookupTable = (function () {
 "use strict";
 
 
-const Bignumber = __webpack_require__(/*! bignumber.js */ "./node_modules/bignumber.js/bignumber.js").BigNumber
+const Bignumber = (__webpack_require__(/*! bignumber.js */ "./node_modules/bignumber.js/bignumber.js").BigNumber)
 
 exports.MT = {
   POS_INT: 0,
@@ -11847,7 +11847,7 @@ module.exports = function decodeAsm (stdlib, foreign, buffer) {
 
 const { Buffer } = __webpack_require__(/*! buffer */ "./node_modules/borc/node_modules/buffer/index.js")
 const ieee754 = __webpack_require__(/*! ieee754 */ "./node_modules/ieee754/index.js")
-const Bignumber = __webpack_require__(/*! bignumber.js */ "./node_modules/bignumber.js/bignumber.js").BigNumber
+const Bignumber = (__webpack_require__(/*! bignumber.js */ "./node_modules/bignumber.js/bignumber.js").BigNumber)
 
 const parser = __webpack_require__(/*! ./decoder.asm */ "./node_modules/borc/src/decoder.asm.js")
 const utils = __webpack_require__(/*! ./utils */ "./node_modules/borc/src/utils.js")
@@ -12672,7 +12672,7 @@ function collectObject (val) {
 
 const { Buffer } = __webpack_require__(/*! buffer */ "./node_modules/borc/node_modules/buffer/index.js")
 const { URL } = __webpack_require__(/*! iso-url */ "./node_modules/iso-url/index.js")
-const Bignumber = __webpack_require__(/*! bignumber.js */ "./node_modules/bignumber.js/bignumber.js").BigNumber
+const Bignumber = (__webpack_require__(/*! bignumber.js */ "./node_modules/bignumber.js/bignumber.js").BigNumber)
 
 const utils = __webpack_require__(/*! ./utils */ "./node_modules/borc/src/utils.js")
 const constants = __webpack_require__(/*! ./constants */ "./node_modules/borc/src/constants.js")
@@ -13443,7 +13443,7 @@ module.exports = Tagged
 
 
 const { Buffer } = __webpack_require__(/*! buffer */ "./node_modules/borc/node_modules/buffer/index.js")
-const Bignumber = __webpack_require__(/*! bignumber.js */ "./node_modules/bignumber.js/bignumber.js").BigNumber
+const Bignumber = (__webpack_require__(/*! bignumber.js */ "./node_modules/bignumber.js/bignumber.js").BigNumber)
 
 const constants = __webpack_require__(/*! ./constants */ "./node_modules/borc/src/constants.js")
 const SHIFT32 = constants.SHIFT32
@@ -13626,7 +13626,7 @@ exports.nextPowerOf2 = (n) => {
 
 "use strict";
 
-const Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js").Buffer
+const Buffer = (__webpack_require__(/*! safe-buffer */ "./node_modules/safe-buffer/index.js").Buffer)
 
 module.exports = class BufferPipe {
   /**
@@ -15826,7 +15826,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".imageDiv {\n  max-width: 23rem;\n  margin: 2.25rem;\n  border: solid;\n  background-color: whitesmoke;\n}\n.imageDiv .imageLabelDiv {\n  padding-left: 5.5rem;\n  font-family: \"Merriweather\", serif;\n}\n.imageDiv .imagePreview {\n  max-width: 30rem;\n  max-height: 35rem;\n}\n.imageDiv .imagePreview .inputBox {\n  padding-left: 4rem;\n  width: 15.05rem;\n}\n.imageDiv .imagePreview .inputBox .disabled {\n  background-color: whitesmoke;\n}\n.imageDiv .imagePreview .inputBox .enabled {\n  background-color: whitesmoke;\n}\n.imageDiv .imagePreview .imageInputButton {\n  padding-left: 9rem;\n  width: 5.5rem;\n  margin-bottom: 1rem;\n}\n.imageDiv .imagePreview__image {\n  max-width: 18rem;\n  max-height: 25rem;\n  margin-top: 1rem;\n}\n.imageDiv .imagePreview__video {\n  max-width: 18rem;\n  max-height: 25rem;\n  margin-top: 1rem;\n  padding-left: 2.5rem;\n  padding-right: 2.5rem;\n}", "",{"version":3,"sources":["webpack://./src/dtc_assets/src/Components/Fields/FileUpload.scss"],"names":[],"mappings":"AAAA;EACI,gBAAA;EACA,eAAA;EACA,aAAA;EACA,4BAAA;AACJ;AAEI;EACI,oBAAA;EACA,kCAAA;AAAR;AAGI;EACI,gBAAA;EACA,iBAAA;AADR;AAGQ;EACI,kBAAA;EACA,eAAA;AADZ;AAEY;EACI,4BAAA;AAAhB;AAEY;EACI,4BAAA;AAAhB;AAIQ;EACI,kBAAA;EACA,aAAA;EACA,mBAAA;AAFZ;AAKQ;EACI,gBAAA;EACA,iBAAA;EACA,gBAAA;AAHZ;AAMQ;EACI,gBAAA;EACA,iBAAA;EACA,gBAAA;EACA,oBAAA;EACA,qBAAA;AAJZ","sourcesContent":[".imageDiv{\n    max-width: 23rem;\n    margin: 2.25rem;\n    border: solid;\n    background-color: rgb(245, 245, 245);\n\n\n    .imageLabelDiv{\n        padding-left: 5.5rem;\n        font-family: 'Merriweather', serif;\n    }\n\n    .imagePreview{\n        max-width: 30rem;\n        max-height: 35rem;\n\n        .inputBox{\n            padding-left: 4rem;\n            width: 15.05rem;\n            .disabled{\n                background-color: rgb(245, 245, 245);\n            }\n            .enabled{\n                background-color: rgb(245, 245, 245);\n            }\n        }\n\n        .imageInputButton{\n            padding-left: 9rem;\n            width: 5.5rem;\n            margin-bottom: 1rem;\n        }\n\n        &__image{\n            max-width: 18rem;\n            max-height: 25rem;\n            margin-top: 1rem;\n        }\n\n        &__video{\n            max-width: 18rem;\n            max-height: 25rem;\n            margin-top: 1rem;\n            padding-left: 2.5rem;\n            padding-right: 2.5rem;\n        }\n    \n    }\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".imageDiv {\n  max-width: 23rem;\n  margin: 2.25rem;\n  border: solid;\n  border: #252525;\n  background-color: whitesmoke;\n}\n.imageDiv .imageLabelDiv {\n  padding-left: 5.5rem;\n  font-family: \"Merriweather\", serif;\n}\n.imageDiv .imagePreview {\n  max-width: 30rem;\n  max-height: 35rem;\n}\n.imageDiv .imagePreview .inputBox {\n  padding-left: 2.5rem;\n  width: 75%;\n}\n.imageDiv .imagePreview .inputBox .disabled {\n  background-color: whitesmoke;\n}\n.imageDiv .imagePreview .inputBox .enabled {\n  background-color: whitesmoke;\n}\n.imageDiv .imagePreview .imageInputButton {\n  padding-left: 37%;\n  width: 5rem;\n  margin-bottom: 1rem;\n}\n.imageDiv .imagePreview__image {\n  max-width: 18rem;\n  max-height: 25rem;\n  padding: 1rem;\n}\n.imageDiv .imagePreview__video {\n  max-width: 18rem;\n  max-height: 25rem;\n  margin-top: 1rem;\n  padding-left: 2.5rem;\n  padding-right: 2.5rem;\n}", "",{"version":3,"sources":["webpack://./src/dtc_assets/src/Components/Fields/FileUpload.scss"],"names":[],"mappings":"AAAA;EACI,gBAAA;EACA,eAAA;EACA,aAAA;EACA,eAAA;EACA,4BAAA;AACJ;AAEI;EACI,oBAAA;EACA,kCAAA;AAAR;AAGI;EACI,gBAAA;EACA,iBAAA;AADR;AAGQ;EACI,oBAAA;EACA,UAAA;AADZ;AAEY;EACI,4BAAA;AAAhB;AAEY;EACI,4BAAA;AAAhB;AAIQ;EACI,iBAAA;EACA,WAAA;EACA,mBAAA;AAFZ;AAKQ;EACI,gBAAA;EACA,iBAAA;EACA,aAAA;AAHZ;AAMQ;EACI,gBAAA;EACA,iBAAA;EACA,gBAAA;EACA,oBAAA;EACA,qBAAA;AAJZ","sourcesContent":[".imageDiv{\n    max-width: 23rem;\n    margin: 2.25rem;\n    border: solid;\n    border:rgb(37, 37, 37);\n    background-color: rgb(245, 245, 245);\n\n\n    .imageLabelDiv{\n        padding-left: 5.5rem;\n        font-family: 'Merriweather', serif;\n    }\n\n    .imagePreview{\n        max-width: 30rem;\n        max-height: 35rem;\n\n        .inputBox{\n            padding-left: 2.5rem;\n            width: 75%;\n            .disabled{\n                background-color: rgb(245, 245, 245);\n            }\n            .enabled{\n                background-color: rgb(245, 245, 245);\n            }\n        }\n\n        .imageInputButton{\n            padding-left: 37%;\n            width: 5rem;\n            margin-bottom: 1rem;\n        }\n\n        &__image{\n            max-width: 18rem;\n            max-height: 25rem;\n            padding: 1rem;\n        }\n\n        &__video{\n            max-width: 18rem;\n            max-height: 25rem;\n            margin-top: 1rem;\n            padding-left: 2.5rem;\n            padding-right: 2.5rem;\n        }\n    \n    }\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -15853,7 +15853,61 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".inputBox {\n  width: 40%;\n}\n.inputBox .label__disabled {\n  font-family: \"Julius Sans One\", sans-serif;\n  font-size: 0.8rem;\n  color: #7a7a7a;\n}\n.inputBox .label__enabled {\n  font-family: \"Julius Sans One\", sans-serif;\n  font-size: 0.95rem;\n  color: black;\n}\n.inputBox .enabled {\n  font-family: \"Merriweather\", serif;\n  outline: 0;\n  border-width: 0 0 2px;\n  border-color: black;\n  width: 100%;\n}\n.inputBox .disabled {\n  font-family: \"Merriweather\", serif;\n  outline: 0;\n  border-width: 0 0 2px;\n  color: #7a7a7a;\n  width: 95%;\n}", "",{"version":3,"sources":["webpack://./src/dtc_assets/src/Components/Fields/InputBox.scss"],"names":[],"mappings":"AAAA;EACI,UAAA;AACJ;AAEQ;EACI,0CAAA;EACA,iBAAA;EACA,cAAA;AAAZ;AAEQ;EACI,0CAAA;EACA,kBAAA;EACA,YAAA;AAAZ;AAGI;EACI,kCAAA;EACA,UAAA;EACA,qBAAA;EACA,mBAAA;EACA,WAAA;AADR;AAII;EACI,kCAAA;EACA,UAAA;EACA,qBAAA;EACA,cAAA;EACA,UAAA;AAFR","sourcesContent":[".inputBox{\n    width: 40%;\n    .label{\n\n        &__disabled{\n            font-family: 'Julius Sans One', sans-serif;\n            font-size: .80rem;\n            color: rgb(122, 122, 122);\n        }\n        &__enabled{\n            font-family: 'Julius Sans One', sans-serif;\n            font-size: .95rem;\n            color: rgb(0, 0, 0);\n        }\n    }\n    .enabled{\n        font-family: 'Merriweather', serif;\n        outline: 0;\n        border-width: 0 0 2px;\n        border-color: rgb(0, 0, 0);\n        width: 100%;\n    }\n    \n    .disabled{\n        font-family: 'Merriweather', serif;\n        outline: 0;\n        border-width: 0 0 2px;\n        color: rgb(122, 122, 122);\n        width: 95%;\n    }\n}\n\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".inputBox {\n  width: 100%;\n}\n.inputBox .label__disabled {\n  font-family: \"Julius Sans One\", sans-serif;\n  font-size: 0.8rem;\n  color: #7a7a7a;\n}\n.inputBox .label__enabled {\n  font-family: \"Julius Sans One\", sans-serif;\n  font-size: 0.95rem;\n  color: black;\n}\n.inputBox .enabled {\n  font-family: \"Merriweather\", serif;\n  outline: 0;\n  border-width: 0 0 2px;\n  border-color: black;\n  width: 100%;\n}\n.inputBox .disabled {\n  font-family: \"Merriweather\", serif;\n  outline: 0;\n  border-width: 0 0 2px;\n  color: #7a7a7a;\n  width: 95%;\n}", "",{"version":3,"sources":["webpack://./src/dtc_assets/src/Components/Fields/InputBox.scss"],"names":[],"mappings":"AAAA;EACI,WAAA;AACJ;AAEQ;EACI,0CAAA;EACA,iBAAA;EACA,cAAA;AAAZ;AAEQ;EACI,0CAAA;EACA,kBAAA;EACA,YAAA;AAAZ;AAGI;EACI,kCAAA;EACA,UAAA;EACA,qBAAA;EACA,mBAAA;EACA,WAAA;AADR;AAII;EACI,kCAAA;EACA,UAAA;EACA,qBAAA;EACA,cAAA;EACA,UAAA;AAFR","sourcesContent":[".inputBox{\n    width: 100%;\n    .label{\n\n        &__disabled{\n            font-family: 'Julius Sans One', sans-serif;\n            font-size: .80rem;\n            color: rgb(122, 122, 122);\n        }\n        &__enabled{\n            font-family: 'Julius Sans One', sans-serif;\n            font-size: .95rem;\n            color: rgb(0, 0, 0);\n        }\n    }\n    .enabled{\n        font-family: 'Merriweather', serif;\n        outline: 0;\n        border-width: 0 0 2px;\n        border-color: rgb(0, 0, 0);\n        width: 100%;\n    }\n    \n    .disabled{\n        font-family: 'Merriweather', serif;\n        outline: 0;\n        border-width: 0 0 2px;\n        color: rgb(122, 122, 122);\n        width: 95%;\n    }\n}\n\n"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/dtc_assets/src/Components/Fields/Slider.scss":
+/*!***************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/dtc_assets/src/Components/Fields/Slider.scss ***!
+  \***************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../node_modules/css-loader/dist/runtime/sourceMaps.js */ "./node_modules/css-loader/dist/runtime/sourceMaps.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".sliderDiv {\n  width: 90%;\n}\n.sliderDiv .sliderLabelDiv {\n  color: #7a7a7a;\n}\n.sliderDiv .sliderLabelDiv__enabled {\n  text-align: center;\n  font-family: \"Julius Sans One\", sans-serif;\n  font-size: 0.95rem;\n  color: #7a7a7a;\n}\n.sliderDiv .sliderLabelDiv__disabled {\n  text-align: center;\n  font-family: \"Julius Sans One\", sans-serif;\n  font-size: 0.95rem;\n  color: black;\n}\n.sliderDiv .sliderInputDiv {\n  padding-left: 5%;\n  width: 100%;\n}\n.sliderDiv .sliderInputDiv .slider {\n  width: 100%;\n}", "",{"version":3,"sources":["webpack://./src/dtc_assets/src/Components/Fields/Slider.scss"],"names":[],"mappings":"AAAA;EACI,UAAA;AACJ;AAAI;EACI,cAAA;AAER;AADQ;EACI,kBAAA;EACA,0CAAA;EACA,kBAAA;EACA,cAAA;AAGZ;AADQ;EACI,kBAAA;EACA,0CAAA;EACA,kBAAA;EACA,YAAA;AAGZ;AAAI;EACI,gBAAA;EACA,WAAA;AAER;AADQ;EACI,WAAA;AAGZ","sourcesContent":[".sliderDiv{\n    width: 90%;\n    .sliderLabelDiv{\n        color: rgb(122, 122, 122);\n        &__enabled{\n            text-align: center;\n            font-family: 'Julius Sans One', sans-serif;\n            font-size: .95rem;\n            color: rgb(122, 122, 122);\n        }\n        &__disabled{\n            text-align: center;\n            font-family: 'Julius Sans One', sans-serif;\n            font-size: .95rem;\n            color: rgb(0, 0, 0);\n        }\n    }\n    .sliderInputDiv{\n        padding-left: 5%;\n        width:100%;\n        .slider{\n            width: 100%;\n        }\n    }\n}"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/dtc_assets/src/Components/JournalPage.scss":
+/*!*************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/dtc_assets/src/Components/JournalPage.scss ***!
+  \*************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/sourceMaps.js */ "./node_modules/css-loader/dist/runtime/sourceMaps.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".journalPageContainer .journalText {\n  width: 40%;\n  float: left;\n}\n.journalPageContainer JournalImages {\n  width: 50%;\n  float: left;\n}\n.journalPageContainer .imageDiv {\n  float: left;\n  margin-left: 4%;\n}\n.journalPageContainer .entry .enabled {\n  border-width: 0.5px 0.5px 2px;\n}\n.journalPageContainer .entry .disabled {\n  border-width: 0.5px 0.5px 2px;\n}", "",{"version":3,"sources":["webpack://./src/dtc_assets/src/Components/JournalPage.scss"],"names":[],"mappings":"AACI;EACI,UAAA;EACA,WAAA;AAAR;AAGI;EACI,UAAA;EACA,WAAA;AADR;AAII;EACI,WAAA;EACA,eAAA;AAFR;AAMQ;EACI,6BAAA;AAJZ;AAMQ;EACI,6BAAA;AAJZ","sourcesContent":[".journalPageContainer{\n    .journalText{\n        width: 40%;\n        float: left;\n    }\n\n    JournalImages{\n        width: 50%;\n        float: left;\n    }\n\n    .imageDiv{\n        float: left;\n        margin-left: 4%;\n    }\n\n    .entry{\n        .enabled{\n            border-width: 0.5px 0.5px 2px;\n        }\n        .disabled{\n            border-width: 0.5px 0.5px 2px;\n        }\n        \n    }\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -15920,8 +15974,8 @@ module.exports = function (cssWithMappingToString) {
     var alreadyImportedModules = {};
 
     if (dedupe) {
-      for (var _i = 0; _i < this.length; _i++) {
-        var id = this[_i][0];
+      for (var k = 0; k < this.length; k++) {
+        var id = this[k][0];
 
         if (id != null) {
           alreadyImportedModules[id] = true;
@@ -15929,8 +15983,8 @@ module.exports = function (cssWithMappingToString) {
       }
     }
 
-    for (var _i2 = 0; _i2 < modules.length; _i2++) {
-      var item = [].concat(modules[_i2]);
+    for (var _k = 0; _k < modules.length; _k++) {
+      var item = [].concat(modules[_k]);
 
       if (dedupe && alreadyImportedModules[item[0]]) {
         continue;
@@ -45818,6 +45872,52 @@ if (false) {} else {
 
 /***/ }),
 
+/***/ "./node_modules/redux-thunk/es/index.js":
+/*!**********************************************!*\
+  !*** ./node_modules/redux-thunk/es/index.js ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/** A function that accepts a potential "extra argument" value to be injected later,
+ * and returns an instance of the thunk middleware that uses that value
+ */
+function createThunkMiddleware(extraArgument) {
+  // Standard Redux middleware definition pattern:
+  // See: https://redux.js.org/tutorials/fundamentals/part-4-store#writing-custom-middleware
+  var middleware = function middleware(_ref) {
+    var dispatch = _ref.dispatch,
+        getState = _ref.getState;
+    return function (next) {
+      return function (action) {
+        // The thunk middleware looks for any functions that were passed to `store.dispatch`.
+        // If this "action" is really a function, call it and return the result.
+        if (typeof action === 'function') {
+          // Inject the store's `dispatch` and `getState` methods, as well as any "extra arg"
+          return action(dispatch, getState, extraArgument);
+        } // Otherwise, pass the action down the middleware chain as usual
+
+
+        return next(action);
+      };
+    };
+  };
+
+  return middleware;
+}
+
+var thunk = createThunkMiddleware(); // Attach the factory function so users can create a customized version
+// with whatever "extra arg" they want to inject into their thunks
+
+thunk.withExtraArgument = createThunkMiddleware;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (thunk);
+
+/***/ }),
+
 /***/ "./node_modules/safe-buffer/index.js":
 /*!*******************************************!*\
   !*** ./node_modules/safe-buffer/index.js ***!
@@ -47633,6 +47733,116 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 /***/ }),
 
+/***/ "./src/dtc_assets/src/Components/Fields/Slider.scss":
+/*!**********************************************************!*\
+  !*** ./src/dtc_assets/src/Components/Fields/Slider.scss ***!
+  \**********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../../../node_modules/style-loader/dist/runtime/styleDomAPI.js */ "./node_modules/style-loader/dist/runtime/styleDomAPI.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../../node_modules/style-loader/dist/runtime/insertBySelector.js */ "./node_modules/style-loader/dist/runtime/insertBySelector.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../../../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js */ "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! !../../../../../node_modules/style-loader/dist/runtime/insertStyleElement.js */ "./node_modules/style-loader/dist/runtime/insertStyleElement.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! !../../../../../node_modules/style-loader/dist/runtime/styleTagTransform.js */ "./node_modules/style-loader/dist/runtime/styleTagTransform.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_Slider_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../../../../../node_modules/css-loader/dist/cjs.js!../../../../../node_modules/sass-loader/dist/cjs.js!./Slider.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/dtc_assets/src/Components/Fields/Slider.scss");
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var options = {};
+
+options.styleTagTransform = (_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default());
+options.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default());
+
+      options.insert = _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, "head");
+    
+options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
+options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_Slider_scss__WEBPACK_IMPORTED_MODULE_6__["default"], options);
+
+
+
+
+       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_Slider_scss__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_Slider_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_Slider_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
+
+
+/***/ }),
+
+/***/ "./src/dtc_assets/src/Components/JournalPage.scss":
+/*!********************************************************!*\
+  !*** ./src/dtc_assets/src/Components/JournalPage.scss ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/styleDomAPI.js */ "./node_modules/style-loader/dist/runtime/styleDomAPI.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/insertBySelector.js */ "./node_modules/style-loader/dist/runtime/insertBySelector.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js */ "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/insertStyleElement.js */ "./node_modules/style-loader/dist/runtime/insertStyleElement.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/styleTagTransform.js */ "./node_modules/style-loader/dist/runtime/styleTagTransform.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_JournalPage_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../../../../node_modules/css-loader/dist/cjs.js!../../../../node_modules/sass-loader/dist/cjs.js!./JournalPage.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/dtc_assets/src/Components/JournalPage.scss");
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var options = {};
+
+options.styleTagTransform = (_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default());
+options.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default());
+
+      options.insert = _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, "head");
+    
+options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
+options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_JournalPage_scss__WEBPACK_IMPORTED_MODULE_6__["default"], options);
+
+
+
+
+       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_JournalPage_scss__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_JournalPage_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_JournalPage_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
+
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js":
 /*!****************************************************************************!*\
   !*** ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js ***!
@@ -47978,8 +48188,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const React = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
 const dtc_1 = __webpack_require__(/*! ../../declarations/dtc */ "./src/declarations/dtc/index.js");
-const InputBox_1 = __importDefault(__webpack_require__(/*! ./Components/Fields/InputBox */ "./src/dtc_assets/src/Components/Fields/InputBox.jsx"));
-const FileUpload_1 = __importDefault(__webpack_require__(/*! ./Components/Fields/FileUpload */ "./src/dtc_assets/src/Components/Fields/FileUpload.jsx"));
+const JournalPage_1 = __importDefault(__webpack_require__(/*! ./Components/JournalPage */ "./src/dtc_assets/src/Components/JournalPage.jsx"));
 const App = () => {
     const [greeting, setGreeting] = React.useState("");
     const [pending, setPending] = React.useState(false);
@@ -48012,10 +48221,7 @@ const App = () => {
     };
     return (React.createElement("main", null,
         React.createElement("img", { src: "logo.png", alt: "DFINITY logo" }),
-        React.createElement(FileUpload_1.default, { label: 'Test Image' }),
-        React.createElement("form", { onSubmit: handleSubmit },
-            React.createElement(InputBox_1.default, { label: "Enter Something" }),
-            React.createElement("button", { id: "clickMeBtn", type: "submit", disabled: pending }, "Click Me!")),
+        React.createElement(JournalPage_1.default, null),
         React.createElement("section", { id: "greeting" }, greeting)));
 };
 exports["default"] = App;
@@ -48138,27 +48344,173 @@ __webpack_require__(/*! ./InputBox.scss */ "./src/dtc_assets/src/Components/Fiel
 const InputBox = (props) => {
     const inputRef = react_1.default.useRef();
     let textValue;
-    const [className, setClassName] = (0, react_1.useState)("enabled");
-    const { label, maxLength, disabled
+    const [disabledOrEnabled, setDisabledOrEnabled] = (0, react_1.useState)("enabled");
+    const { label, maxLength, rows, columns, disabled, divClassName
     // dispatchAction //the action that is to take place in order to dispatch the field change to the redux store
      } = props;
     const onBlur = () => {
         textValue = inputRef.current.value;
-        setClassName("disabled");
+        setDisabledOrEnabled("disabled");
     };
     const onFocus = () => {
-        setClassName("enabled");
+        setDisabledOrEnabled("enabled");
     };
-    return (react_1.default.createElement("div", { className: "inputBox " + label },
-        react_1.default.createElement("div", { className: 'label-element-div' },
-            react_1.default.createElement("label", { className: "label__" + className, htmlFor: 'Label' },
+    return (react_1.default.createElement("div", { className: 'inputBox' },
+        react_1.default.createElement("div", { className: 'label-element-div ' },
+            react_1.default.createElement("label", { className: "label__" + disabledOrEnabled, htmlFor: 'Label' },
                 " ",
                 label,
                 "  \u00A0 ")),
-        react_1.default.createElement("div", { className: "input-element-div" },
-            react_1.default.createElement("input", { maxLength: maxLength, className: className, type: "text", alt: label, ref: inputRef, disabled: disabled, onFocus: onFocus, onBlur: onBlur }))));
+        react_1.default.createElement("div", { className: `input-element-div + ${divClassName || " "}` },
+            react_1.default.createElement("textarea", { rows: rows, cols: columns, maxLength: maxLength, className: disabledOrEnabled, type: "text", alt: label, ref: inputRef, disabled: disabled, onFocus: onFocus, onBlur: onBlur }))));
 };
 exports["default"] = InputBox;
+
+
+/***/ }),
+
+/***/ "./src/dtc_assets/src/Components/Fields/Slider.jsx":
+/*!*********************************************************!*\
+  !*** ./src/dtc_assets/src/Components/Fields/Slider.jsx ***!
+  \*********************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const react_1 = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+__webpack_require__(/*! ./Slider.scss */ "./src/dtc_assets/src/Components/Fields/Slider.scss");
+const Slider = (props) => {
+    const { min, max } = props;
+    const inputRef = (0, react_1.useRef)();
+    const [sliderValue, setSliderValue] = (0, react_1.useState)('');
+    const [disabledOrEnabled, setDisabledOrEnabled] = (0, react_1.useState)('disabled');
+    const displayValue = () => {
+        setSliderValue(inputRef.current.value);
+    };
+    const onBlur = () => {
+        setDisabledOrEnabled("disabled");
+    };
+    const onFocus = () => {
+        setDisabledOrEnabled("enabled");
+    };
+    return (react_1.default.createElement("div", { className: "sliderDiv" },
+        react_1.default.createElement("div", { className: "sliderLabelDiv__" + disabledOrEnabled },
+            react_1.default.createElement("label", { className: "sliderLabel" }, ` Lock Journal For ${sliderValue || '3'} Months`)),
+        react_1.default.createElement("div", { className: "sliderInputDiv" },
+            react_1.default.createElement("input", { type: "range", min: min, max: max, className: "slider", value: sliderValue || "3", id: "myRange", ref: inputRef, onBlur: onBlur, onFocus: onFocus, onChange: displayValue }))));
+};
+exports["default"] = Slider;
+
+
+/***/ }),
+
+/***/ "./src/dtc_assets/src/Components/JournalPage.jsx":
+/*!*******************************************************!*\
+  !*** ./src/dtc_assets/src/Components/JournalPage.jsx ***!
+  \*******************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+const FileUpload_1 = __importDefault(__webpack_require__(/*! ./Fields/FileUpload */ "./src/dtc_assets/src/Components/Fields/FileUpload.jsx"));
+const InputBox_1 = __importDefault(__webpack_require__(/*! ./Fields/InputBox */ "./src/dtc_assets/src/Components/Fields/InputBox.jsx"));
+const Slider_1 = __importDefault(__webpack_require__(/*! ./Fields/Slider */ "./src/dtc_assets/src/Components/Fields/Slider.jsx"));
+__webpack_require__(/*! ./JournalPage.scss */ "./src/dtc_assets/src/Components/JournalPage.scss");
+const JournalPage = (props) => {
+    return (react_1.default.createElement("div", { className: "journalPageContainer" },
+        react_1.default.createElement(Slider_1.default, { min: 3, max: 120 }),
+        react_1.default.createElement("div", { className: "journalText" },
+            react_1.default.createElement(InputBox_1.default, { label: "Date: ", rows: "1" }),
+            react_1.default.createElement(InputBox_1.default, { label: "Location: ", rows: "1" }),
+            react_1.default.createElement(InputBox_1.default, { divClassName: "entry", label: "Entry: ", rows: "59" })),
+        react_1.default.createElement("div", { className: "journalImages" },
+            react_1.default.createElement(FileUpload_1.default, { label: 'file1' }),
+            react_1.default.createElement(FileUpload_1.default, { label: 'file2' }),
+            react_1.default.createElement(FileUpload_1.default, { label: 'file3' }),
+            react_1.default.createElement(FileUpload_1.default, { label: 'file4' }))));
+};
+exports["default"] = JournalPage;
+
+
+/***/ }),
+
+/***/ "./src/dtc_assets/src/configureStore.jsx":
+/*!***********************************************!*\
+  !*** ./src/dtc_assets/src/configureStore.jsx ***!
+  \***********************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const redux_1 = __webpack_require__(Object(function webpackMissingModule() { var e = new Error("Cannot find module 'redux'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+const redux_thunk_1 = __importDefault(__webpack_require__(/*! redux-thunk */ "./node_modules/redux-thunk/es/index.js"));
+const monitorReducer_1 = __importDefault(__webpack_require__(/*! ./enhancers/monitorReducer */ "./src/dtc_assets/src/enhancers/monitorReducer.jsx"));
+const logger_1 = __importDefault(__webpack_require__(/*! ./middleware/logger */ "./src/dtc_assets/src/middleware/logger.jsx"));
+const rootReducer_1 = __importDefault(__webpack_require__(/*! ./reducers/rootReducer */ "./src/dtc_assets/src/reducers/rootReducer.jsx"));
+function configureStore(preloadedState) {
+    const middlewares = [logger_1.default, redux_thunk_1.default];
+    const middlewareEnhancer = (0, redux_1.applyMiddleware)(...middlewares);
+    const enhancers = [middlewareEnhancer, monitorReducer_1.default];
+    const composedEnhancers = (0, redux_1.compose)(...enhancers);
+    const store = (0, redux_1.createStore)(rootReducer_1.default, preloadedState, composedEnhancers);
+    return store;
+}
+exports["default"] = configureStore;
+
+
+/***/ }),
+
+/***/ "./src/dtc_assets/src/enhancers/monitorReducer.jsx":
+/*!*********************************************************!*\
+  !*** ./src/dtc_assets/src/enhancers/monitorReducer.jsx ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const round = number => Math.round(number * 100) / 100;
+const monitorReducerEnhancer = createStore => (reducer, initialState, enhancer) => {
+    const monitoredReducer = (state, action) => {
+        const start = performance.now();
+        const newState = reducer(state, action);
+        const end = performance.now();
+        const diff = round(end - start);
+        console.log('reducer process time:', diff);
+        return newState;
+    };
+    return createStore(monitoredReducer, initialState, enhancer);
+};
+exports["default"] = monitorReducerEnhancer;
 
 
 /***/ }),
@@ -48196,8 +48548,66 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const React = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
 const ReactDOM = __importStar(__webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js"));
+const react_redux_1 = __webpack_require__(Object(function webpackMissingModule() { var e = new Error("Cannot find module 'react-redux'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 const App_1 = __importDefault(__webpack_require__(/*! ./App */ "./src/dtc_assets/src/App.jsx"));
-ReactDOM.render(React.createElement(App_1.default, null), document.getElementById('root'));
+const configureStore_1 = __importDefault(__webpack_require__(/*! ./configureStore */ "./src/dtc_assets/src/configureStore.jsx"));
+const store = (0, configureStore_1.default)();
+ReactDOM.render(React.createElement(react_redux_1.Provider, { store: store },
+    React.createElement(App_1.default, null)), document.getElementById('root'));
+
+
+/***/ }),
+
+/***/ "./src/dtc_assets/src/middleware/logger.jsx":
+/*!**************************************************!*\
+  !*** ./src/dtc_assets/src/middleware/logger.jsx ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const logger = store => next => action => {
+    console.group(action.type);
+    console.info('dispatching', action);
+    let result = next(action);
+    console.log('next state', store.getState());
+    console.groupEnd();
+    return result;
+};
+exports["default"] = logger;
+
+
+/***/ }),
+
+/***/ "./src/dtc_assets/src/reducers/journalReducer.jsx":
+/*!********************************************************!*\
+  !*** ./src/dtc_assets/src/reducers/journalReducer.jsx ***!
+  \********************************************************/
+/***/ (() => {
+
+throw new Error("Module parse failed: Identifier 'updatedJournalPage' has already been declared (41:18)\nFile was processed with these loaders:\n * ./node_modules/ts-loader/index.js\nYou may need an additional loader to handle the result of these loaders.\n|             };\n|         case types.CHANGE_FILE_2:\n>             const updatedJournalPage = {\n|                 ...state.journal[index],\n|                 file2: payload");
+
+/***/ }),
+
+/***/ "./src/dtc_assets/src/reducers/rootReducer.jsx":
+/*!*****************************************************!*\
+  !*** ./src/dtc_assets/src/reducers/rootReducer.jsx ***!
+  \*****************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const redux_1 = __webpack_require__(Object(function webpackMissingModule() { var e = new Error("Cannot find module 'redux'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+const journalReducer_1 = __importDefault(__webpack_require__(/*! ./journalReducer */ "./src/dtc_assets/src/reducers/journalReducer.jsx"));
+const rootReducer = (0, redux_1.combineReducers)({
+    journal: journalReducer_1.default
+});
+exports["default"] = rootReducer;
 
 
 /***/ }),
