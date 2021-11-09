@@ -19,6 +19,10 @@ const JournalPage = (props) => {
             <Slider
                 min={3}
                 max={120}
+                dispatch={dispatch}
+                dispatchAction={types.CHANGE_LOCK_TIME}
+                index={0}
+                value={journalPageState.journal[0].file4}
             />
             <div className={"journalText"} >
             <InputBox
@@ -50,15 +54,31 @@ const JournalPage = (props) => {
             <div className={"journalImages"}>
             <FileUpload
                 label={'file1'}
+                dispatch={dispatch}
+                dispatchAction={types.CHANGE_FILE_1}
+                index={0}
+                value={journalPageState.journal[0].file1}
             />
             <FileUpload
                 label={'file2'}
+                dispatch={dispatch}
+                dispatchAction={types.CHANGE_FILE_2}
+                index={0}
+                value={journalPageState.journal[0].file2}
             />
             <FileUpload
                 label={'file3'}
+                dispatch={dispatch}
+                dispatchAction={types.CHANGE_FILE_3}
+                index={0}
+                value={journalPageState.journal[0].file3}
             />
             <FileUpload
                 label={'file4'}
+                dispatch={dispatch}
+                dispatchAction={types.CHANGE_FILE_4}
+                index={0}
+                value={journalPageState.journal[0].file4}
             />
             </div>
             

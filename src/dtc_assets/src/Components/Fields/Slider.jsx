@@ -4,7 +4,11 @@ import "./Slider.scss";
 const Slider = (props) => {
     const {
         min,
-        max
+        max,
+        dispatch,
+        dispatchAction,
+        index,
+        value
     } = props;
 
     const inputRef = useRef();
@@ -12,15 +16,21 @@ const Slider = (props) => {
     const [sliderValue, setSliderValue] = useState('');
     const [disabledOrEnabled, setDisabledOrEnabled] = useState('disabled');
 
-    const displayValue = () => {
-        setSliderValue(inputRef.current.value);
-    }
-
     const onBlur = () => {
         setDisabledOrEnabled("disabled");
 
 
     };
+
+    const onChange = () =>{
+        setSliderValue(inputRef.current.value);
+        dispatch({
+            payload: inputRef.current.value,
+            actionType: dispatchAction,
+            index: index
+        })
+    };
+
     const onFocus = () => {
         setDisabledOrEnabled("enabled");
         
@@ -45,7 +55,7 @@ const Slider = (props) => {
                     id="myRange" ref={inputRef}  
                     onBlur={onBlur} 
                     onFocus={onFocus}
-                    onChange={displayValue}/>
+                    onChange={onChange}/>
             </div>
         </div>
     )

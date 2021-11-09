@@ -7,6 +7,7 @@ export const types ={
     CHANGE_DATE: "CHANGE_DATE",
     CHANGE_LOCATION: "CHANGE_LOCATION",
     CHANGE_ENTRY: "CHANGE_ENTRY",
+    CHANGE_LOCK_TIME: "CHANGE_LOCK_TIME"
 }
 
 export const initialState = {
@@ -19,7 +20,8 @@ export const initialState = {
             file4: {},
             date: '',
             location: '',
-            entry: ''
+            entry: '',
+            lockTime: ''
         }
     ]
 
@@ -100,6 +102,15 @@ const changeValue = (state = initialState, action) => {
             updatedJournalPage = {
                 ... state.journal[index],
                 entry: payload
+            }
+            state.journal[index] = updatedJournalPage;
+            return {
+                ...state
+            }
+        case types.CHANGE_LOCK_TIME:
+            updatedJournalPage = {
+                ... state.journal[index],
+                lockTime: payload
             }
             state.journal[index] = updatedJournalPage;
             return {
