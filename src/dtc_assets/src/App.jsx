@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { dtc } from "../../declarations/dtc"
-import JournalPage from './Components/JournalPage';
+import journal from './Components/Journal';
+import Journal from './Components/Journal';
 
 const App = () => {
     const [greeting, setGreeting] = React.useState("");
@@ -35,7 +36,7 @@ const App = () => {
     return (
         <main>
             <img src="logo.png" alt="DFINITY logo" />
-                <JournalPage/>
+                <Journal/>
                 {/* <button id="clickMeBtn" type="submit" disabled={pending}>Click Me!</button> */}
             <section id="greeting">{greeting}</section>
         </main>
