@@ -1,6 +1,7 @@
-import React, {useRef, useState} from 'react';
+import React, {useRef, useState, useEffect} from 'react';
 import InputBox from './InputBox';
 import "./FileUpload.scss";
+import { useEffect } from '../../../../../dist/dtc_assets';
 
 const FileUpload = (props) => {
     const {
@@ -12,8 +13,6 @@ const FileUpload = (props) => {
         value
     } = props;
     let inputRef = useRef();
-    const [fileSrc, setFileSrc]  = useState("../../../assets/AddImageIcon.png");
-    const [fileType, setFileType] = useState("image");
 
     const displayUploadedFile = (inputFile) => {
         const reader = new FileReader();
@@ -26,6 +25,16 @@ const FileUpload = (props) => {
         
         });
     }; 
+
+    const [fileSrc, setFileSrc]  = useState("../../../assets/AddImageIcon.png");
+    const [fileType, setFileType] = useState("image");
+
+    useEffect( async () => {
+        if(value){
+            setFileSrc(await displayUploadedFile(value));
+        }
+    },[value]);
+
 
     const handleUpload = async () => {
         const file = inputRef.current.files[0] || value;
@@ -70,7 +79,7 @@ const FileUpload = (props) => {
                         Image Preview
                     </span>   
                 }
-                <input id={'uploadedImaged'} type="file" className={'imageInputButton'} ref={inputRef} onChange={handleUpload}/>
+                <input id={'uploadedImaged'} type="file" className={'imageInputButton'} ref={inputRef} onLoad={handleUpload} onChange={handleUpload}/>
             </div>
         </div>
     );
