@@ -18,10 +18,10 @@ export const initialState = {
             file2: {},
             file3: {},
             file4: {},
-            date: '',
-            location: '',
+            date: 'test',
+            location: 'test',
             entry: '',
-            lockTime: ''
+            lockTime: 'test'
         }
     ]
 

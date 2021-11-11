@@ -11,7 +11,7 @@ const JournalPage = (props) => {
     const {
         dispatch,
         index,
-        journalState
+        journalPageState
     } = props
 
     return (
@@ -22,7 +22,7 @@ const JournalPage = (props) => {
                 dispatch={dispatch}
                 dispatchAction={types.CHANGE_LOCK_TIME}
                 index={index}
-                value={journalState.journal[index].file4}
+                value={journalPageState.file4}
             />
             <div className={"journalText"} >
             <InputBox
@@ -31,7 +31,7 @@ const JournalPage = (props) => {
                 dispatch={dispatch}
                 dispatchAction={types.CHANGE_DATE}
                 index={index}
-                value={journalState.journal[index].date}
+                value={journalPageState.date}
             />
             <InputBox
                 label={"Location: "}
@@ -39,7 +39,7 @@ const JournalPage = (props) => {
                 dispatch={dispatch}
                 dispatchAction={types.CHANGE_LOCATION}
                 index={index}
-                value={journalState.journal[index].location}
+                value={journalPageState.location}
             />
             <InputBox
                 divClassName={"entry"}
@@ -48,7 +48,7 @@ const JournalPage = (props) => {
                 dispatch={dispatch}
                 dispatchAction={types.CHANGE_ENTRY}
                 index={index}
-                value={journalState.journal[index].entry}
+                value={journalPageState.entry}
             />
             </div>
             <div className={"journalImages"}>
@@ -57,28 +57,28 @@ const JournalPage = (props) => {
                 dispatch={dispatch}
                 dispatchAction={types.CHANGE_FILE_1}
                 index={index}
-                value={journalState.journal[index].file1}
+                value={journalPageState.file1}
             />
             <FileUpload
                 label={'file2'}
                 dispatch={dispatch}
                 dispatchAction={types.CHANGE_FILE_2}
                 index={index}
-                value={journalState.journal[index].file2}
+                value={journalPageState.file2}
             />
             <FileUpload
                 label={'file3'}
                 dispatch={dispatch}
                 dispatchAction={types.CHANGE_FILE_3}
                 index={index}
-                value={journalState.journal[index].file3}
+                value={journalPageState.file3}
             />
             <FileUpload
                 label={'file4'}
                 dispatch={dispatch}
                 dispatchAction={types.CHANGE_FILE_4}
                 index={index}
-                value={journalState.journal[index].file4}
+                value={journalPageState.file4}
             />
             </div>
             
