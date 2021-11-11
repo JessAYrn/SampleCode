@@ -7,20 +7,25 @@ import "./Journal.scss";
 
 const Journal = (props) => {
 
-    const [journalState, dispatch] = useReducer(journalReducer, initialState );
+    const [journalState, dispatch] = useReducer(journalReducer, initialState);
+    const [pageIsVisibleArray, setPageIsVisibleArray] = useState(journalState.journal.map((page) => false));
 
     useEffect(() => {
         console.log(journalState.journal);
+        console.log(pageIsVisibleArray);
     },[journalState])
 
     const displayJournalTable = () => {
 
-        const highlightRow = (index) => {
-            console.log("it works");
-        };
-
-        const lowlightRow = (index) => {
-            console.log("it really works");
+        const openPage = (e, index) => {
+            setPageIsVisibleArray(pageIsVisibleArray.map((page, mapIndex) => {
+                console.log(index, ' and ',mapIndex)
+                if(index === mapIndex){
+                    return true;
+                } else {
+                    return false;
+                }
+            }))
         };
 
 
@@ -28,10 +33,11 @@ const Journal = (props) => {
             <table className={"table"}>
             { journalState.journal.map((page, index) => {
                 return(
-                    <tr className={"tableRow__"+index} onMouseOver={highlightRow(index)} onMouseLeave={lowlightRow(index)}>
-                        <td>{page.date}</td>
-                        <td>{page.location}</td>
-                        <td>{page.lockTime}</td>
+                    <tr className={"tableRow "+index}>
+                        <td className={"tableCell "+index}>{page.date}</td>
+                        <td className={"tableCell "+index}>{page.location}</td>
+                        <td className={"tableCell "+index}>{page.lockTime}</td>
+                        <td className={"tableCell "+index}> <button onClick={(e) => openPage(e, index)}> open </button> </td>
                     </tr>  
                 );
             }) }
@@ -39,14 +45,23 @@ const Journal = (props) => {
         );
     };
 
+    const getIndexOfVisiblePage = () => {
+        return pageIsVisibleArray.findIndex(page => page === true);
+    }
+
     return(
         <div>
-            {displayJournalTable()}
-            <JournalPage
-                index={0}
-                dispatch={dispatch}
-                journalPageState={journalState.journal[0]}
-            />
+            {console.log(getIndexOfVisiblePage())}
+            { (getIndexOfVisiblePage() < 0) ? 
+                displayJournalTable() : 
+                <JournalPage
+                index={getIndexOfVisiblePage()}
+                journalPageData={journalState.journal[getIndexOfVisiblePage()]}
+                journalReducerDispatchFunction={dispatch}
+            /> }
+            
+            
+            
         </div>
     )
 

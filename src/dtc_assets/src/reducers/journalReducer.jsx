@@ -22,6 +22,17 @@ export const initialState = {
             location: 'test',
             entry: '',
             lockTime: 'test'
+        },
+        {
+            coverImage: {},
+            file1: {},
+            file2: {},
+            file3: {},
+            file4: {},
+            date: 'test',
+            location: 'test',
+            entry: '',
+            lockTime: 'test'
         }
     ]
 
