@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { dtc } from "../../declarations/dtc"
-import journal from './Components/Journal';
 import Journal from './Components/Journal';
 
 const App = () => {
@@ -35,7 +34,7 @@ const App = () => {
 
     return (
         <main>
-            <img src="logo.png" alt="DFINITY logo" />
+            <img src="dtc-logo-black.png" alt="TDTC logo" />
                 <Journal/>
                 {/* <button id="clickMeBtn" type="submit" disabled={pending}>Click Me!</button> */}
             <section id="greeting">{greeting}</section>
