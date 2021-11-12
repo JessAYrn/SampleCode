@@ -15887,6 +15887,33 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".sliderDiv {\n  width: 90%;\n}\n.slide
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/dtc_assets/src/Components/Journal.scss":
+/*!*********************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/dtc_assets/src/Components/Journal.scss ***!
+  \*********************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/sourceMaps.js */ "./node_modules/css-loader/dist/runtime/sourceMaps.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".table {\n  font-family: \"Julius Sans One\", sans-serif;\n  font-size: 1rem;\n  color: #7a7a7a;\n  border-collapse: collapse;\n  width: 100%;\n}\n.table .tableRow {\n  border-bottom: solid #7a7a7a 0.5px;\n  width: 100%;\n  padding-bottom: 0.5rem;\n}\n.table .tableRow .tableCell {\n  text-align: center;\n  padding: 0.5rem;\n}\n\n.addNewEntryButtonDiv {\n  width: 50%;\n  margin-left: 25%;\n}\n.addNewEntryButtonDiv .addNewEntryButton {\n  background-color: #e6e6e6;\n  border-radius: 25px;\n  border-color: #e6e6e6;\n  width: 100%;\n}", "",{"version":3,"sources":["webpack://./src/dtc_assets/src/Components/Journal.scss"],"names":[],"mappings":"AAAA;EACE,0CAAA;EACA,eAAA;EACA,cAAA;EACA,yBAAA;EACA,WAAA;AACF;AAAE;EACE,kCAAA;EACA,WAAA;EACA,sBAAA;AAEJ;AADI;EACE,kBAAA;EACA,eAAA;AAGN;;AAEA;EACE,UAAA;EACA,gBAAA;AACF;AAAE;EACE,yBAAA;EACA,mBAAA;EACA,qBAAA;EACA,WAAA;AAEJ","sourcesContent":[".table{\n  font-family: 'Julius Sans One', sans-serif;\n  font-size: 1rem;\n  color: rgb(122, 122, 122);\n  border-collapse: collapse;\n  width: 100%;\n  .tableRow{\n    border-bottom: solid rgb(122, 122, 122) .5px;\n    width: 100%;\n    padding-bottom: .5rem;\n    .tableCell{\n      text-align: center;\n      padding: 0.5rem;\n    }\n  }\n}\n\n.addNewEntryButtonDiv{\n  width: 50%;\n  margin-left: 25%;\n  .addNewEntryButton{\n    background-color: rgb(230, 230, 230);\n    border-radius: 25px;\n    border-color: rgb(230, 230, 230);\n    width: 100%;\n  }\n}"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/dtc_assets/src/Components/JournalPage.scss":
 /*!*************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/dtc_assets/src/Components/JournalPage.scss ***!
@@ -15907,7 +15934,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".journalPageContainer .journalText {\n  width: 40%;\n  float: left;\n}\n.journalPageContainer JournalImages {\n  width: 50%;\n  float: left;\n}\n.journalPageContainer .imageDiv {\n  float: left;\n  margin-left: 4%;\n}\n.journalPageContainer .entry .enabled {\n  border-width: 0.5px 0.5px 2px;\n}\n.journalPageContainer .entry .disabled {\n  border-width: 0.5px 0.5px 2px;\n}", "",{"version":3,"sources":["webpack://./src/dtc_assets/src/Components/JournalPage.scss"],"names":[],"mappings":"AACI;EACI,UAAA;EACA,WAAA;AAAR;AAGI;EACI,UAAA;EACA,WAAA;AADR;AAII;EACI,WAAA;EACA,eAAA;AAFR;AAMQ;EACI,6BAAA;AAJZ;AAMQ;EACI,6BAAA;AAJZ","sourcesContent":[".journalPageContainer{\n    .journalText{\n        width: 40%;\n        float: left;\n    }\n\n    JournalImages{\n        width: 50%;\n        float: left;\n    }\n\n    .imageDiv{\n        float: left;\n        margin-left: 4%;\n    }\n\n    .entry{\n        .enabled{\n            border-width: 0.5px 0.5px 2px;\n        }\n        .disabled{\n            border-width: 0.5px 0.5px 2px;\n        }\n        \n    }\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".journalPageContainer .journalText {\n  width: 40%;\n  float: left;\n}\n.journalPageContainer JournalImages {\n  width: 50%;\n  float: left;\n}\n.journalPageContainer .imageDiv {\n  float: left;\n  margin-left: 4%;\n}\n.journalPageContainer .logoDiv {\n  width: 100%;\n  float: left;\n}\n.journalPageContainer .logoDiv .backButtonImg {\n  margin-top: 3rem;\n  float: left;\n  max-width: 3rem;\n  max-height: 3rem;\n}\n.journalPageContainer .logoDiv .logoImg {\n  float: right;\n  max-width: 10rem;\n  max-height: 10rem;\n}\n.journalPageContainer .entry .enabled {\n  border-width: 0.5px 0.5px 2px;\n  height: 20rem;\n}\n.journalPageContainer .entry .disabled {\n  border-width: 0.5px 0.5px 2px;\n  height: 20rem;\n}", "",{"version":3,"sources":["webpack://./src/dtc_assets/src/Components/JournalPage.scss"],"names":[],"mappings":"AACI;EACI,UAAA;EACA,WAAA;AAAR;AAGI;EACI,UAAA;EACA,WAAA;AADR;AAII;EACI,WAAA;EACA,eAAA;AAFR;AAII;EACI,WAAA;EACA,WAAA;AAFR;AAGQ;EACI,gBAAA;EACA,WAAA;EACA,eAAA;EACA,gBAAA;AADZ;AAIQ;EACI,YAAA;EACA,gBAAA;EACA,iBAAA;AAFZ;AAOQ;EACI,6BAAA;EACA,aAAA;AALZ;AAOQ;EACI,6BAAA;EACA,aAAA;AALZ","sourcesContent":[".journalPageContainer{\n    .journalText{\n        width: 40%;\n        float: left;\n    }\n\n    JournalImages{\n        width: 50%;\n        float: left;\n    }\n\n    .imageDiv{\n        float: left;\n        margin-left: 4%;\n    }\n    .logoDiv{\n        width: 100%;\n        float: left;\n        .backButtonImg{\n            margin-top: 3rem;\n            float: left;\n            max-width: 3rem;\n            max-height: 3rem;\n        }\n    \n        .logoImg{\n            float: right;\n            max-width: 10rem;\n            max-height: 10rem;\n        }\n    }\n\n    .entry{\n        .enabled{\n            border-width: 0.5px 0.5px 2px;\n            height: 20rem;\n        }\n        .disabled{\n            border-width: 0.5px 0.5px 2px;\n            height: 20rem;\n        }\n        \n    }\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -49928,7 +49955,6 @@ if ( true && typeof isCrushed.name === 'string' && isCrushed.name !== 'isCrushed
   \*******************************************/
 /***/ ((module, exports, __webpack_require__) => {
 
-/*! safe-buffer. MIT License. Feross Aboukhadijeh <https://feross.org/opensource> */
 /* eslint-disable node/no-deprecated-api */
 var buffer = __webpack_require__(/*! buffer */ "./node_modules/buffer/index.js")
 var Buffer = buffer.Buffer
@@ -49950,8 +49976,6 @@ if (Buffer.from && Buffer.alloc && Buffer.allocUnsafe && Buffer.allocUnsafeSlow)
 function SafeBuffer (arg, encodingOrOffset, length) {
   return Buffer(arg, encodingOrOffset, length)
 }
-
-SafeBuffer.prototype = Object.create(Buffer.prototype)
 
 // Copy static methods from Buffer
 copyProps(Buffer, SafeBuffer)
@@ -51792,6 +51816,61 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 /***/ }),
 
+/***/ "./src/dtc_assets/src/Components/Journal.scss":
+/*!****************************************************!*\
+  !*** ./src/dtc_assets/src/Components/Journal.scss ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/styleDomAPI.js */ "./node_modules/style-loader/dist/runtime/styleDomAPI.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/insertBySelector.js */ "./node_modules/style-loader/dist/runtime/insertBySelector.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js */ "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/insertStyleElement.js */ "./node_modules/style-loader/dist/runtime/insertStyleElement.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/styleTagTransform.js */ "./node_modules/style-loader/dist/runtime/styleTagTransform.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_Journal_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../../../../node_modules/css-loader/dist/cjs.js!../../../../node_modules/sass-loader/dist/cjs.js!./Journal.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/dtc_assets/src/Components/Journal.scss");
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var options = {};
+
+options.styleTagTransform = (_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default());
+options.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default());
+
+      options.insert = _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, "head");
+    
+options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
+options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_Journal_scss__WEBPACK_IMPORTED_MODULE_6__["default"], options);
+
+
+
+
+       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_Journal_scss__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_Journal_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_Journal_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
+
+
+/***/ }),
+
 /***/ "./src/dtc_assets/src/Components/JournalPage.scss":
 /*!********************************************************!*\
   !*** ./src/dtc_assets/src/Components/JournalPage.scss ***!
@@ -52192,7 +52271,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const React = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
 const dtc_1 = __webpack_require__(/*! ../../declarations/dtc */ "./src/declarations/dtc/index.js");
-const JournalPage_1 = __importDefault(__webpack_require__(/*! ./Components/JournalPage */ "./src/dtc_assets/src/Components/JournalPage.jsx"));
+const Journal_1 = __importDefault(__webpack_require__(/*! ./Components/Journal */ "./src/dtc_assets/src/Components/Journal.jsx"));
 const App = () => {
     const [greeting, setGreeting] = React.useState("");
     const [pending, setPending] = React.useState(false);
@@ -52224,8 +52303,7 @@ const App = () => {
         return false;
     };
     return (React.createElement("main", null,
-        React.createElement("img", { src: "logo.png", alt: "DFINITY logo" }),
-        React.createElement(JournalPage_1.default, null),
+        React.createElement(Journal_1.default, null),
         React.createElement("section", { id: "greeting" }, greeting)));
 };
 exports["default"] = App;
@@ -52268,10 +52346,8 @@ const react_1 = __importStar(__webpack_require__(/*! react */ "./node_modules/re
 const InputBox_1 = __importDefault(__webpack_require__(/*! ./InputBox */ "./src/dtc_assets/src/Components/Fields/InputBox.jsx"));
 __webpack_require__(/*! ./FileUpload.scss */ "./src/dtc_assets/src/Components/Fields/FileUpload.scss");
 const FileUpload = (props) => {
-    const { label, disabled } = props;
+    const { label, disabled, dispatchAction, dispatch, index, value } = props;
     let inputRef = (0, react_1.useRef)();
-    const [fileSrc, setFileSrc] = (0, react_1.useState)("../../../assets/AddImageIcon.png");
-    const [fileType, setFileType] = (0, react_1.useState)("image");
     const displayUploadedFile = (inputFile) => {
         const reader = new FileReader();
         return new Promise((resolve, reject) => {
@@ -52281,8 +52357,15 @@ const FileUpload = (props) => {
             reader.readAsDataURL(inputFile);
         });
     };
+    const [fileSrc, setFileSrc] = (0, react_1.useState)("../../../assets/AddImageIcon.png");
+    const [fileType, setFileType] = (0, react_1.useState)("image");
+    (0, react_1.useEffect)(async () => {
+        if (value) {
+            setFileSrc(await displayUploadedFile(value));
+        }
+    }, [value]);
     const handleUpload = async () => {
-        const file = inputRef.current.files[0];
+        const file = inputRef.current.files[0] || value;
         try {
             if (file.type.includes("image")) {
                 setFileType("image");
@@ -52291,6 +52374,11 @@ const FileUpload = (props) => {
                 setFileType("video");
             }
             setFileSrc(await displayUploadedFile(file));
+            dispatch({
+                payload: file,
+                actionType: dispatchAction,
+                index: index
+            });
         }
         catch (e) {
             console.warn(e.message);
@@ -52308,7 +52396,7 @@ const FileUpload = (props) => {
             react_1.default.createElement(InputBox_1.default, { maxLength: "34", label: "" }),
             !fileSrc &&
                 react_1.default.createElement("span", { className: "imagePreview__default-display" }, "Image Preview"),
-            react_1.default.createElement("input", { id: 'uploadedImaged', type: "file", className: 'imageInputButton', ref: inputRef, onChange: handleUpload }))));
+            react_1.default.createElement("input", { id: 'uploadedImaged', type: "file", className: 'imageInputButton', ref: inputRef, onLoad: handleUpload, onChange: handleUpload }))));
 };
 exports["default"] = FileUpload;
 
@@ -52352,15 +52440,17 @@ const InputBox = (props) => {
     // dispatchAction //the action that is to take place in order to dispatch the field change to the redux store
      } = props;
     const onBlur = () => {
+        setDisabledOrEnabled("disabled");
+    };
+    const onFocus = () => {
+        setDisabledOrEnabled("enabled");
+    };
+    const onChnage = () => {
         dispatch({
             payload: inputRef.current.value,
             actionType: dispatchAction,
             index: index
         });
-        setDisabledOrEnabled("disabled");
-    };
-    const onFocus = () => {
-        setDisabledOrEnabled("enabled");
     };
     return (react_1.default.createElement("div", { className: 'inputBox' },
         react_1.default.createElement("div", { className: 'label-element-div ' },
@@ -52369,7 +52459,7 @@ const InputBox = (props) => {
                 label,
                 "  \u00A0 ")),
         react_1.default.createElement("div", { className: `input-element-div + ${divClassName || " "}` },
-            react_1.default.createElement("textarea", { rows: rows, cols: columns, maxLength: maxLength, className: disabledOrEnabled, value: value, type: "text", alt: label, ref: inputRef, disabled: disabled, onFocus: onFocus, onBlur: onBlur }))));
+            react_1.default.createElement("textarea", { rows: rows, cols: columns, maxLength: maxLength, className: disabledOrEnabled, value: value, type: "text", alt: label, ref: inputRef, disabled: disabled, onFocus: onFocus, onBlur: onBlur, onChange: onChnage }))));
 };
 exports["default"] = InputBox;
 
@@ -52407,15 +52497,20 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 const react_1 = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
 __webpack_require__(/*! ./Slider.scss */ "./src/dtc_assets/src/Components/Fields/Slider.scss");
 const Slider = (props) => {
-    const { min, max } = props;
+    const { min, max, dispatch, dispatchAction, index, value } = props;
     const inputRef = (0, react_1.useRef)();
     const [sliderValue, setSliderValue] = (0, react_1.useState)('');
     const [disabledOrEnabled, setDisabledOrEnabled] = (0, react_1.useState)('disabled');
-    const displayValue = () => {
-        setSliderValue(inputRef.current.value);
-    };
     const onBlur = () => {
         setDisabledOrEnabled("disabled");
+    };
+    const onChange = () => {
+        setSliderValue(inputRef.current.value);
+        dispatch({
+            payload: inputRef.current.value,
+            actionType: dispatchAction,
+            index: index
+        });
     };
     const onFocus = () => {
         setDisabledOrEnabled("enabled");
@@ -52424,17 +52519,17 @@ const Slider = (props) => {
         react_1.default.createElement("div", { className: "sliderLabelDiv__" + disabledOrEnabled },
             react_1.default.createElement("label", { className: "sliderLabel" }, ` Lock Journal For ${sliderValue || '3'} Months`)),
         react_1.default.createElement("div", { className: "sliderInputDiv" },
-            react_1.default.createElement("input", { type: "range", min: min, max: max, className: "slider", value: sliderValue || "3", id: "myRange", ref: inputRef, onBlur: onBlur, onFocus: onFocus, onChange: displayValue }))));
+            react_1.default.createElement("input", { type: "range", min: min, max: max, className: "slider", value: sliderValue || "3", id: "myRange", ref: inputRef, onBlur: onBlur, onFocus: onFocus, onChange: onChange }))));
 };
 exports["default"] = Slider;
 
 
 /***/ }),
 
-/***/ "./src/dtc_assets/src/Components/JournalPage.jsx":
-/*!*******************************************************!*\
-  !*** ./src/dtc_assets/src/Components/JournalPage.jsx ***!
-  \*******************************************************/
+/***/ "./src/dtc_assets/src/Components/Journal.jsx":
+/*!***************************************************!*\
+  !*** ./src/dtc_assets/src/Components/Journal.jsx ***!
+  \***************************************************/
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -52462,25 +52557,110 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
+const JournalPage_1 = __importDefault(__webpack_require__(/*! ./JournalPage */ "./src/dtc_assets/src/Components/JournalPage.jsx"));
 const react_1 = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+const journalReducer_1 = __importStar(__webpack_require__(/*! ../reducers/journalReducer */ "./src/dtc_assets/src/reducers/journalReducer.jsx"));
+__webpack_require__(/*! ./Journal.scss */ "./src/dtc_assets/src/Components/Journal.scss");
+const Journal = (props) => {
+    const [journalState, dispatch] = (0, react_1.useReducer)(journalReducer_1.default, journalReducer_1.initialState);
+    const [pageIsVisibleArray, setPageIsVisibleArray] = (0, react_1.useState)(journalState.journal.map((page) => false));
+    const [newPageAdded, setNewPageAdded] = (0, react_1.useState)(false);
+    (0, react_1.useEffect)(() => {
+        console.log(journalState.journal);
+        console.log(pageIsVisibleArray);
+        setPageIsVisibleArray(journalState.journal.map((page, index) => {
+            if ((index === journalState.journal.length - 1) && newPageAdded) {
+                setNewPageAdded(false);
+                return true;
+            }
+            else {
+                return false;
+            }
+        }));
+    }, [journalState.journal.length]);
+    const displayJournalTable = () => {
+        const openPage = (e, index) => {
+            setPageIsVisibleArray(pageIsVisibleArray.map((page, mapIndex) => {
+                console.log(index, ' and ', mapIndex);
+                if (index === mapIndex) {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            }));
+        };
+        const addJournalPage = () => {
+            dispatch({
+                actionType: journalReducer_1.types.ADD_JOURNAL_PAGE
+            });
+            setNewPageAdded(true);
+            openPage(null, journalState.journal.length - 1);
+        };
+        return (react_1.default.createElement("div", null,
+            react_1.default.createElement("img", { src: "dtc-logo-black.png", alt: "TDTC logo" }),
+            react_1.default.createElement("table", { className: "table" }, journalState.journal.map((page, index) => {
+                return (react_1.default.createElement("tr", { className: "tableRow " + index },
+                    react_1.default.createElement("td", { className: "tableCell " + index }, page.date),
+                    react_1.default.createElement("td", { className: "tableCell " + index }, page.location),
+                    react_1.default.createElement("td", { className: "tableCell " + index }, page.lockTime),
+                    react_1.default.createElement("td", { className: "tableCell " + index },
+                        " ",
+                        react_1.default.createElement("button", { onClick: (e) => openPage(e, index) }, " open "),
+                        " ")));
+            })),
+            react_1.default.createElement("div", { className: 'addNewEntryButtonDiv' },
+                react_1.default.createElement("button", { className: 'addNewEntryButton', onClick: addJournalPage }, " Create New Entry "))));
+    };
+    const getIndexOfVisiblePage = () => {
+        return pageIsVisibleArray.findIndex(page => page === true);
+    };
+    const closePage = (e, index) => {
+        setPageIsVisibleArray(pageIsVisibleArray.map((page, mapIndex) => {
+            return false;
+        }));
+    };
+    return (react_1.default.createElement("div", null, (getIndexOfVisiblePage() < 0) ?
+        displayJournalTable() :
+        react_1.default.createElement(JournalPage_1.default, { closePage: closePage, index: getIndexOfVisiblePage(), journalPageData: journalState.journal[getIndexOfVisiblePage()], journalReducerDispatchFunction: dispatch })));
+};
+exports["default"] = Journal;
+
+
+/***/ }),
+
+/***/ "./src/dtc_assets/src/Components/JournalPage.jsx":
+/*!*******************************************************!*\
+  !*** ./src/dtc_assets/src/Components/JournalPage.jsx ***!
+  \*******************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
 const FileUpload_1 = __importDefault(__webpack_require__(/*! ./Fields/FileUpload */ "./src/dtc_assets/src/Components/Fields/FileUpload.jsx"));
 const InputBox_1 = __importDefault(__webpack_require__(/*! ./Fields/InputBox */ "./src/dtc_assets/src/Components/Fields/InputBox.jsx"));
 const Slider_1 = __importDefault(__webpack_require__(/*! ./Fields/Slider */ "./src/dtc_assets/src/Components/Fields/Slider.jsx"));
-const journalReducer_1 = __importStar(__webpack_require__(/*! ../reducers/journalReducer */ "./src/dtc_assets/src/reducers/journalReducer.jsx"));
+const journalReducer_1 = __webpack_require__(/*! ../reducers/journalReducer */ "./src/dtc_assets/src/reducers/journalReducer.jsx");
 __webpack_require__(/*! ./JournalPage.scss */ "./src/dtc_assets/src/Components/JournalPage.scss");
 const JournalPage = (props) => {
-    const [journalPageState, dispatch] = (0, react_1.useReducer)(journalReducer_1.default);
+    const { journalReducerDispatchFunction, index, journalPageData, closePage } = props;
     return (react_1.default.createElement("div", { className: "journalPageContainer" },
-        react_1.default.createElement(Slider_1.default, { min: 3, max: 120 }),
+        react_1.default.createElement("div", { className: "logoDiv" },
+            react_1.default.createElement("img", { className: 'backButtonImg', src: "back-icon.png", alt: "Back Button", onClick: (e) => closePage(e) }),
+            react_1.default.createElement("img", { className: 'logoImg', src: "dtc-logo-black.png", alt: "Logo" })),
+        react_1.default.createElement(Slider_1.default, { min: 3, max: 120, dispatch: journalReducerDispatchFunction, dispatchAction: journalReducer_1.types.CHANGE_LOCK_TIME, index: index, value: journalPageData.file4 }),
         react_1.default.createElement("div", { className: "journalText" },
-            react_1.default.createElement(InputBox_1.default, { label: "Date: ", rows: "1", dispatch: dispatch, dispatchAction: journalReducer_1.types.CHANGE_DATE, index: 0 }),
-            react_1.default.createElement(InputBox_1.default, { label: "Location: ", rows: "1", dispatch: dispatch, dispatchAction: journalReducer_1.types.CHANGE_LOCATION, index: 0 }),
-            react_1.default.createElement(InputBox_1.default, { divClassName: "entry", label: "Entry: ", rows: "59", dispatch: dispatch, dispatchAction: journalReducer_1.types.CHANGE_ENTRY, index: 0 })),
+            react_1.default.createElement(InputBox_1.default, { label: "Date: ", rows: "1", dispatch: journalReducerDispatchFunction, dispatchAction: journalReducer_1.types.CHANGE_DATE, index: index, value: journalPageData.date }),
+            react_1.default.createElement(InputBox_1.default, { label: "Location: ", rows: "1", dispatch: journalReducerDispatchFunction, dispatchAction: journalReducer_1.types.CHANGE_LOCATION, index: index, value: journalPageData.location }),
+            react_1.default.createElement(InputBox_1.default, { divClassName: "entry", label: "Entry: ", rows: "59", dispatch: journalReducerDispatchFunction, dispatchAction: journalReducer_1.types.CHANGE_ENTRY, index: index, value: journalPageData.entry })),
         react_1.default.createElement("div", { className: "journalImages" },
-            react_1.default.createElement(FileUpload_1.default, { label: 'file1' }),
-            react_1.default.createElement(FileUpload_1.default, { label: 'file2' }),
-            react_1.default.createElement(FileUpload_1.default, { label: 'file3' }),
-            react_1.default.createElement(FileUpload_1.default, { label: 'file4' }))));
+            react_1.default.createElement(FileUpload_1.default, { label: 'file1', dispatch: journalReducerDispatchFunction, dispatchAction: journalReducer_1.types.CHANGE_FILE_1, index: index, value: journalPageData.file1 }),
+            react_1.default.createElement(FileUpload_1.default, { label: 'file2', dispatch: journalReducerDispatchFunction, dispatchAction: journalReducer_1.types.CHANGE_FILE_2, index: index, value: journalPageData.file2 }))));
 };
 exports["default"] = JournalPage;
 
@@ -52505,10 +52685,11 @@ const monitorReducer_1 = __importDefault(__webpack_require__(/*! ./enhancers/mon
 const logger_1 = __importDefault(__webpack_require__(/*! ./middleware/logger */ "./src/dtc_assets/src/middleware/logger.jsx"));
 const rootReducer_1 = __importDefault(__webpack_require__(/*! ./reducers/rootReducer */ "./src/dtc_assets/src/reducers/rootReducer.jsx"));
 function configureStore(preloadedState) {
+    const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION__COMPOSE__ || redux_1.compose;
     const middlewares = [logger_1.default, redux_thunk_1.default];
     const middlewareEnhancer = (0, redux_1.applyMiddleware)(...middlewares);
     const enhancers = [middlewareEnhancer, monitorReducer_1.default];
-    const composedEnhancers = (0, redux_1.compose)(...enhancers, window.__REDUX_DEVTOOLS_EXTENSION__ ? window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__() : f => f);
+    const composedEnhancers = composeEnhancers(...enhancers, window.__REDUX_DEVTOOLS_EXTENSION__ ? window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__() : f => f);
     const store = (0, redux_1.createStore)(rootReducer_1.default, preloadedState, composedEnhancers);
     return store;
 }
@@ -52627,6 +52808,8 @@ exports.types = {
     CHANGE_DATE: "CHANGE_DATE",
     CHANGE_LOCATION: "CHANGE_LOCATION",
     CHANGE_ENTRY: "CHANGE_ENTRY",
+    CHANGE_LOCK_TIME: "CHANGE_LOCK_TIME",
+    ADD_JOURNAL_PAGE: "ADD_JOURNAL_PAGE"
 };
 exports.initialState = {
     journal: [
@@ -52636,11 +52819,34 @@ exports.initialState = {
             file2: {},
             file3: {},
             file4: {},
-            date: '',
-            location: '',
-            entry: ''
+            date: 'test',
+            location: 'test',
+            entry: '',
+            lockTime: 'test'
+        },
+        {
+            coverImage: {},
+            file1: {},
+            file2: {},
+            file3: {},
+            file4: {},
+            date: 'test',
+            location: 'test',
+            entry: '',
+            lockTime: 'test'
         }
     ]
+};
+const freshPage = {
+    coverImage: {},
+    file1: {},
+    file2: {},
+    file3: {},
+    file4: {},
+    date: 'test',
+    location: 'test',
+    entry: '',
+    lockTime: 'test'
 };
 const changeValue = (state = exports.initialState, action) => {
     const { actionType, payload, index } = action;
@@ -52715,6 +52921,20 @@ const changeValue = (state = exports.initialState, action) => {
                 entry: payload
             };
             state.journal[index] = updatedJournalPage;
+            return {
+                ...state
+            };
+        case exports.types.CHANGE_LOCK_TIME:
+            updatedJournalPage = {
+                ...state.journal[index],
+                lockTime: payload
+            };
+            state.journal[index] = updatedJournalPage;
+            return {
+                ...state
+            };
+        case exports.types.ADD_JOURNAL_PAGE:
+            state.journal.push(freshPage);
             return {
                 ...state
             };

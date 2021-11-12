@@ -72,7 +72,7 @@ const JournalPage = (props) => {
                 index={index}
                 value={journalPageData.file2}
             />
-            <FileUpload
+            {/* <FileUpload
                 label={'file3'}
                 dispatch={journalReducerDispatchFunction}
                 dispatchAction={types.CHANGE_FILE_3}
@@ -85,7 +85,7 @@ const JournalPage = (props) => {
                 dispatchAction={types.CHANGE_FILE_4}
                 index={index}
                 value={journalPageData.file4}
-            />
+            /> */}
             </div>
             
         </div>
