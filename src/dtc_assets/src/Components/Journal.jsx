@@ -9,11 +9,20 @@ const Journal = (props) => {
 
     const [journalState, dispatch] = useReducer(journalReducer, initialState);
     const [pageIsVisibleArray, setPageIsVisibleArray] = useState(journalState.journal.map((page) => false));
+    const [newPageAdded, setNewPageAdded] = useState(false);
 
     useEffect(() => {
         console.log(journalState.journal);
         console.log(pageIsVisibleArray);
-        setPageIsVisibleArray(journalState.journal.map((page) => false));
+        setPageIsVisibleArray(journalState.journal.map((page, index) => { 
+
+            if((index === journalState.journal.length -1) && newPageAdded){
+                setNewPageAdded(false);
+                return true;
+            } else {
+                return false;
+            }
+        }));
     },[journalState.journal.length])
 
     const displayJournalTable = () => {
@@ -33,6 +42,8 @@ const Journal = (props) => {
             dispatch({
                 actionType: types.ADD_JOURNAL_PAGE
             });
+            setNewPageAdded(true);
+            openPage(null, journalState.journal.length - 1);
         }
 
         return(
