@@ -14,3 +14,14 @@
     }
   }
 }
+
+.addNewEntryButtonDiv{
+  width: 50%;
+  margin-left: 25%;
+  .addNewEntryButton{
+    background-color: rgb(230, 230, 230);
+    border-radius: 25px;
+    border-color: rgb(230, 230, 230);
+    width: 100%;
+  }
+}

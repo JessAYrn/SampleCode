@@ -1,6 +1,6 @@
 import JournalPage from "./JournalPage";
 import React, {useEffect, useReducer, useState } from "react";
-import journalReducer, {initialState} from "../reducers/journalReducer";
+import journalReducer, {initialState, types} from "../reducers/journalReducer";
 import "./Journal.scss";
 
 
@@ -13,7 +13,8 @@ const Journal = (props) => {
     useEffect(() => {
         console.log(journalState.journal);
         console.log(pageIsVisibleArray);
-    },[journalState])
+        setPageIsVisibleArray(journalState.journal.map((page) => false));
+    },[journalState.journal.length])
 
     const displayJournalTable = () => {
 
@@ -28,21 +29,30 @@ const Journal = (props) => {
             }))
         };
 
+        const addJournalPage = () => {
+            dispatch({
+                actionType: types.ADD_JOURNAL_PAGE
+            });
+        }
+
         return(
             <div>
                 <img src="dtc-logo-black.png" alt="TDTC logo" />
                 <table className={"table"}>
-            { journalState.journal.map((page, index) => {
-                return(
-                    <tr className={"tableRow "+index}>
-                        <td className={"tableCell "+index}>{page.date}</td>
-                        <td className={"tableCell "+index}>{page.location}</td>
-                        <td className={"tableCell "+index}>{page.lockTime}</td>
-                        <td className={"tableCell "+index}> <button onClick={(e) => openPage(e, index)}> open </button> </td>
-                    </tr>  
-                );
-            }) }
-            </table>
+                { journalState.journal.map((page, index) => {
+                    return(
+                        <tr className={"tableRow "+index}>
+                            <td className={"tableCell "+index}>{page.date}</td>
+                            <td className={"tableCell "+index}>{page.location}</td>
+                            <td className={"tableCell "+index}>{page.lockTime}</td>
+                            <td className={"tableCell "+index}> <button onClick={(e) => openPage(e, index)}> open </button> </td>
+                        </tr>  
+                    );
+                }) }
+                </table>
+                <div className={'addNewEntryButtonDiv'}>
+                    <button className={'addNewEntryButton'} onClick={addJournalPage}> Create New Entry </button>
+                </div>
             </div>
         );
     };
@@ -52,14 +62,12 @@ const Journal = (props) => {
     }
     const closePage = (e, index) => {
         setPageIsVisibleArray(pageIsVisibleArray.map((page, mapIndex) => {
-            console.log(index, ' and ',mapIndex)
                 return false;
         }))
     };
 
     return(
         <div>
-            {console.log(getIndexOfVisiblePage())}
             { (getIndexOfVisiblePage() < 0) ? 
                 displayJournalTable() : 
                 <JournalPage

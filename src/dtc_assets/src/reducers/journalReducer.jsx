@@ -7,7 +7,8 @@ export const types ={
     CHANGE_DATE: "CHANGE_DATE",
     CHANGE_LOCATION: "CHANGE_LOCATION",
     CHANGE_ENTRY: "CHANGE_ENTRY",
-    CHANGE_LOCK_TIME: "CHANGE_LOCK_TIME"
+    CHANGE_LOCK_TIME: "CHANGE_LOCK_TIME",
+    ADD_JOURNAL_PAGE: "ADD_JOURNAL_PAGE"
 }
 
 export const initialState = {
@@ -36,6 +37,18 @@ export const initialState = {
         }
     ]
 
+}
+
+const freshPage = {
+    coverImage: {},
+            file1: {},
+            file2: {},
+            file3: {},
+            file4: {},
+            date: 'test',
+            location: 'test',
+            entry: '',
+            lockTime: 'test'
 }
 
 const changeValue = (state = initialState, action) => {
@@ -124,6 +137,11 @@ const changeValue = (state = initialState, action) => {
                 lockTime: payload
             }
             state.journal[index] = updatedJournalPage;
+            return {
+                ...state
+            }
+        case types.ADD_JOURNAL_PAGE:
+            state.journal.push(freshPage);
             return {
                 ...state
             }
