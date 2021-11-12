@@ -28,9 +28,10 @@ const Journal = (props) => {
             }))
         };
 
-
         return(
-            <table className={"table"}>
+            <div>
+                <img src="dtc-logo-black.png" alt="TDTC logo" />
+                <table className={"table"}>
             { journalState.journal.map((page, index) => {
                 return(
                     <tr className={"tableRow "+index}>
@@ -42,12 +43,19 @@ const Journal = (props) => {
                 );
             }) }
             </table>
+            </div>
         );
     };
 
     const getIndexOfVisiblePage = () => {
         return pageIsVisibleArray.findIndex(page => page === true);
     }
+    const closePage = (e, index) => {
+        setPageIsVisibleArray(pageIsVisibleArray.map((page, mapIndex) => {
+            console.log(index, ' and ',mapIndex)
+                return false;
+        }))
+    };
 
     return(
         <div>
@@ -55,6 +63,7 @@ const Journal = (props) => {
             { (getIndexOfVisiblePage() < 0) ? 
                 displayJournalTable() : 
                 <JournalPage
+                closePage={closePage}
                 index={getIndexOfVisiblePage()}
                 journalPageData={journalState.journal[getIndexOfVisiblePage()]}
                 journalReducerDispatchFunction={dispatch}

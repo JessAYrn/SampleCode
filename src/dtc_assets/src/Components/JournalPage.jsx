@@ -11,12 +11,17 @@ const JournalPage = (props) => {
     const {
         journalReducerDispatchFunction,
         index,
-        journalPageData
+        journalPageData,
+        closePage
     } = props
     
 
     return (
         <div className={"journalPageContainer"}>
+            <div className={"logoDiv"}>
+                <img className={'backButtonImg'} src="back-icon.png" alt="Back Button" onClick={(e) => closePage(e)}/>
+                <img className={'logoImg'}src="dtc-logo-black.png" alt="Logo" />
+            </div>
             <Slider
                 min={3}
                 max={120}

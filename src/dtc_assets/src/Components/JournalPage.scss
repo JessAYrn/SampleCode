@@ -13,6 +13,22 @@
         float: left;
         margin-left: 4%;
     }
+    .logoDiv{
+        width: 100%;
+        float: left;
+        .backButtonImg{
+            margin-top: 3rem;
+            float: left;
+            max-width: 3rem;
+            max-height: 3rem;
+        }
+    
+        .logoImg{
+            float: right;
+            max-width: 10rem;
+            max-height: 10rem;
+        }
+    }
 
     .entry{
         .enabled{

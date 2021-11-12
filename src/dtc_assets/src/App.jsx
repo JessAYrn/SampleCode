@@ -34,7 +34,6 @@ const App = () => {
 
     return (
         <main>
-            <img src="dtc-logo-black.png" alt="TDTC logo" />
                 <Journal/>
                 {/* <button id="clickMeBtn" type="submit" disabled={pending}>Click Me!</button> */}
             <section id="greeting">{greeting}</section>
