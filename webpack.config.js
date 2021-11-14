@@ -96,7 +96,10 @@ module.exports = {
     }),
     new webpack.EnvironmentPlugin({
       NODE_ENV: 'development',
-      DTC_CANISTER_ID: canisters["dtc"]
+      DTC_CANISTER_ID: canisters["dtc"],
+      II_URL : isDevelopment ?
+      "http://localhost:8000?canisterId=rkp4c-7iaaa-aaaaa-aaaca-cai#authorize" :
+      "https://identity.ic0.app/#authorize",
     }),
     new webpack.ProvidePlugin({
       Buffer: [require.resolve("buffer/"), "Buffer"],
