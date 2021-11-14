@@ -13,8 +13,9 @@ const App = () => {
     const [authClient, setAuthClient] = useState(undefined);
 
     useEffect(() => {
-        const client = AuthClient.create();
-        setAuthClient(client);
+        AuthClient.create().then((client) => {
+            setAuthClient(client);
+        });
     }, [])
 
     console.log(AuthClient);
@@ -46,7 +47,7 @@ const App = () => {
     }
 
     return (
-        <AppContext.Provider value={authClient}>
+        <AppContext.Provider value={{authClient}}>
             <main>
                 <Journal/>
                 {/* <button id="clickMeBtn" type="submit" disabled={pending}>Click Me!</button> */}
