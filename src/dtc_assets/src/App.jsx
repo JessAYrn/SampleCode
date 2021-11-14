@@ -3,6 +3,7 @@ import { createContext, useState, useEffect} from 'react';
 import { dtc } from "../../declarations/dtc"
 import Journal from './Components/Journal';
 import {AuthClient} from "@dfinity/auth-client";
+import LoginPage from './Components/LoginPage';
 
 export const AppContext = createContext({});
 
@@ -52,11 +53,13 @@ const App = () => {
 
     return (
         <AppContext.Provider value={{authClient}}>
-            <main>
+            {!isAuthenticated && !isLoaded ? <></> : 
+                isLoaded ?  <LoginPage/> :
+                <main>
                 <Journal/>
                 {/* <button id="clickMeBtn" type="submit" disabled={pending}>Click Me!</button> */}
-            <section id="greeting">{greeting}</section>
-        </main>
+                    <section id="greeting">{greeting}</section>
+                </main> }
         </AppContext.Provider>
     )
 }
