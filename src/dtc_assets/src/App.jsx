@@ -11,10 +11,14 @@ const App = () => {
     const [greeting, setGreeting] = useState("");
     const [pending, setPending] = useState(false);
     const [authClient, setAuthClient] = useState(undefined);
+    const [isLoaded, setIsLoaded] = useState(false);
+    const [isAuthenticated, setIsAuthenticated] = useState(false);
 
     useEffect(() => {
-        AuthClient.create().then((client) => {
+        AuthClient.create().then(async (client) => {
             setAuthClient(client);
+            setIsAuthenticated(await client.isAuthenticated());
+            setIsLoaded(true);
         });
     }, [])
 
