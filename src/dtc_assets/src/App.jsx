@@ -1,10 +1,23 @@
 import * as React from 'react';
+import { createContext, useState, useEffect} from 'react';
 import { dtc } from "../../declarations/dtc"
 import Journal from './Components/Journal';
+import {AuthClient} from "@dfinity/auth-client";
+
+export const AppContext = createContext({});
+
 
 const App = () => {
-    const [greeting, setGreeting] = React.useState("");
-    const [pending, setPending] = React.useState(false);
+    const [greeting, setGreeting] = useState("");
+    const [pending, setPending] = useState(false);
+    const [authClient, setAuthClient] = useState(undefined);
+
+    useEffect(() => {
+        const client = AuthClient.create();
+        setAuthClient(client);
+    }, [])
+
+    console.log(AuthClient);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -33,11 +46,13 @@ const App = () => {
     }
 
     return (
-        <main>
+        <AppContext.Provider value={authClient}>
+            <main>
                 <Journal/>
                 {/* <button id="clickMeBtn" type="submit" disabled={pending}>Click Me!</button> */}
             <section id="greeting">{greeting}</section>
         </main>
+        </AppContext.Provider>
     )
 }
 
