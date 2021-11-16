@@ -4,17 +4,24 @@ import { dtc } from "../../declarations/dtc"
 import Journal from './Components/Journal';
 import {AuthClient} from "@dfinity/auth-client";
 import LoginPage from './Components/LoginPage';
+import { canisterId, createActor } from '../../declarations/dtc/index';
 
-export const AppContext = createContext({});
+export const AppContext = createContext({
+    authClient: {}, 
+    setIsAuthenticated: null,
+    actor: undefined});
 
 
 const App = () => {
+    const [actor, setActor] = useState(undefined);
     const [greeting, setGreeting] = useState("");
     const [pending, setPending] = useState(false);
     const [authClient, setAuthClient] = useState(undefined);
     const [isLoaded, setIsLoaded] = useState(false);
     const [isAuthenticated, setIsAuthenticated] = useState(false);
+    const [loadingMessage, setLoadingMessage] = useState(false);
 
+    // login function used when Authenticating the client (aka user)
     useEffect(() => {
         AuthClient.create().then(async (client) => {
             setAuthClient(client);
@@ -22,6 +29,20 @@ const App = () => {
             setIsLoaded(true);
         });
     }, [])
+
+    //Creating the canisterActor that enables us to be able to call the functions defined on the backend
+    useEffect(() => {
+        if(!authClient) return;
+
+        const identity = authClient.getIdentity();
+        const actor = createActor(canisterId, {
+            agentOptions: {
+                identity
+            }
+        });
+        setActor(actor);
+
+    }, [authClient])
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -50,9 +71,8 @@ const App = () => {
     }
 
     return (
-        <AppContext.Provider value={{authClient}}>
-            {!isAuthenticated && !isLoaded ? <></> : 
-                isLoaded ? <LoginPage/> :
+        <AppContext.Provider value={{authClient, setIsAuthenticated, actor}}>
+            {!isAuthenticated && !isLoaded ? <LoginPage/> :
                 <main>
                 <Journal/>
                 {/* <button id="clickMeBtn" type="submit" disabled={pending}>Click Me!</button> */}

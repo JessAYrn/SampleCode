@@ -24,6 +24,8 @@ II_ENV=development dfx deploy --no-wallet --argument '(null)'
 
 in the Digital-Time-Capsule project 
 
+in the webpack.config.js file, be sure that the II_URL property uses the proper canister ID. it should use the canister ID of the local internet-identity canister. you find this in the termial where you deployed the local internet-identity repo. 
+
 delete the /package-lock.json file, 
 delete the /node_modules file,
 delete the /dist file,

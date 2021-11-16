@@ -1,7 +1,9 @@
 import JournalPage from "./JournalPage";
-import React, {useEffect, useReducer, useState } from "react";
+import React, {useEffect, useReducer, useState, useContext } from "react";
 import journalReducer, {initialState, types} from "../reducers/journalReducer";
 import "./Journal.scss";
+import { useContext } from "../../../../dist/dtc_assets";
+import { AppContext } from "../App";
 
 
 
@@ -10,6 +12,8 @@ const Journal = (props) => {
     const [journalState, dispatch] = useReducer(journalReducer, initialState);
     const [pageIsVisibleArray, setPageIsVisibleArray] = useState(journalState.journal.map((page) => false));
     const [newPageAdded, setNewPageAdded] = useState(false);
+    const [profile, setProfile] = useState();
+    const {actor} = useContext(AppContext);
 
     useEffect(() => {
         setPageIsVisibleArray(journalState.journal.map((page, index) => { 
@@ -21,7 +25,17 @@ const Journal = (props) => {
                 return false;
             }
         }));
-    },[journalState.journal.length])
+    },[journalState.journal.length]);
+
+    useEffect(() => {
+        console.log(actor);
+        (actor) ? actor.readEntry().then((result) => {
+            console.log(result);
+            if("ok" in result){
+                setProfile(result.ok);
+            }
+        }) : () => {};
+    },[actor])
 
     const displayJournalTable = () => {
 
