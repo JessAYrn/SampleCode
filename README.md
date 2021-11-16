@@ -23,4 +23,29 @@ II_ENV=development dfx deploy --no-wallet --argument '(null)'
 
 ## Running the Digital-Time-Capsule canister Locally
 
-//TODO: finish documenting this
+in the Digital-Time-Capsule project 
+
+delete the /package-lock.json file, 
+delete the /node_modules file,
+delete the /dist file,
+delete the /.dfx file,
+delete the /src/declarations file
+
+after deleting these files, run the following commands in the terminal: 
+
+npm i
+
+then:
+
+dfx start
+
+then, in a new terminal: 
+
+dfx deploy 
+
+then: 
+
+npm start
+
+
+npm i
