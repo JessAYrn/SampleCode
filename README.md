@@ -11,10 +11,9 @@ Within the internet-identity project
 replace the "build" within the dfx.json file of the Internet-Identity repo from {"src/internet_identity/build.sh"} to {"cargo build --release --target wasm32-unknown-unknown"}
 next run the following commands in the Internet-Identity project directory
 
-npm ci /* or in the event this doesn't work just run the following command then perform the rest of the steps that follow this step: npm i) */
+npm ci /* or in the event that running locally doesn't work, delete the project, repull it from the git repository, and instead of running npm ci, just run the command: npm i */
 
 dfx start [--clean] [--background]
-
 
 In a different terminal, run the following command to install the Internet Identity canister:
 
