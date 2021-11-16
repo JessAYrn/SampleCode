@@ -64143,7 +64143,7 @@ const LoginPage = (props) => {
         react_1.default.createElement("div", { className: 'loginPageDiv' },
             react_1.default.createElement("img", { className: 'logoImg', src: "dtc-logo-black.png", alt: "Logo" }),
             react_1.default.createElement("button", { className: 'loginButtonDiv', onClick: async () => {
-                    (authClient) ? await authClient.login() : () => { };
+                    (authClient) ? await authClient.login({ identityProvider: "http://localhost:8000?canisterId=rwlgt-iiaaa-aaaaa-aaaaa-cai#authorize" }) : () => { };
                 } }, " Log In Using Internet Identity "))));
 };
 exports["default"] = LoginPage;
@@ -66941,7 +66941,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 // CANISTER_ID is replaced by webpack based on node environment
-const canisterId = "rrkah-fqaaa-aaaaa-aaaaq-cai";
+const canisterId = "qoctq-giaaa-aaaaa-aaaea-cai";
 
 /**
  * 

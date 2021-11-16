@@ -12,8 +12,6 @@ const Journal = (props) => {
     const [newPageAdded, setNewPageAdded] = useState(false);
 
     useEffect(() => {
-        console.log(journalState.journal);
-        console.log(pageIsVisibleArray);
         setPageIsVisibleArray(journalState.journal.map((page, index) => { 
 
             if((index === journalState.journal.length -1) && newPageAdded){
@@ -29,7 +27,6 @@ const Journal = (props) => {
 
         const openPage = (e, index) => {
             setPageIsVisibleArray(pageIsVisibleArray.map((page, mapIndex) => {
-                console.log(index, ' and ',mapIndex)
                 if(index === mapIndex){
                     return true;
                 } else {

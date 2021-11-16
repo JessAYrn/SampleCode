@@ -23,8 +23,6 @@ const App = () => {
         });
     }, [])
 
-    console.log(AuthClient);
-
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (pending) return;
@@ -54,7 +52,7 @@ const App = () => {
     return (
         <AppContext.Provider value={{authClient}}>
             {!isAuthenticated && !isLoaded ? <></> : 
-                isLoaded ?  <LoginPage/> :
+                isLoaded ? <LoginPage/> :
                 <main>
                 <Journal/>
                 {/* <button id="clickMeBtn" type="submit" disabled={pending}>Click Me!</button> */}

@@ -5,6 +5,7 @@ import "./LoginPage.scss";
 
 const LoginPage = (props) => {
     const { authClient } = useContext(AppContext);
+    console.log(process.env.II_URL);
 
     return(
 
@@ -12,7 +13,7 @@ const LoginPage = (props) => {
             <div className={'loginPageDiv'}>
             <img className={'logoImg'}src="dtc-logo-black.png" alt="Logo"/>
             <button className={'loginButtonDiv'} onClick={async () => {
-                (authClient) ? await authClient.login() : () => {}
+                (authClient) ? await authClient.login({identityProvider : process.env.II_URL}).then((res) => { console.log(res)}) : () => {}
             }}> Log In Using Internet Identity </button>
             </div>
         </div>

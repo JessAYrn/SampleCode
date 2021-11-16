@@ -98,7 +98,7 @@ module.exports = {
       NODE_ENV: 'development',
       DTC_CANISTER_ID: canisters["dtc"],
       II_URL : isDevelopment ?
-      "http://localhost:8000?canisterId=rkp4c-7iaaa-aaaaa-aaaca-cai#authorize" :
+      "http://localhost:8000?canisterId=rwlgt-iiaaa-aaaaa-aaaaa-cai#authorize" :
       "https://identity.ic0.app/#authorize",
     }),
     new webpack.ProvidePlugin({
