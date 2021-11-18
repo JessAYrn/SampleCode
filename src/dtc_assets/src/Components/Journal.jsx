@@ -13,7 +13,7 @@ const Journal = (props) => {
     const [pageIsVisibleArray, setPageIsVisibleArray] = useState(journalState.journal.map((page) => false));
     const [newPageAdded, setNewPageAdded] = useState(false);
     const [profile, setProfile] = useState();
-    const {actor} = useContext(AppContext);
+    const {actor, authClient, setAuthClient, setActor, setIsLoaded} = useContext(AppContext);
 
     useEffect(() => {
         setPageIsVisibleArray(journalState.journal.map((page, index) => { 
@@ -29,8 +29,7 @@ const Journal = (props) => {
 
     useEffect(() => {
         console.log(actor);
-        (actor) ? actor.readEntry().then((result) => {
-            console.log(result);
+        (actor) ? actor.readEntry(1).then((result) => {
             if("ok" in result){
                 setProfile(result.ok);
             }
@@ -98,6 +97,10 @@ const Journal = (props) => {
                 journalPageData={journalState.journal[getIndexOfVisiblePage()]}
                 journalReducerDispatchFunction={dispatch}
             /> }
+            <button className={'loginButtonDiv'} onClick={async () => {
+                await authClient.logout();
+                setIsLoaded(false);
+            }} > Log Out </button>
             
             
             

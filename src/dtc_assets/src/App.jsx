@@ -11,24 +11,26 @@ export const AppContext = createContext({
     setIsAuthenticated: null,
     actor: undefined});
 
+    console.log("Nothing");
+
 
 const App = () => {
     const [actor, setActor] = useState(undefined);
     const [greeting, setGreeting] = useState("");
     const [pending, setPending] = useState(false);
     const [authClient, setAuthClient] = useState(undefined);
-    const [isLoaded, setIsLoaded] = useState(false);
+    const [isLoaded, setIsLoaded] = useState(true);
     const [isAuthenticated, setIsAuthenticated] = useState(false);
     const [loadingMessage, setLoadingMessage] = useState(false);
 
     // login function used when Authenticating the client (aka user)
     useEffect(() => {
         AuthClient.create().then(async (client) => {
-            setAuthClient(client);
             setIsAuthenticated(await client.isAuthenticated());
+            setAuthClient(client);
             setIsLoaded(true);
         });
-    }, [])
+    }, [isLoaded])
 
     //Creating the canisterActor that enables us to be able to call the functions defined on the backend
     useEffect(() => {
@@ -42,7 +44,7 @@ const App = () => {
         });
         setActor(actor);
 
-    }, [authClient])
+    }, [authClient]);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -71,13 +73,22 @@ const App = () => {
     }
 
     return (
-        <AppContext.Provider value={{authClient, setIsAuthenticated, actor}}>
-            {!isAuthenticated && !isLoaded ? <LoginPage/> :
-                <main>
-                <Journal/>
-                {/* <button id="clickMeBtn" type="submit" disabled={pending}>Click Me!</button> */}
-                    <section id="greeting">{greeting}</section>
-                </main> }
+        <AppContext.Provider value={{authClient, setAuthClient, setIsAuthenticated, actor, setActor, setIsLoaded}}>
+            {console.log(isAuthenticated, isLoaded)}
+
+            {
+                !!isLoaded &&
+                    isAuthenticated ? 
+                    <main>
+                        <Journal/>
+                        <section id="greeting">{greeting}</section>
+                    </main> : <LoginPage/> 
+            }
+            {
+                !isLoaded && 
+                    <h2> Load Screen </h2>
+            }
+
         </AppContext.Provider>
     )
 }

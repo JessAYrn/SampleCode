@@ -63697,21 +63697,42 @@ const dtc_1 = __webpack_require__(/*! ../../declarations/dtc */ "./src/declarati
 const Journal_1 = __importDefault(__webpack_require__(/*! ./Components/Journal */ "./src/dtc_assets/src/Components/Journal.jsx"));
 const auth_client_1 = __webpack_require__(/*! @dfinity/auth-client */ "./node_modules/@dfinity/auth-client/lib/esm/index.js");
 const LoginPage_1 = __importDefault(__webpack_require__(/*! ./Components/LoginPage */ "./src/dtc_assets/src/Components/LoginPage.jsx"));
-exports.AppContext = (0, react_1.createContext)({});
+const index_1 = __webpack_require__(/*! ../../declarations/dtc/index */ "./src/declarations/dtc/index.js");
+exports.AppContext = (0, react_1.createContext)({
+    authClient: {},
+    setIsAuthenticated: null,
+    actor: undefined
+});
 const App = () => {
+    const [actor, setActor] = (0, react_1.useState)(undefined);
     const [greeting, setGreeting] = (0, react_1.useState)("");
     const [pending, setPending] = (0, react_1.useState)(false);
     const [authClient, setAuthClient] = (0, react_1.useState)(undefined);
-    const [isLoaded, setIsLoaded] = (0, react_1.useState)(false);
+    const [isLoaded, setIsLoaded] = (0, react_1.useState)(true);
     const [isAuthenticated, setIsAuthenticated] = (0, react_1.useState)(false);
+    const [loadingMessage, setLoadingMessage] = (0, react_1.useState)(false);
+    // login function used when Authenticating the client (aka user)
     (0, react_1.useEffect)(() => {
         auth_client_1.AuthClient.create().then(async (client) => {
-            setAuthClient(client);
             setIsAuthenticated(await client.isAuthenticated());
+            setAuthClient(client);
             setIsLoaded(true);
         });
-    }, []);
-    console.log(auth_client_1.AuthClient);
+    }, [isAuthenticated, isLoaded]);
+    (0, react_1.useEffect)(() => {
+    }, [authClient, isAuthenticated, isLoaded, actor]);
+    //Creating the canisterActor that enables us to be able to call the functions defined on the backend
+    (0, react_1.useEffect)(() => {
+        if (!authClient)
+            return;
+        const identity = authClient.getIdentity();
+        const actor = (0, index_1.createActor)(index_1.canisterId, {
+            agentOptions: {
+                identity
+            }
+        });
+        setActor(actor);
+    }, [authClient]);
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (pending)
@@ -63739,11 +63760,15 @@ const App = () => {
         setPending(false);
         return false;
     };
-    return (React.createElement(exports.AppContext.Provider, { value: { authClient } }, !isAuthenticated && !isLoaded ? React.createElement(React.Fragment, null) :
-        isLoaded ? React.createElement(LoginPage_1.default, null) :
+    return (React.createElement(exports.AppContext.Provider, { value: { authClient, setAuthClient, setIsAuthenticated, actor, setActor, setIsLoaded } },
+        console.log(isAuthenticated, isLoaded),
+        !!isLoaded &&
+            isAuthenticated ?
             React.createElement("main", null,
                 React.createElement(Journal_1.default, null),
-                React.createElement("section", { id: "greeting" }, greeting))));
+                React.createElement("section", { id: "greeting" }, greeting)) : React.createElement(LoginPage_1.default, null),
+        !isLoaded &&
+            React.createElement("h2", null, " Load Screen ")));
 };
 exports["default"] = App;
 
@@ -64000,13 +64025,14 @@ const JournalPage_1 = __importDefault(__webpack_require__(/*! ./JournalPage */ "
 const react_1 = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
 const journalReducer_1 = __importStar(__webpack_require__(/*! ../reducers/journalReducer */ "./src/dtc_assets/src/reducers/journalReducer.jsx"));
 __webpack_require__(/*! ./Journal.scss */ "./src/dtc_assets/src/Components/Journal.scss");
+const App_1 = __webpack_require__(/*! ../App */ "./src/dtc_assets/src/App.jsx");
 const Journal = (props) => {
     const [journalState, dispatch] = (0, react_1.useReducer)(journalReducer_1.default, journalReducer_1.initialState);
     const [pageIsVisibleArray, setPageIsVisibleArray] = (0, react_1.useState)(journalState.journal.map((page) => false));
     const [newPageAdded, setNewPageAdded] = (0, react_1.useState)(false);
+    const [profile, setProfile] = (0, react_1.useState)();
+    const { actor, authClient, setAuthClient, setActor, setIsLoaded } = (0, react_1.useContext)(App_1.AppContext);
     (0, react_1.useEffect)(() => {
-        console.log(journalState.journal);
-        console.log(pageIsVisibleArray);
         setPageIsVisibleArray(journalState.journal.map((page, index) => {
             if ((index === journalState.journal.length - 1) && newPageAdded) {
                 setNewPageAdded(false);
@@ -64017,10 +64043,17 @@ const Journal = (props) => {
             }
         }));
     }, [journalState.journal.length]);
+    (0, react_1.useEffect)(() => {
+        console.log(actor);
+        (actor) ? actor.readEntry(1).then((result) => {
+            if ("ok" in result) {
+                setProfile(result.ok);
+            }
+        }) : () => { };
+    }, [actor]);
     const displayJournalTable = () => {
         const openPage = (e, index) => {
             setPageIsVisibleArray(pageIsVisibleArray.map((page, mapIndex) => {
-                console.log(index, ' and ', mapIndex);
                 if (index === mapIndex) {
                     return true;
                 }
@@ -64059,9 +64092,14 @@ const Journal = (props) => {
             return false;
         }));
     };
-    return (react_1.default.createElement("div", null, (getIndexOfVisiblePage() < 0) ?
-        displayJournalTable() :
-        react_1.default.createElement(JournalPage_1.default, { closePage: closePage, index: getIndexOfVisiblePage(), journalPageData: journalState.journal[getIndexOfVisiblePage()], journalReducerDispatchFunction: dispatch })));
+    return (react_1.default.createElement("div", null,
+        (getIndexOfVisiblePage() < 0) ?
+            displayJournalTable() :
+            react_1.default.createElement(JournalPage_1.default, { closePage: closePage, index: getIndexOfVisiblePage(), journalPageData: journalState.journal[getIndexOfVisiblePage()], journalReducerDispatchFunction: dispatch }),
+        react_1.default.createElement("button", { className: 'loginButtonDiv', onClick: async () => {
+                await authClient.logout();
+                setIsLoaded(false);
+            } }, " Log Out ")));
 };
 exports["default"] = Journal;
 
@@ -64138,12 +64176,13 @@ const react_1 = __importStar(__webpack_require__(/*! react */ "./node_modules/re
 const App_1 = __webpack_require__(/*! ../App */ "./src/dtc_assets/src/App.jsx");
 __webpack_require__(/*! ./LoginPage.scss */ "./src/dtc_assets/src/Components/LoginPage.scss");
 const LoginPage = (props) => {
-    const { authClient } = (0, react_1.useContext)(App_1.AppContext);
+    const { authClient, setIsLoaded } = (0, react_1.useContext)(App_1.AppContext);
     return (react_1.default.createElement("div", null,
         react_1.default.createElement("div", { className: 'loginPageDiv' },
             react_1.default.createElement("img", { className: 'logoImg', src: "dtc-logo-black.png", alt: "Logo" }),
             react_1.default.createElement("button", { className: 'loginButtonDiv', onClick: async () => {
-                    (authClient) ? await authClient.login({ identityProvider: "http://localhost:8000?canisterId=rwlgt-iiaaa-aaaaa-aaaaa-cai#authorize" }) : () => { };
+                    await authClient.login({ identityProvider: "http://localhost:8000?canisterId=rwlgt-iiaaa-aaaaa-aaaaa-cai#authorize" });
+                    setIsLoaded(false);
                 } }, " Log In Using Internet Identity "))));
 };
 exports["default"] = LoginPage;
@@ -66941,7 +66980,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 // CANISTER_ID is replaced by webpack based on node environment
-const canisterId = "qoctq-giaaa-aaaaa-aaaea-cai";
+const canisterId = "r7inp-6aaaa-aaaaa-aaabq-cai";
 
 /**
  * 
