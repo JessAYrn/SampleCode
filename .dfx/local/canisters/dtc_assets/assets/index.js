@@ -63703,6 +63703,7 @@ exports.AppContext = (0, react_1.createContext)({
     setIsAuthenticated: null,
     actor: undefined
 });
+console.log("Nothing");
 const App = () => {
     const [actor, setActor] = (0, react_1.useState)(undefined);
     const [greeting, setGreeting] = (0, react_1.useState)("");
@@ -63718,9 +63719,7 @@ const App = () => {
             setAuthClient(client);
             setIsLoaded(true);
         });
-    }, [isAuthenticated, isLoaded]);
-    (0, react_1.useEffect)(() => {
-    }, [authClient, isAuthenticated, isLoaded, actor]);
+    }, [isLoaded]);
     //Creating the canisterActor that enables us to be able to call the functions defined on the backend
     (0, react_1.useEffect)(() => {
         if (!authClient)
@@ -66980,7 +66979,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 // CANISTER_ID is replaced by webpack based on node environment
-const canisterId = "r7inp-6aaaa-aaaaa-aaabq-cai";
+const canisterId = "rdmx6-jaaaa-aaaaa-aaadq-cai";
 
 /**
  * 

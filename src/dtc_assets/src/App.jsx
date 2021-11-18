@@ -21,7 +21,7 @@ const App = () => {
     const [authClient, setAuthClient] = useState(undefined);
     const [isLoaded, setIsLoaded] = useState(true);
     const [isAuthenticated, setIsAuthenticated] = useState(false);
-    const [loadingMessage, setLoadingMessage] = useState(false);
+    const [loginAttempted, setLoginAttempted] = useState(false);
 
     // login function used when Authenticating the client (aka user)
     useEffect(() => {
@@ -73,7 +73,17 @@ const App = () => {
     }
 
     return (
-        <AppContext.Provider value={{authClient, setAuthClient, setIsAuthenticated, actor, setActor, setIsLoaded}}>
+        <AppContext.Provider 
+        value={{
+            authClient, 
+            setAuthClient, 
+            setIsAuthenticated, 
+            actor, 
+            setActor, 
+            setIsLoaded,
+            loginAttempted, 
+            setLoginAttempted
+            }}>
             {console.log(isAuthenticated, isLoaded)}
 
             {

@@ -4,7 +4,7 @@ import "./LoginPage.scss";
 
 
 const LoginPage = (props) => {
-    const { authClient, setIsLoaded } = useContext(AppContext);
+    const { authClient, setIsLoaded, loginAttempted, setLoginAttempted } = useContext(AppContext);
 
     return(
 
@@ -12,9 +12,14 @@ const LoginPage = (props) => {
             <div className={'loginPageDiv'}>
             <img className={'logoImg'}src="dtc-logo-black.png" alt="Logo"/>
             <button className={'loginButtonDiv'} onClick={async () => {
-                await authClient.login({identityProvider : process.env.II_URL});
+                setLoginAttempted(!loginAttempted);
                 setIsLoaded(false);
-            }}> Log In Using Internet Identity </button>
+                if(loginAttempted){
+                    location.reload();
+                } else {
+                    await authClient.login({identityProvider : process.env.II_URL});
+                }
+            }}> {(loginAttempted) ? 'Open Journal' : 'Log In Using Internet Identity'} </button>
             </div>
         </div>
     );
