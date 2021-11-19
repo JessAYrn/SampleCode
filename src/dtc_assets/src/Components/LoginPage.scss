@@ -8,10 +8,24 @@
     margin-left:25%;
     margin-top: 7rem;
 
-    .loginButtonDiv{
+    .open{
         max-width: 27%;
         max-height: 10%;
-        margin-left: 36.5%;
         border-radius: 25px;
+    }
+
+    .loginButtonDiv__{
+        &open{
+            margin-left: 42.5%;
+            max-width: 27%;
+            max-height: 10%;
+            border-radius: 25px;
+        }
+        &closed{
+            margin-left: 36.5%;
+            max-width: 27%;
+            max-height: 10%;
+            border-radius: 25px;
+        }
     }
 }

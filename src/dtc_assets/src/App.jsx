@@ -26,8 +26,8 @@ const App = () => {
     // login function used when Authenticating the client (aka user)
     useEffect(() => {
         AuthClient.create().then(async (client) => {
-            setIsAuthenticated(await client.isAuthenticated());
             setAuthClient(client);
+            setIsAuthenticated(await client.isAuthenticated());
             setIsLoaded(true);
         });
     }, [isLoaded])
@@ -87,7 +87,7 @@ const App = () => {
             {console.log(isAuthenticated, isLoaded)}
 
             {
-                !!isLoaded &&
+                isLoaded &&
                     isAuthenticated ? 
                     <main>
                         <Journal/>

@@ -11,7 +11,7 @@ const LoginPage = (props) => {
         <div>
             <div className={'loginPageDiv'}>
             <img className={'logoImg'}src="dtc-logo-black.png" alt="Logo"/>
-            <button className={'loginButtonDiv'} onClick={async () => {
+            <button className={`loginButtonDiv__${(loginAttempted) ? "open" : 'closed'}`} onClick={async () => {
                 setLoginAttempted(!loginAttempted);
                 setIsLoaded(false);
                 if(loginAttempted){
