@@ -25,3 +25,50 @@
     width: 100%;
   }
 }
+
+.biographyDiv{
+    .section1{
+      width: 33%;
+      float: left;
+      height: 22rem;
+      .inputBox{
+        .input-element-div__dedications{
+          
+          .enabled{
+            border-width: 1px 1px 1px !important;
+          }
+        
+          .disabled{
+              border-width: 1px 1px 1px !important;
+          }
+          
+          
+        }
+      }
+    }
+    .section2{
+      width: 66%;
+      float: left;
+      height: 22rem;
+    }
+
+    .prefaceDiv{
+      margin-top: 2rem;
+      width: 100%;
+      .inputBox{
+        .input-element-div__preface{
+          
+          .enabled{
+            border-width: 1px 1px 1px !important;
+          }
+        
+          .disabled{
+              border-width: 1px 1px 1px !important;
+          }
+          
+          
+        }
+      }
+    }
+  
+}

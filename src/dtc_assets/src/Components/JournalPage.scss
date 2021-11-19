@@ -4,7 +4,7 @@
         float: left;
     }
 
-    JournalImages{
+    .JournalImages{
         width: 50%;
         float: left;
     }
@@ -32,11 +32,11 @@
 
     .entry{
         .enabled{
-            border-width: 0.5px 0.5px 2px;
+            border-width: 1px 1px 1px;
             height: 20rem;
         }
         .disabled{
-            border-width: 0.5px 0.5px 2px;
+            border-width: 1px 1px 1px;
             height: 20rem;
         }
         

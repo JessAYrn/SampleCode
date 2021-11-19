@@ -5,7 +5,7 @@
         &__disabled{
             font-family: 'Julius Sans One', sans-serif;
             font-size: .80rem;
-            color: rgb(122, 122, 122);
+            color: rgb(163, 163, 163);
         }
         &__enabled{
             font-family: 'Julius Sans One', sans-serif;
@@ -16,7 +16,7 @@
     .enabled{
         font-family: 'Merriweather', serif;
         outline: 0;
-        border-width: 0 0 2px;
+        border-width: 0 0 1px;
         border-color: rgb(0, 0, 0);
         width: 100%;
     }
@@ -24,8 +24,8 @@
     .disabled{
         font-family: 'Merriweather', serif;
         outline: 0;
-        border-width: 0 0 2px;
-        color: rgb(122, 122, 122);
+        border-width: 0 0 1px;
+        color: rgb(163, 163, 163);
         width: 95%;
     }
 }

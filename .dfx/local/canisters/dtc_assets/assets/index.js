@@ -20743,7 +20743,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".imageDiv {\n  max-width: 23rem;\n  margin: 2.25rem;\n  border: solid;\n  border: #252525;\n  background-color: whitesmoke;\n}\n.imageDiv .imageLabelDiv {\n  padding-left: 5.5rem;\n  font-family: \"Merriweather\", serif;\n}\n.imageDiv .imagePreview {\n  max-width: 30rem;\n  max-height: 35rem;\n}\n.imageDiv .imagePreview .inputBox {\n  padding-left: 2.5rem;\n  width: 75%;\n}\n.imageDiv .imagePreview .inputBox .disabled {\n  background-color: whitesmoke;\n}\n.imageDiv .imagePreview .inputBox .enabled {\n  background-color: whitesmoke;\n}\n.imageDiv .imagePreview .imageInputButton {\n  padding-left: 37%;\n  width: 5rem;\n  margin-bottom: 1rem;\n}\n.imageDiv .imagePreview__image {\n  max-width: 18rem;\n  max-height: 25rem;\n  padding: 1rem;\n}\n.imageDiv .imagePreview__video {\n  max-width: 18rem;\n  max-height: 25rem;\n  margin-top: 1rem;\n  padding-left: 2.5rem;\n  padding-right: 2.5rem;\n}", "",{"version":3,"sources":["webpack://./src/dtc_assets/src/Components/Fields/FileUpload.scss"],"names":[],"mappings":"AAAA;EACI,gBAAA;EACA,eAAA;EACA,aAAA;EACA,eAAA;EACA,4BAAA;AACJ;AAEI;EACI,oBAAA;EACA,kCAAA;AAAR;AAGI;EACI,gBAAA;EACA,iBAAA;AADR;AAGQ;EACI,oBAAA;EACA,UAAA;AADZ;AAEY;EACI,4BAAA;AAAhB;AAEY;EACI,4BAAA;AAAhB;AAIQ;EACI,iBAAA;EACA,WAAA;EACA,mBAAA;AAFZ;AAKQ;EACI,gBAAA;EACA,iBAAA;EACA,aAAA;AAHZ;AAMQ;EACI,gBAAA;EACA,iBAAA;EACA,gBAAA;EACA,oBAAA;EACA,qBAAA;AAJZ","sourcesContent":[".imageDiv{\n    max-width: 23rem;\n    margin: 2.25rem;\n    border: solid;\n    border:rgb(37, 37, 37);\n    background-color: rgb(245, 245, 245);\n\n\n    .imageLabelDiv{\n        padding-left: 5.5rem;\n        font-family: 'Merriweather', serif;\n    }\n\n    .imagePreview{\n        max-width: 30rem;\n        max-height: 35rem;\n\n        .inputBox{\n            padding-left: 2.5rem;\n            width: 75%;\n            .disabled{\n                background-color: rgb(245, 245, 245);\n            }\n            .enabled{\n                background-color: rgb(245, 245, 245);\n            }\n        }\n\n        .imageInputButton{\n            padding-left: 37%;\n            width: 5rem;\n            margin-bottom: 1rem;\n        }\n\n        &__image{\n            max-width: 18rem;\n            max-height: 25rem;\n            padding: 1rem;\n        }\n\n        &__video{\n            max-width: 18rem;\n            max-height: 25rem;\n            margin-top: 1rem;\n            padding-left: 2.5rem;\n            padding-right: 2.5rem;\n        }\n    \n    }\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".imageDiv {\n  max-width: 23rem;\n  margin: 2.25rem;\n  border: solid;\n  border: #252525;\n  background-color: whitesmoke;\n}\n.imageDiv .imageLabelDiv {\n  padding-left: 5.5rem;\n  font-family: \"Merriweather\", serif;\n}\n.imageDiv .imagePreview {\n  max-width: 23rem;\n  max-height: 35rem;\n}\n.imageDiv .imagePreview .inputBox {\n  padding-left: 2.5rem;\n  width: 75%;\n}\n.imageDiv .imagePreview .inputBox .disabled {\n  background-color: whitesmoke;\n}\n.imageDiv .imagePreview .inputBox .enabled {\n  background-color: whitesmoke;\n}\n.imageDiv .imagePreview .imageInputButton {\n  padding-left: 37%;\n  width: 5rem;\n  margin-bottom: 1rem;\n}\n.imageDiv .imagePreview__image {\n  max-width: 18rem;\n  max-height: 25rem;\n  padding: 1rem;\n}\n.imageDiv .imagePreview__video {\n  max-width: 15rem;\n  max-height: 20rem;\n  margin-top: 1rem;\n  padding-left: 2.5rem;\n  padding-right: 2.5rem;\n}", "",{"version":3,"sources":["webpack://./src/dtc_assets/src/Components/Fields/FileUpload.scss"],"names":[],"mappings":"AAAA;EACI,gBAAA;EACA,eAAA;EACA,aAAA;EACA,eAAA;EACA,4BAAA;AACJ;AAEI;EACI,oBAAA;EACA,kCAAA;AAAR;AAGI;EACI,gBAAA;EACA,iBAAA;AADR;AAGQ;EACI,oBAAA;EACA,UAAA;AADZ;AAEY;EACI,4BAAA;AAAhB;AAEY;EACI,4BAAA;AAAhB;AAIQ;EACI,iBAAA;EACA,WAAA;EACA,mBAAA;AAFZ;AAKQ;EACI,gBAAA;EACA,iBAAA;EACA,aAAA;AAHZ;AAMQ;EACI,gBAAA;EACA,iBAAA;EACA,gBAAA;EACA,oBAAA;EACA,qBAAA;AAJZ","sourcesContent":[".imageDiv{\n    max-width: 23rem;\n    margin: 2.25rem;\n    border: solid;\n    border:rgb(37, 37, 37);\n    background-color: rgb(245, 245, 245);\n\n\n    .imageLabelDiv{\n        padding-left: 5.5rem;\n        font-family: 'Merriweather', serif;\n    }\n\n    .imagePreview{\n        max-width: 23rem;\n        max-height: 35rem;\n\n        .inputBox{\n            padding-left: 2.5rem;\n            width: 75%;\n            .disabled{\n                background-color: rgb(245, 245, 245);\n            }\n            .enabled{\n                background-color: rgb(245, 245, 245);\n            }\n        }\n\n        .imageInputButton{\n            padding-left: 37%;\n            width: 5rem;\n            margin-bottom: 1rem;\n        }\n\n        &__image{\n            max-width: 18rem;\n            max-height: 25rem;\n            padding: 1rem;\n        }\n\n        &__video{\n            max-width: 15rem;\n            max-height: 20rem;\n            margin-top: 1rem;\n            padding-left: 2.5rem;\n            padding-right: 2.5rem;\n        }\n    \n    }\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -20878,7 +20878,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".loginPageDiv {\n  border: solid;\n  border-width: 2px;\n  border-color: black;\n  background-color: #e9e9e9;\n  max-width: 50%;\n  height: 40rem;\n  margin-left: 25%;\n  margin-top: 7rem;\n}\n.loginPageDiv .loginButtonDiv {\n  max-width: 27%;\n  max-height: 10%;\n  margin-left: 36.5%;\n  border-radius: 25px;\n}", "",{"version":3,"sources":["webpack://./src/dtc_assets/src/Components/LoginPage.scss"],"names":[],"mappings":"AAAA;EACI,aAAA;EACA,iBAAA;EACA,mBAAA;EACA,yBAAA;EACA,cAAA;EACA,aAAA;EACA,gBAAA;EACA,gBAAA;AACJ;AACI;EACI,cAAA;EACA,eAAA;EACA,kBAAA;EACA,mBAAA;AACR","sourcesContent":[".loginPageDiv{\n    border: solid;\n    border-width: 2px;\n    border-color: rgb(0, 0, 0);\n    background-color: rgb(233, 233, 233);\n    max-width: 50%;\n    height: 40rem;\n    margin-left:25%;\n    margin-top: 7rem;\n\n    .loginButtonDiv{\n        max-width: 27%;\n        max-height: 10%;\n        margin-left: 36.5%;\n        border-radius: 25px;\n    }\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".loginPageDiv {\n  border: solid;\n  border-width: 2px;\n  border-color: black;\n  background-color: #e9e9e9;\n  max-width: 50%;\n  height: 40rem;\n  margin-left: 25%;\n  margin-top: 7rem;\n}\n.loginPageDiv .open {\n  max-width: 27%;\n  max-height: 10%;\n  border-radius: 25px;\n}\n.loginPageDiv .loginButtonDiv__open {\n  margin-left: 42.5%;\n  max-width: 27%;\n  max-height: 10%;\n  border-radius: 25px;\n}\n.loginPageDiv .loginButtonDiv__closed {\n  margin-left: 36.5%;\n  max-width: 27%;\n  max-height: 10%;\n  border-radius: 25px;\n}", "",{"version":3,"sources":["webpack://./src/dtc_assets/src/Components/LoginPage.scss"],"names":[],"mappings":"AAAA;EACI,aAAA;EACA,iBAAA;EACA,mBAAA;EACA,yBAAA;EACA,cAAA;EACA,aAAA;EACA,gBAAA;EACA,gBAAA;AACJ;AACI;EACI,cAAA;EACA,eAAA;EACA,mBAAA;AACR;AAGQ;EACI,kBAAA;EACA,cAAA;EACA,eAAA;EACA,mBAAA;AADZ;AAGQ;EACI,kBAAA;EACA,cAAA;EACA,eAAA;EACA,mBAAA;AADZ","sourcesContent":[".loginPageDiv{\n    border: solid;\n    border-width: 2px;\n    border-color: rgb(0, 0, 0);\n    background-color: rgb(233, 233, 233);\n    max-width: 50%;\n    height: 40rem;\n    margin-left:25%;\n    margin-top: 7rem;\n\n    .open{\n        max-width: 27%;\n        max-height: 10%;\n        border-radius: 25px;\n    }\n\n    .loginButtonDiv__{\n        &open{\n            margin-left: 42.5%;\n            max-width: 27%;\n            max-height: 10%;\n            border-radius: 25px;\n        }\n        &closed{\n            margin-left: 36.5%;\n            max-width: 27%;\n            max-height: 10%;\n            border-radius: 25px;\n        }\n    }\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -63711,12 +63711,12 @@ const App = () => {
     const [authClient, setAuthClient] = (0, react_1.useState)(undefined);
     const [isLoaded, setIsLoaded] = (0, react_1.useState)(true);
     const [isAuthenticated, setIsAuthenticated] = (0, react_1.useState)(false);
-    const [loadingMessage, setLoadingMessage] = (0, react_1.useState)(false);
+    const [loginAttempted, setLoginAttempted] = (0, react_1.useState)(false);
     // login function used when Authenticating the client (aka user)
     (0, react_1.useEffect)(() => {
         auth_client_1.AuthClient.create().then(async (client) => {
-            setIsAuthenticated(await client.isAuthenticated());
             setAuthClient(client);
+            setIsAuthenticated(await client.isAuthenticated());
             setIsLoaded(true);
         });
     }, [isLoaded]);
@@ -63759,9 +63759,18 @@ const App = () => {
         setPending(false);
         return false;
     };
-    return (React.createElement(exports.AppContext.Provider, { value: { authClient, setAuthClient, setIsAuthenticated, actor, setActor, setIsLoaded } },
+    return (React.createElement(exports.AppContext.Provider, { value: {
+            authClient,
+            setAuthClient,
+            setIsAuthenticated,
+            actor,
+            setActor,
+            setIsLoaded,
+            loginAttempted,
+            setLoginAttempted
+        } },
         console.log(isAuthenticated, isLoaded),
-        !!isLoaded &&
+        isLoaded &&
             isAuthenticated ?
             React.createElement("main", null,
                 React.createElement(Journal_1.default, null),
@@ -63851,7 +63860,12 @@ const FileUpload = (props) => {
         react_1.default.createElement("div", { className: "imagePreview", id: "imagePreview" },
             (fileType === "image") ?
                 react_1.default.createElement("img", { src: fileSrc, alt: "image preview", className: "imagePreview__image" }) :
-                react_1.default.createElement("video", { width: "320", height: "240", controls: true, className: "imagePreview__video" },
+                react_1.default.createElement("video", { width: "320", height: "240", controls: true, id: "uploadedVideo", className: "imagePreview__video", onClick: () => {
+                        var video = document.getElementById("uploadedVideo");
+                        console.log(video);
+                        video.pause();
+                        video.playbackRate = 10;
+                    } },
                     react_1.default.createElement("source", { src: fileSrc, type: 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"' }),
                     react_1.default.createElement("source", { src: fileSrc, type: 'video/ogg; codecs="theora, vorbis"' }),
                     react_1.default.createElement("source", { src: fileSrc, type: 'video/webm' }),
@@ -64175,14 +64189,23 @@ const react_1 = __importStar(__webpack_require__(/*! react */ "./node_modules/re
 const App_1 = __webpack_require__(/*! ../App */ "./src/dtc_assets/src/App.jsx");
 __webpack_require__(/*! ./LoginPage.scss */ "./src/dtc_assets/src/Components/LoginPage.scss");
 const LoginPage = (props) => {
-    const { authClient, setIsLoaded } = (0, react_1.useContext)(App_1.AppContext);
+    const { authClient, setIsLoaded, loginAttempted, setLoginAttempted } = (0, react_1.useContext)(App_1.AppContext);
     return (react_1.default.createElement("div", null,
         react_1.default.createElement("div", { className: 'loginPageDiv' },
             react_1.default.createElement("img", { className: 'logoImg', src: "dtc-logo-black.png", alt: "Logo" }),
-            react_1.default.createElement("button", { className: 'loginButtonDiv', onClick: async () => {
-                    await authClient.login({ identityProvider: "http://localhost:8000?canisterId=rwlgt-iiaaa-aaaaa-aaaaa-cai#authorize" });
+            react_1.default.createElement("button", { className: `loginButtonDiv__${(loginAttempted) ? "open" : 'closed'}`, onClick: async () => {
+                    setLoginAttempted(!loginAttempted);
                     setIsLoaded(false);
-                } }, " Log In Using Internet Identity "))));
+                    if (loginAttempted) {
+                        location.reload();
+                    }
+                    else {
+                        await authClient.login({ identityProvider: "http://localhost:8000?canisterId=rwlgt-iiaaa-aaaaa-aaaaa-cai#authorize" });
+                    }
+                } },
+                " ",
+                (loginAttempted) ? 'Open Journal' : 'Log In Using Internet Identity',
+                " "))));
 };
 exports["default"] = LoginPage;
 
@@ -66979,7 +67002,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 // CANISTER_ID is replaced by webpack based on node environment
-const canisterId = "rdmx6-jaaaa-aaaaa-aaadq-cai";
+const canisterId = "r7inp-6aaaa-aaaaa-aaabq-cai";
 
 /**
  * 

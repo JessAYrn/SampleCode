@@ -4,6 +4,7 @@ import journalReducer, {initialState, types} from "../reducers/journalReducer";
 import "./Journal.scss";
 import { useContext } from "../../../../dist/dtc_assets";
 import { AppContext } from "../App";
+import InputBox from "./Fields/InputBox";
 
 
 
@@ -58,7 +59,53 @@ const Journal = (props) => {
 
         return(
             <div>
-                <img src="dtc-logo-black.png" alt="TDTC logo" />
+                <div className={'biographyDiv'}>
+                    <div className={'section1'}>
+                        <InputBox
+                            label={"This Journal Belongs To: "}
+                            rows={"1"}
+                            dispatch={dispatch}
+                            dispatchAction={types.CHANGE_NAME}
+                            value={journalState.bio.name}
+                        />
+                        <InputBox
+                            label={"Date of Birth: "}
+                            rows={"1"}
+                            dispatch={dispatch}
+                            dispatchAction={types.CHANGE_DOB}
+                            value={journalState.bio.dob}
+                        />
+                        <InputBox
+                            label={"Place of Birth: "}
+                            rows={"1"}
+                            dispatch={dispatch}
+                            dispatchAction={types.CHANGE_POB}
+                            value={journalState.bio.pob}
+                        />
+                        <InputBox
+                            divClassName={'dedications'}
+                            label={"Dedications: "}
+                            rows={"8"}
+                            dispatch={dispatch}
+                            dispatchAction={types.CHANGE_DEDICATIONS}
+                            value={journalState.bio.dedications}
+                        />
+                    </div>
+                    <div className={'section2'}>
+                        <img src="dtc-logo-black.png" alt="TDTC logo" />
+                    </div>
+                    <div className={'prefaceDiv'}>
+                    <InputBox
+                        divClassName={'preface'}
+                        label={"Preface: "}
+                        rows={"10"}
+                        dispatch={dispatch}
+                        dispatchAction={types.CHANGE_PREFACE}
+                        value={journalState.bio.preface}
+                    />
+                    </div>
+
+                </div>
                 <table className={"table"}>
                 { journalState.journal.map((page, index) => {
                     return(

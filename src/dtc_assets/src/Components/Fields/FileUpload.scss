@@ -12,7 +12,7 @@
     }
 
     .imagePreview{
-        max-width: 30rem;
+        max-width: 23rem;
         max-height: 35rem;
 
         .inputBox{
@@ -33,14 +33,14 @@
         }
 
         &__image{
-            max-width: 18rem;
-            max-height: 25rem;
+            max-width: 15rem;
+            max-height: 20rem;
             padding: 1rem;
         }
 
         &__video{
-            max-width: 18rem;
-            max-height: 25rem;
+            max-width: 15rem;
+            height: 20rem;
             margin-top: 1rem;
             padding-left: 2.5rem;
             padding-right: 2.5rem;

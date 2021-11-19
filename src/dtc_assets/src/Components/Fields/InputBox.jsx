@@ -43,7 +43,7 @@ const InputBox = (props) => {
             <div className={'label-element-div '}>
                 <label className={"label__"+disabledOrEnabled} htmlFor='Label'> {label}  &nbsp; </label>
             </div>
-            <div className={`input-element-div + ${divClassName || " "}`}>
+            <div className={`input-element-div__${(divClassName) ? divClassName : " "}`}>
             <textarea
                 rows={rows}
                 cols={columns}
