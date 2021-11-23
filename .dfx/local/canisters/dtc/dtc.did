@@ -1,10 +1,13 @@
 type User = 
  service {
-   create: (ProfileInput) -> (Result);
+   create: (ProfileInput) -> (Result_3);
    delete: () -> (Result);
    readEntry: (EntryKey) -> (Result_2);
    readJournal: () -> (Result_1);
-   updateJournal: (opt EntryKey, opt JournalEntry) -> (Result);
+   updateJournal: (opt EntryKey, opt record {
+                                       JournalEntry;
+                                       JournalFile;
+                                     }) -> (Result);
    updateProfile: (ProfileInput) -> (Result);
  };
 type Trie = 
@@ -13,10 +16,18 @@ type Trie =
    "empty";
    leaf: Leaf;
  };
+type Result_3 = 
+ variant {
+   err: Error;
+   ok: AmountAccepted;
+ };
 type Result_2 = 
  variant {
    err: Error;
-   ok: JournalEntry;
+   ok: record {
+         JournalEntry;
+         JournalFile;
+       };
  };
 type Result_1 = 
  variant {
@@ -47,11 +58,19 @@ type Key =
    hash: Hash;
    key: nat;
  };
+type JournalFile = 
+ record {
+   file1: opt blob;
+   file2: opt blob;
+ };
 type JournalEntry = 
  record {
-   date: text;
+   date: int;
+   entryTitle: text;
    location: text;
+   lockTime: int;
    "text": text;
+   timeTillUnlock: int;
  };
 type Hash = nat32;
 type Error = 
@@ -76,4 +95,5 @@ type AssocList =
        };
        List;
      };
+type AmountAccepted = record {accepted: nat64;};
 service : () -> User

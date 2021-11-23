@@ -4,7 +4,14 @@ import "./LoginPage.scss";
 
 
 const LoginPage = (props) => {
-    const { authClient, setIsLoaded, loginAttempted, setLoginAttempted } = useContext(AppContext);
+    const {    
+            authClient, 
+            setIsLoaded, 
+            loginAttempted, 
+            setLoginAttempted, 
+            actor 
+        } = useContext(AppContext);
+
 
     return(
 
@@ -15,7 +22,13 @@ const LoginPage = (props) => {
                 setLoginAttempted(!loginAttempted);
                 setIsLoaded(false);
                 if(loginAttempted){
-                    location.reload();
+                    if(authClient){
+                        actor.create({userName: "JesseTheGreat"}).then((result) => {
+                            console.log(result);
+                        });
+                    }
+                    // location.reload();
+
                 } else {
                     await authClient.login({identityProvider : process.env.II_URL});
                 }

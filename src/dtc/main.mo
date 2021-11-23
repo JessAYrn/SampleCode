@@ -18,15 +18,27 @@ actor class User(){
         userName: Text;
     };
 
+    type AmountAccepted = {
+        accepted: Nat64
+    };
+
     type EntryKey = {
         entryKey: Nat;
     };
 
+    type JournalFile = {
+        file1: ?Blob;
+        file2: ?Blob;
+    };
+
     type JournalEntry = {
-    date : Text;
-    text : Text;
-    location : Text;
-  };
+        entryTitle: Text;
+        text: Text;
+        location: Text;
+        date: Int;
+        lockTime: Int;
+        timeTillUnlock: Int;
+    };
 
     // This "Error" type is known as a varient. The attributes of varients are tagged with the hashtag and there is no need to specify the data type of the attribute because varients only attributes of a specific data type. 
     type Error ={
@@ -49,7 +61,7 @@ actor class User(){
 
 
     //Result.Result returns a varient type that has attributes from success case(the first input) and from your error case (your second input). both inputs must be varient types. () is a unit type.
-    public shared(msg) func create (profile: ProfileInput) : async Result.Result<(),Error> {
+    public shared(msg) func create (profile: ProfileInput) : async Result.Result<AmountAccepted,Error> {
 
         let callerId = msg.caller;
 
@@ -73,9 +85,14 @@ actor class User(){
         // If there is an original value, do not update
         switch(existing) {
             case null {
+
+                Cycles.add(100_000_000_000);
+                let journal = await Journal.Journal(callerId);
+                Cycles.add(100_000_000_000);
+                let amountAccepted = await journal.wallet_receive();
                 profiles := newProfiles;
                 //No need to write return when attribute of a varient is being returned
-                return #ok(());
+                return #ok(amountAccepted);
             };
             case ( ? v) {
                 //No need to write return when attribute of a varient is being returned
@@ -116,7 +133,7 @@ actor class User(){
         
     };
 
-    public shared(msg) func readEntry(entryKey: EntryKey) : async Result.Result<JournalEntry, Error> {
+    public shared(msg) func readEntry(entryKey: EntryKey) : async Result.Result<(JournalEntry,JournalFile), Error> {
 
         //Reject Anonymous User
         // if(Principal.toText(msg.caller) == "2vxsx-fae"){
@@ -142,7 +159,7 @@ actor class User(){
 
     };
 
-    public shared(msg) func updateJournal(entryKey : ?EntryKey, entry : ?JournalEntry) : async Result.Result<(), Error> {
+    public shared(msg) func updateJournal(entryKey : ?EntryKey, entry : ?(JournalEntry, JournalFile)) : async Result.Result<(), Error> {
 
         //Reject Anonymous User
         // if(Principal.toText(msg.caller) == "2vxsx-fae"){
@@ -168,9 +185,7 @@ actor class User(){
                                 #err(#NoInputGiven)
                             };
                             case(?entryValue){
-                                Cycles.add(100000000000);
                                 let journal = await Journal.Journal(callerId);
-                                let amountAccepted = await journal.wallet_receive();
                                 let status = await journal.createEntry(entryValue);
                                 return status;
                             };
@@ -179,18 +194,17 @@ actor class User(){
                     case (? entryKeyValue){
                         switch(entry){
                             case null {
-                                Cycles.add(10000000000);
                                 let journal = await Journal.Journal(callerId);
-                                let amountAccepted = await journal.wallet_receive();
-                                let status = await journal.deleteJournalEntry(entryKeyValue.entryKey);
-                                return status;
+                                let journalStatus = await journal.deleteJournalEntry(entryKeyValue.entryKey);
+                                let fileStatus = await journal.deleteJournalEntryFiles(entryKeyValue.entryKey);
+                                return fileStatus;
                             };
                             case (?entryValue){
-                                Cycles.add(10000000000);
                                 let journal = await Journal.Journal(callerId);
-                                let amountAccepted = await journal.wallet_receive();
-                                let status = await journal.updateJournal(entryKeyValue.entryKey, entryValue);
-                                return status;
+                                let entryStatus = await journal.updateJournalEntry(entryKeyValue.entryKey, entryValue.0);
+                                let fileStatus = await journal.updateJournalEntryFiles(entryKeyValue.entryKey, entryValue.1);
+
+                                return fileStatus;
                             };
                         };
                     };

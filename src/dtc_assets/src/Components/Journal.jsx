@@ -29,7 +29,6 @@ const Journal = (props) => {
     },[journalState.journal.length]);
 
     useEffect(() => {
-        console.log(actor);
         (actor) ? actor.readEntry(1).then((result) => {
             if("ok" in result){
                 setProfile(result.ok);

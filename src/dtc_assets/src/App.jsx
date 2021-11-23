@@ -11,8 +11,6 @@ export const AppContext = createContext({
     setIsAuthenticated: null,
     actor: undefined});
 
-    console.log("Nothing");
-
 
 const App = () => {
     const [actor, setActor] = useState(undefined);
@@ -82,9 +80,9 @@ const App = () => {
             setActor, 
             setIsLoaded,
             loginAttempted, 
-            setLoginAttempted
+            setLoginAttempted, 
+            isAuthenticated
             }}>
-            {console.log(isAuthenticated, isLoaded)}
 
             {
                 isLoaded &&

@@ -32,7 +32,7 @@ delete the /dist file,
 delete the /.dfx file,
 delete the /src/declarations file
 
-after deleting these files, run the following commands in the terminal: 
+after deleting these files, run the following commands in the Digital-Time-Capsule terminal: 
 
 npm i
 
@@ -47,6 +47,3 @@ dfx deploy
 then: 
 
 npm start
-
-
-npm i
