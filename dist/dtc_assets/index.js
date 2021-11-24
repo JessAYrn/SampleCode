@@ -69160,7 +69160,15 @@ const idlFactory = ({ IDL }) => {
   Trie.fill(
     IDL.Variant({ 'branch' : Branch, 'leaf' : Leaf, 'empty' : IDL.Null })
   );
-  const Result_1 = IDL.Variant({ 'ok' : Trie, 'err' : Error });
+  const Bio = IDL.Record({
+    'dob' : IDL.Text,
+    'name' : IDL.Text,
+    'biography' : IDL.Text,
+    'birthPlace' : IDL.Text,
+    'siblings' : IDL.Text,
+    'children' : IDL.Text,
+  });
+  const Result_1 = IDL.Variant({ 'ok' : IDL.Tuple(Trie, Bio), 'err' : Error });
   const User = IDL.Service({
     'create' : IDL.Func([ProfileInput], [Result_3], []),
     'delete' : IDL.Func([], [Result], []),
@@ -69202,7 +69210,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 // CANISTER_ID is replaced by webpack based on node environment
-const canisterId = "naxa5-eyaaa-aaaaa-aacda-cai";
+const canisterId = "occ5c-uiaaa-aaaaa-aacia-cai";
 
 /**
  * 

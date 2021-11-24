@@ -1,6 +1,14 @@
 import type { Principal } from '@dfinity/principal';
 export interface AmountAccepted { 'accepted' : bigint }
 export type AssocList = [] | [[[Key, JournalEntry], List]];
+export interface Bio {
+  'dob' : string,
+  'name' : string,
+  'biography' : string,
+  'birthPlace' : string,
+  'siblings' : string,
+  'children' : string,
+}
 export interface Branch { 'left' : Trie, 'size' : bigint, 'right' : Trie }
 export interface EntryKey { 'entryKey' : bigint }
 export type Error = { 'NotFound' : null } |
@@ -26,7 +34,7 @@ export type List = [] | [[[Key, JournalEntry], List]];
 export interface ProfileInput { 'userName' : string }
 export type Result = { 'ok' : null } |
   { 'err' : Error };
-export type Result_1 = { 'ok' : Trie } |
+export type Result_1 = { 'ok' : [Trie, Bio] } |
   { 'err' : Error };
 export type Result_2 = { 'ok' : [JournalEntry, JournalFile] } |
   { 'err' : Error };

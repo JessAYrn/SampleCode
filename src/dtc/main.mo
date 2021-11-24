@@ -40,6 +40,15 @@ actor class User(){
         timeTillUnlock: Int;
     };
 
+    type Bio = {
+        name : Text;
+        dob: Text;
+        birthPlace: Text;
+        siblings: Text;
+        children: Text;
+        biography: Text;
+    };
+
     // This "Error" type is known as a varient. The attributes of varients are tagged with the hashtag and there is no need to specify the data type of the attribute because varients only attributes of a specific data type. 
     type Error ={
         #NotFound;
@@ -102,7 +111,7 @@ actor class User(){
     };
 
     //read Journal
-    public shared(msg) func readJournal () : async Result.Result<Trie.Trie<Nat,JournalEntry>, Error> {
+    public shared(msg) func readJournal () : async Result.Result<(Trie.Trie<Nat,JournalEntry>, Bio), Error> {
 
         //Reject Anonymous User
         //if(Principal.toText(msg.caller) == "2vxsx-fae"){

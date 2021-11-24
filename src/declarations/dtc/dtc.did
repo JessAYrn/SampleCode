@@ -32,7 +32,10 @@ type Result_2 =
 type Result_1 = 
  variant {
    err: Error;
-   ok: Trie;
+   ok: record {
+         Trie;
+         Bio;
+       };
  };
 type Result = 
  variant {
@@ -86,6 +89,15 @@ type Branch =
    left: Trie;
    right: Trie;
    size: nat;
+ };
+type Bio = 
+ record {
+   biography: text;
+   birthPlace: text;
+   children: text;
+   dob: text;
+   name: text;
+   siblings: text;
  };
 type AssocList = 
  opt record {
