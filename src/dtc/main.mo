@@ -66,9 +66,9 @@ actor class User(){
         let callerId = msg.caller;
 
         //Reject Anonymous User
-        // if(Principal.toText(msg.caller) == "2vxsx-fae"){
-        //     return #err(#NotAuthorized);
-        // };
+        //if(Principal.toText(msg.caller) == "2vxsx-fae"){
+        //    return #err(#NotAuthorized);
+        //};
 
         let userProfile: Profile = {
             userName = profile.userName;
@@ -105,9 +105,9 @@ actor class User(){
     public shared(msg) func readJournal () : async Result.Result<Trie.Trie<Nat,JournalEntry>, Error> {
 
         //Reject Anonymous User
-        // if(Principal.toText(msg.caller) == "2vxsx-fae"){
-        //     return #err(#NotAuthorized);
-        // };
+        //if(Principal.toText(msg.caller) == "2vxsx-fae"){
+        //    return #err(#NotAuthorized);
+        //};
 
         let callerId = msg.caller;
 
@@ -136,9 +136,9 @@ actor class User(){
     public shared(msg) func readEntry(entryKey: EntryKey) : async Result.Result<(JournalEntry,JournalFile), Error> {
 
         //Reject Anonymous User
-        // if(Principal.toText(msg.caller) == "2vxsx-fae"){
-        //     return #err(#NotAuthorized);
-        // };
+        //if(Principal.toText(msg.caller) == "2vxsx-fae"){
+        //    return #err(#NotAuthorized);
+        //};
 
         let callerId = msg.caller;
         let result = Trie.find(
@@ -162,9 +162,9 @@ actor class User(){
     public shared(msg) func updateJournal(entryKey : ?EntryKey, entry : ?(JournalEntry, JournalFile)) : async Result.Result<(), Error> {
 
         //Reject Anonymous User
-        // if(Principal.toText(msg.caller) == "2vxsx-fae"){
-        //     return #err(#NotAuthorized);
-        // };
+        //if(Principal.toText(msg.caller) == "2vxsx-fae"){
+        //    return #err(#NotAuthorized);
+        //};
 
         let callerId = msg.caller;
         let result = Trie.find(
@@ -219,9 +219,9 @@ actor class User(){
     public shared(msg) func updateProfile(profile: ProfileInput) : async Result.Result<(),Error> {
         
         //Reject Anonymous User
-        // if(Principal.toText(msg.caller) == "2vxsx-fae"){
-        //     return #err(#NotAuthorized)
-        // };
+        //if(Principal.toText(msg.caller) == "2vxsx-fae"){
+        //    return #err(#NotAuthorized)
+        //};
 
         let callerId = msg.caller;
 
@@ -258,9 +258,9 @@ actor class User(){
         
         let callerId = msg.caller;
         //Reject Anonymous User
-        // if(Principal.toText(callerId) == "2vxsx-fae"){
-        //     return #err(#NotAuthorized)
-        // };
+        //if(Principal.toText(callerId) == "2vxsx-fae"){
+        //    return #err(#NotAuthorized)
+        //};
 
         let result = Trie.find(
             profiles,       //Target Trie

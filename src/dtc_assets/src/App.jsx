@@ -25,7 +25,9 @@ const App = () => {
     useEffect(() => {
         AuthClient.create().then(async (client) => {
             setAuthClient(client);
-            setIsAuthenticated(await client.isAuthenticated());
+            await client.isAuthenticated().then((result) => {
+                setIsAuthenticated(result);
+            });
             setIsLoaded(true);
         });
     }, [isLoaded])

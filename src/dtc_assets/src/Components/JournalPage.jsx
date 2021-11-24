@@ -1,8 +1,9 @@
-import React, {useReducer, useEffect} from "react";
+import React, {useReducer, useContext, useEffect} from "react";
 import FileUpload from "./Fields/FileUpload";
 import InputBox from "./Fields/InputBox";
 import Slider from "./Fields/Slider";
 import {types} from "../reducers/journalReducer";
+import  {AppContext} from "../App";
 import "./JournalPage.scss";
 
 
@@ -13,7 +14,16 @@ const JournalPage = (props) => {
         index,
         journalPageData,
         closePage
-    } = props
+    } = props;
+
+    const { 
+        actor 
+    } = useContext(AppContext);
+
+    useEffect( async () => {
+        console.log('fire');
+        await actor.readEntry({entryKey: 1}).then((result) => { console.log(result)});
+    }, [actor]);
     
 
     return (
@@ -28,7 +38,7 @@ const JournalPage = (props) => {
                 dispatch={journalReducerDispatchFunction}
                 dispatchAction={types.CHANGE_LOCK_TIME}
                 index={index}
-                value={journalPageData.file4}
+                value={journalPageData.lockTime}
             />
             <div className={"journalText"} >
             <InputBox
@@ -60,32 +70,12 @@ const JournalPage = (props) => {
             <div className={"journalImages"}>
             <FileUpload
                 label={'file1'}
-                dispatch={journalReducerDispatchFunction}
-                dispatchAction={types.CHANGE_FILE_1}
                 index={index}
-                value={journalPageData.file1}
             />
             <FileUpload
                 label={'file2'}
-                dispatch={journalReducerDispatchFunction}
-                dispatchAction={types.CHANGE_FILE_2}
                 index={index}
-                value={journalPageData.file2}
             />
-            {/* <FileUpload
-                label={'file3'}
-                dispatch={journalReducerDispatchFunction}
-                dispatchAction={types.CHANGE_FILE_3}
-                index={index}
-                value={journalPageData.file3}
-            />
-            <FileUpload
-                label={'file4'}
-                dispatch={journalReducerDispatchFunction}
-                dispatchAction={types.CHANGE_FILE_4}
-                index={index}
-                value={journalPageData.file4}
-            /> */}
             </div>
             
         </div>

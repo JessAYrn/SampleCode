@@ -65861,7 +65861,9 @@ const App = () => {
     (0, react_1.useEffect)(() => {
         auth_client_1.AuthClient.create().then(async (client) => {
             setAuthClient(client);
-            setIsAuthenticated(await client.isAuthenticated());
+            await client.isAuthenticated().then((result) => {
+                setIsAuthenticated(result);
+            });
             setIsLoaded(true);
         });
     }, [isLoaded]);
@@ -66194,7 +66196,6 @@ const Journal = (props) => {
     const [journalState, dispatch] = (0, react_1.useReducer)(journalReducer_1.default, journalReducer_1.initialState);
     const [pageIsVisibleArray, setPageIsVisibleArray] = (0, react_1.useState)(journalState.journal.map((page) => false));
     const [newPageAdded, setNewPageAdded] = (0, react_1.useState)(false);
-    const [profile, setProfile] = (0, react_1.useState)();
     const { actor, authClient, setAuthClient, setActor, setIsLoaded } = (0, react_1.useContext)(App_1.AppContext);
     (0, react_1.useEffect)(() => {
         setPageIsVisibleArray(journalState.journal.map((page, index) => {
@@ -66207,13 +66208,15 @@ const Journal = (props) => {
             }
         }));
     }, [journalState.journal.length]);
-    (0, react_1.useEffect)(() => {
-        (actor) ? actor.readEntry(1).then((result) => {
-            if ("ok" in result) {
-                setProfile(result.ok);
-            }
+    (0, react_1.useEffect)(async () => {
+        (actor) ? await actor.readJournal().then((result) => {
+            // if("ok" in result){
+            //     console.log(result.ok);
+            // }
+            console.log(result);
+            console.log("test");
         }) : () => { };
-    }, [actor]);
+    }, [authClient]);
     const displayJournalTable = () => {
         const openPage = (e, index) => {
             setPageIsVisibleArray(pageIsVisibleArray.map((page, mapIndex) => {
@@ -66286,30 +66289,55 @@ exports["default"] = Journal;
 
 "use strict";
 
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-const react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+const react_1 = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
 const FileUpload_1 = __importDefault(__webpack_require__(/*! ./Fields/FileUpload */ "./src/dtc_assets/src/Components/Fields/FileUpload.jsx"));
 const InputBox_1 = __importDefault(__webpack_require__(/*! ./Fields/InputBox */ "./src/dtc_assets/src/Components/Fields/InputBox.jsx"));
 const Slider_1 = __importDefault(__webpack_require__(/*! ./Fields/Slider */ "./src/dtc_assets/src/Components/Fields/Slider.jsx"));
 const journalReducer_1 = __webpack_require__(/*! ../reducers/journalReducer */ "./src/dtc_assets/src/reducers/journalReducer.jsx");
+const App_1 = __webpack_require__(/*! ../App */ "./src/dtc_assets/src/App.jsx");
 __webpack_require__(/*! ./JournalPage.scss */ "./src/dtc_assets/src/Components/JournalPage.scss");
 const JournalPage = (props) => {
     const { journalReducerDispatchFunction, index, journalPageData, closePage } = props;
+    const { actor } = (0, react_1.useContext)(App_1.AppContext);
+    (0, react_1.useEffect)(async () => {
+        console.log('fire');
+        await actor.readEntry({ entryKey: 1 }).then((result) => { console.log(result); });
+    }, [actor]);
     return (react_1.default.createElement("div", { className: "journalPageContainer" },
         react_1.default.createElement("div", { className: "logoDiv" },
             react_1.default.createElement("img", { className: 'backButtonImg', src: "back-icon.png", alt: "Back Button", onClick: (e) => closePage(e) }),
             react_1.default.createElement("img", { className: 'logoImg', src: "dtc-logo-black.png", alt: "Logo" })),
-        react_1.default.createElement(Slider_1.default, { min: 3, max: 120, dispatch: journalReducerDispatchFunction, dispatchAction: journalReducer_1.types.CHANGE_LOCK_TIME, index: index, value: journalPageData.file4 }),
+        react_1.default.createElement(Slider_1.default, { min: 3, max: 120, dispatch: journalReducerDispatchFunction, dispatchAction: journalReducer_1.types.CHANGE_LOCK_TIME, index: index, value: journalPageData.lockTime }),
         react_1.default.createElement("div", { className: "journalText" },
             react_1.default.createElement(InputBox_1.default, { label: "Date: ", rows: "1", dispatch: journalReducerDispatchFunction, dispatchAction: journalReducer_1.types.CHANGE_DATE, index: index, value: journalPageData.date }),
             react_1.default.createElement(InputBox_1.default, { label: "Location: ", rows: "1", dispatch: journalReducerDispatchFunction, dispatchAction: journalReducer_1.types.CHANGE_LOCATION, index: index, value: journalPageData.location }),
             react_1.default.createElement(InputBox_1.default, { divClassName: "entry", label: "Entry: ", rows: "59", dispatch: journalReducerDispatchFunction, dispatchAction: journalReducer_1.types.CHANGE_ENTRY, index: index, value: journalPageData.entry })),
         react_1.default.createElement("div", { className: "journalImages" },
-            react_1.default.createElement(FileUpload_1.default, { label: 'file1', dispatch: journalReducerDispatchFunction, dispatchAction: journalReducer_1.types.CHANGE_FILE_1, index: index, value: journalPageData.file1 }),
-            react_1.default.createElement(FileUpload_1.default, { label: 'file2', dispatch: journalReducerDispatchFunction, dispatchAction: journalReducer_1.types.CHANGE_FILE_2, index: index, value: journalPageData.file2 }))));
+            react_1.default.createElement(FileUpload_1.default, { label: 'file1', index: index }),
+            react_1.default.createElement(FileUpload_1.default, { label: 'file2', index: index }))));
 };
 exports["default"] = JournalPage;
 
@@ -66348,25 +66376,34 @@ const react_1 = __importStar(__webpack_require__(/*! react */ "./node_modules/re
 const App_1 = __webpack_require__(/*! ../App */ "./src/dtc_assets/src/App.jsx");
 __webpack_require__(/*! ./LoginPage.scss */ "./src/dtc_assets/src/Components/LoginPage.scss");
 const LoginPage = (props) => {
-    const { authClient, setIsLoaded, loginAttempted, setLoginAttempted, actor } = (0, react_1.useContext)(App_1.AppContext);
+    const { authClient, setIsLoaded, loginAttempted, setLoginAttempted, actor, isAuthenticated } = (0, react_1.useContext)(App_1.AppContext);
+    const handleClick = async () => {
+        setIsLoaded(false);
+        if (loginAttempted) {
+            actor.readJournal().then((result) => {
+                console.log(result);
+                if ("err" in result) {
+                    actor.create({ userName: "JesseTheGreat" }).then((result) => {
+                        if ("err" in result) {
+                            alert("No Internet Identity Detected");
+                        }
+                        ;
+                    });
+                }
+                else {
+                    console.log(result);
+                }
+            });
+        }
+        else {
+            await authClient.login({ identityProvider: "http://localhost:8000?canisterId=rwlgt-iiaaa-aaaaa-aaaaa-cai#authorize" });
+            setLoginAttempted(!loginAttempted);
+        }
+    };
     return (react_1.default.createElement("div", null,
         react_1.default.createElement("div", { className: 'loginPageDiv' },
             react_1.default.createElement("img", { className: 'logoImg', src: "dtc-logo-black.png", alt: "Logo" }),
-            react_1.default.createElement("button", { className: `loginButtonDiv__${(loginAttempted) ? "open" : 'closed'}`, onClick: async () => {
-                    setLoginAttempted(!loginAttempted);
-                    setIsLoaded(false);
-                    if (loginAttempted) {
-                        if (authClient) {
-                            actor.create({ userName: "JesseTheGreat" }).then((result) => {
-                                console.log(result);
-                            });
-                        }
-                        // location.reload();
-                    }
-                    else {
-                        await authClient.login({ identityProvider: "http://localhost:8000?canisterId=rwlgt-iiaaa-aaaaa-aaaaa-cai#authorize" });
-                    }
-                } },
+            react_1.default.createElement("button", { className: `loginButtonDiv__${(loginAttempted) ? "open" : 'closed'}`, onClick: handleClick },
                 " ",
                 (loginAttempted) ? 'Open Journal' : 'Log In Using Internet Identity',
                 " "))));
@@ -66509,11 +66546,6 @@ exports["default"] = logger;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.initialState = exports.types = void 0;
 exports.types = {
-    CHANGE_FILE_1: "CHANGE_FILE_1",
-    CHANGE_FILE_2: "CHANGE_FILE_2",
-    CHANGE_FILE_3: "CHANGE_FILE_3",
-    CHANGE_FILE_4: 'CHANGE_FILE_4',
-    CHANGE_COVER_IMAGE: "CHANGE_COVER_IMAGE",
     CHANGE_DATE: "CHANGE_DATE",
     CHANGE_LOCATION: "CHANGE_LOCATION",
     CHANGE_ENTRY: "CHANGE_ENTRY",
@@ -66535,22 +66567,12 @@ exports.initialState = {
     },
     journal: [
         {
-            coverImage: {},
-            file1: {},
-            file2: {},
-            file3: {},
-            file4: {},
             date: 'test',
             location: 'test',
             entry: '',
             lockTime: 'test'
         },
         {
-            coverImage: {},
-            file1: {},
-            file2: {},
-            file3: {},
-            file4: {},
             date: 'test',
             location: 'test',
             entry: '',
@@ -66559,11 +66581,6 @@ exports.initialState = {
     ]
 };
 const freshPage = {
-    coverImage: {},
-    file1: {},
-    file2: {},
-    file3: {},
-    file4: {},
     date: 'test',
     location: 'test',
     entry: '',
@@ -66573,51 +66590,6 @@ const changeValue = (state = exports.initialState, action) => {
     const { actionType, payload, index } = action;
     let updatedJournalPage;
     switch (actionType) {
-        case exports.types.CHANGE_FILE_1:
-            updatedJournalPage = {
-                ...state.journal[index],
-                file1: payload
-            };
-            state.journal[index] = updatedJournalPage;
-            return {
-                ...state
-            };
-        case exports.types.CHANGE_FILE_2:
-            updatedJournalPage = {
-                ...state.journal[index],
-                file2: payload
-            };
-            state.journal[index] = updatedJournalPage;
-            return {
-                ...state
-            };
-        case exports.types.CHANGE_FILE_3:
-            updatedJournalPage = {
-                ...state.journal[index],
-                file3: payload
-            };
-            state.journal[index] = updatedJournalPage;
-            return {
-                ...state
-            };
-        case exports.types.CHANGE_FILE_4:
-            updatedJournalPage = {
-                ...state.journal[index],
-                file4: payload
-            };
-            state.journal[index] = updatedJournalPage;
-            return {
-                ...state
-            };
-        case exports.types.CHANGE_COVER_IMAGE:
-            updatedJournalPage = {
-                ...state.journal[index],
-                coverImage: payload
-            };
-            state.journal[index] = updatedJournalPage;
-            return {
-                ...state
-            };
         case exports.types.CHANGE_DATE:
             updatedJournalPage = {
                 ...state.journal[index],
@@ -69230,7 +69202,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 // CANISTER_ID is replaced by webpack based on node environment
-const canisterId = "5ayl4-5iaaa-aaaaa-aaboa-cai";
+const canisterId = "naxa5-eyaaa-aaaaa-aacda-cai";
 
 /**
  * 

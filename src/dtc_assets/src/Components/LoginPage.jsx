@@ -9,8 +9,34 @@ const LoginPage = (props) => {
             setIsLoaded, 
             loginAttempted, 
             setLoginAttempted, 
-            actor 
+            actor,
+            isAuthenticated
         } = useContext(AppContext);
+
+        const handleClick = async () => {
+
+            setIsLoaded(false);
+
+            if(loginAttempted){
+                actor.readJournal().then((result) => {
+                    console.log(result);
+                    if("err" in result){
+                        actor.create({userName: "JesseTheGreat"}).then((result) => {
+                            if("err" in result){
+                                alert("No Internet Identity Detected");
+                            };
+                        });
+                    } else {
+                        console.log(result);
+                    }
+                });
+                
+            } else {
+
+                await authClient.login({identityProvider : process.env.II_URL});
+                setLoginAttempted(!loginAttempted);
+            }
+        };
 
 
     return(
@@ -18,21 +44,7 @@ const LoginPage = (props) => {
         <div>
             <div className={'loginPageDiv'}>
             <img className={'logoImg'}src="dtc-logo-black.png" alt="Logo"/>
-            <button className={`loginButtonDiv__${(loginAttempted) ? "open" : 'closed'}`} onClick={async () => {
-                setLoginAttempted(!loginAttempted);
-                setIsLoaded(false);
-                if(loginAttempted){
-                    if(authClient){
-                        actor.create({userName: "JesseTheGreat"}).then((result) => {
-                            console.log(result);
-                        });
-                    }
-                    // location.reload();
-
-                } else {
-                    await authClient.login({identityProvider : process.env.II_URL});
-                }
-            }}> {(loginAttempted) ? 'Open Journal' : 'Log In Using Internet Identity'} </button>
+            <button className={`loginButtonDiv__${(loginAttempted) ? "open" : 'closed'}`} onClick={handleClick}> {(loginAttempted) ? 'Open Journal' : 'Log In Using Internet Identity'} </button>
             </div>
         </div>
     );

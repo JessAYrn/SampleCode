@@ -13,7 +13,6 @@ const Journal = (props) => {
     const [journalState, dispatch] = useReducer(journalReducer, initialState);
     const [pageIsVisibleArray, setPageIsVisibleArray] = useState(journalState.journal.map((page) => false));
     const [newPageAdded, setNewPageAdded] = useState(false);
-    const [profile, setProfile] = useState();
     const {actor, authClient, setAuthClient, setActor, setIsLoaded} = useContext(AppContext);
 
     useEffect(() => {
@@ -28,13 +27,15 @@ const Journal = (props) => {
         }));
     },[journalState.journal.length]);
 
-    useEffect(() => {
-        (actor) ? actor.readEntry(1).then((result) => {
-            if("ok" in result){
-                setProfile(result.ok);
-            }
+    useEffect(async () => {
+        (actor) ? await actor.readJournal().then((result) => {
+            // if("ok" in result){
+            //     console.log(result.ok);
+            // }
+            console.log(result);
+            console.log("test")
         }) : () => {};
-    },[actor])
+    },[authClient])
 
     const displayJournalTable = () => {
 
