@@ -69210,7 +69210,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 // CANISTER_ID is replaced by webpack based on node environment
-const canisterId = "occ5c-uiaaa-aaaaa-aacia-cai";
+const canisterId = "renrk-eyaaa-aaaaa-aaada-cai";
 
 /**
  * 

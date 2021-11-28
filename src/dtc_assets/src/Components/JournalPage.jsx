@@ -1,13 +1,17 @@
-import React, {useReducer, useContext, useEffect} from "react";
+import React, {useState, useContext, useEffect, useCallback} from "react";
 import FileUpload from "./Fields/FileUpload";
 import InputBox from "./Fields/InputBox";
 import Slider from "./Fields/Slider";
 import {types} from "../reducers/journalReducer";
 import  {AppContext} from "../App";
 import "./JournalPage.scss";
+import { mapAndSendJournalPageRequestToApi } from "../mappers/journalPageMappers";
 
 
 const JournalPage = (props) => {
+
+    const [file1, setFile1] = useState(null);
+    const [file2, setFile2] = useState(null);
 
     const {
         journalReducerDispatchFunction,
@@ -21,9 +25,15 @@ const JournalPage = (props) => {
     } = useContext(AppContext);
 
     useEffect( async () => {
-        console.log('fire');
+        console.log(file1);
+        console.log(file2);
         await actor.readEntry({entryKey: 1}).then((result) => { console.log(result)});
-    }, [actor]);
+    }, [actor, file1, file2]);
+
+    const handleSubmit = useCallback(async () => {
+        await mapAndSendJournalPageRequestToApi( null, journalPageData, {file1: file1, file2: file2}, actor);
+
+    }, [journalPageData, file1, file2])
     
 
     return (
@@ -70,12 +80,19 @@ const JournalPage = (props) => {
             <div className={"journalImages"}>
             <FileUpload
                 label={'file1'}
+                value={file1}
+                setValue={setFile1}
                 index={index}
             />
             <FileUpload
                 label={'file2'}
+                value={file2}
+                setValue={setFile2}
                 index={index}
             />
+            </div>
+            <div>
+                <button type="submit" onClick={handleSubmit}> Submit </button>
             </div>
             
         </div>

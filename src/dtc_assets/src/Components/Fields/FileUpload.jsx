@@ -2,7 +2,6 @@ import React, {useRef, useState, useEffect} from 'react';
 import InputBox from './InputBox';
 import "./FileUpload.scss";
 import { useEffect } from '../../../../../dist/dtc_assets';
-import axios from 'axios';
 
 const FileUpload = (props) => {
     const {
@@ -11,7 +10,8 @@ const FileUpload = (props) => {
         dispatchAction,
         dispatch,
         index,
-        value
+        value,
+        setValue
     } = props;
     let inputRef = useRef();
 
@@ -36,18 +36,9 @@ const FileUpload = (props) => {
         }
     },[value]);
 
-
-    const header = {
-        'Authorization': 'Bearer Q4Ehk1Bx5YfM6C9pEVfp3PGHW5VymQJGh5JQKAdVhNt'
-    };
-
-    const file = {
-        fileSrc
-    }
-
-
     const handleUpload = async () => {
         const file = inputRef.current.files[0] || value;
+        setValue(file);
         try{
             if(file.type.includes("image")){
                 setFileType("image");
@@ -55,18 +46,6 @@ const FileUpload = (props) => {
                 setFileType("video");
             }
             setFileSrc(await displayUploadedFile(file));
-            await axios.get(
-                "https://qdmy4spbr0.execute-api.us-east-2.amazonaws.com/default/uploadVideo" 
-            ).then(
-                (res) => {
-                    console.log(res);
-                });
-
-            dispatch({
-                payload: file,
-                actionType: dispatchAction,
-                index: index
-            });
         } catch(e) {
             console.warn(e.message);
         }

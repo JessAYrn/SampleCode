@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { createContext, useState, useEffect} from 'react';
-import { dtc } from "../../declarations/dtc"
+import { dtc } from "../../declarations/dtc";
 import Journal from './Components/Journal';
 import {AuthClient} from "@dfinity/auth-client";
 import LoginPage from './Components/LoginPage';
