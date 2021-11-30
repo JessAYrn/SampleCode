@@ -25,8 +25,7 @@ const JournalPage = (props) => {
     } = useContext(AppContext);
 
     useEffect( async () => {
-        console.log(file1);
-        console.log(file2);
+        
         await actor.readEntry({entryKey: 1}).then((result) => { console.log(result)});
     }, [actor, file1, file2]);
 
