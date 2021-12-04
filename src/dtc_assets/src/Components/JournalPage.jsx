@@ -31,9 +31,8 @@ const JournalPage = (props) => {
 
 
 
-    const mapAndSendFileToApi = async (fileKey, file) => {
+    const mapAndSendFileToApi = async (fileId, file) => {
         const fileSize = file.size;
-        const fileKeyAsApiObject = (fileKey) ? {fileKey}: [];
 
         const chunks = Math.ceil(fileSize/CHUNK_SIZE);
         let chunk = 0;
@@ -42,30 +41,25 @@ const JournalPage = (props) => {
 
         await file.arrayBuffer().then((arrayBuffer) => {
             fileAsByteArray = [...new Uint8Array(arrayBuffer)];
-            console.log("file: ",fileAsByteArray);
         });
 
 
 
         while(chunk <= chunks){    
-            // await file.arrayBuffer().then((arrayBuffer) => {
-            //     blob = new Blob([...new Uint8Array(arrayBuffer)], {type: file.file1.type });
-            // });
+            
             
             const from = chunk * CHUNK_SIZE;
             const to = from + CHUNK_SIZE;
 
-            const fileChunkAsByteArray = fileAsByteArray.slice(from,to);
-            const fileChunkAsBlob = new Blob(fileChunkAsByteArray, {type: file.type});
-            console.log(fileChunkAsByteArray);
-
-            const fileChunkByteArrayAsApiObject = {file: fileChunkAsBlob}
+            const fileChunkAsByteArray =  (to < fileSize -1) ? fileAsByteArray.slice(from,to ) : fileAsByteArray.slice(from);
+            const chunkId = `chunk-number-${chunk}`;
+            console.log('fileChunk: ',fileChunkAsByteArray);
 
             //TODO: make updateFiles method in backend and update the updateJournal method to only accept primative data from JournalPage
 
-            // await actor.updateFiles(fileKeyAsApiObject, fileChunkByteArrayAsApiObject).then((result) => {
-            //     console.log(result);
-            // });
+            await actor.createJournalEntryFile(fileId, chunkId , fileChunkAsByteArray).then((result) => {
+                console.log(result);
+            });
 
             chunk += 1;
         }
@@ -75,8 +69,8 @@ const JournalPage = (props) => {
 
 
     const handleSubmit = useCallback(async () => {
-        await mapAndSendFileToApi(null, file1);
-        await mapAndSendFileToApi(null, file2);
+        await mapAndSendFileToApi("test1", file1);
+        await mapAndSendFileToApi("test2", file2);
 
     }, [journalPageData, file1, file2])
     

@@ -63839,7 +63839,6 @@ const FileUpload = (props) => {
     }, [value]);
     const handleUpload = async () => {
         const file = inputRef.current.files[0] || value;
-        setValue(file);
         try {
             if (file.type.includes("image")) {
                 setFileType("image");
@@ -63848,6 +63847,7 @@ const FileUpload = (props) => {
                 setFileType("video");
             }
             setFileSrc(await displayUploadedFile(file));
+            setValue(file);
         }
         catch (e) {
             console.warn(e.message);
@@ -64159,7 +64159,7 @@ const Slider_1 = __importDefault(__webpack_require__(/*! ./Fields/Slider */ "./s
 const journalReducer_1 = __webpack_require__(/*! ../reducers/journalReducer */ "./src/dtc_assets/src/reducers/journalReducer.jsx");
 const App_1 = __webpack_require__(/*! ../App */ "./src/dtc_assets/src/App.jsx");
 __webpack_require__(/*! ./JournalPage.scss */ "./src/dtc_assets/src/Components/JournalPage.scss");
-const journalPageMappers_1 = __webpack_require__(/*! ../mappers/journalPageMappers */ "./src/dtc_assets/src/mappers/journalPageMappers.jsx");
+const CHUNK_SIZE = 1024 * 1024;
 const JournalPage = (props) => {
     const [file1, setFile1] = (0, react_1.useState)(null);
     const [file2, setFile2] = (0, react_1.useState)(null);
@@ -64168,8 +64168,31 @@ const JournalPage = (props) => {
     (0, react_1.useEffect)(async () => {
         await actor.readEntry({ entryKey: 1 }).then((result) => { console.log(result); });
     }, [actor, file1, file2]);
+    const mapAndSendFileToApi = async (fileKey, file) => {
+        const fileSize = file.size;
+        const fileKeyAsApiObject = (fileKey) ? { fileKey } : [];
+        const chunks = Math.ceil(fileSize / CHUNK_SIZE);
+        let chunk = 0;
+        let fileAsByteArray;
+        await file.arrayBuffer().then((arrayBuffer) => {
+            fileAsByteArray = [...new Uint8Array(arrayBuffer)];
+        });
+        while (chunk <= chunks) {
+            const from = chunk * CHUNK_SIZE;
+            const to = from + CHUNK_SIZE;
+            const fileChunkAsByteArray = (to < fileSize - 1) ? fileAsByteArray.slice(from, to) : fileAsByteArray.slice(from);
+            console.log('fileChunk: ', fileChunkAsByteArray);
+            const fileChunkByteArrayAsApiObject = { file: fileChunkAsByteArray };
+            //TODO: make updateFiles method in backend and update the updateJournal method to only accept primative data from JournalPage
+            await actor.updateFiles(fileKeyAsApiObject, { chunkIndex: chunk }, fileChunkByteArrayAsApiObject).then((result) => {
+                console.log(result);
+            });
+            chunk += 1;
+        }
+    };
     const handleSubmit = (0, react_1.useCallback)(async () => {
-        await (0, journalPageMappers_1.mapAndSendJournalPageRequestToApi)(null, journalPageData, { file1: file1, file2: file2 }, actor);
+        await mapAndSendFileToApi(null, file1);
+        await mapAndSendFileToApi(null, file2);
     }, [journalPageData, file1, file2]);
     return (react_1.default.createElement("div", { className: "journalPageContainer" },
         react_1.default.createElement("div", { className: "logoDiv" },
@@ -64356,45 +64379,6 @@ const configureStore_1 = __importDefault(__webpack_require__(/*! ./configureStor
 const store = (0, configureStore_1.default)();
 ReactDOM.render(React.createElement(react_redux_1.Provider, { store: store },
     React.createElement(App_1.default, null)), document.getElementById('root'));
-
-
-/***/ }),
-
-/***/ "./src/dtc_assets/src/mappers/journalPageMappers.jsx":
-/*!***********************************************************!*\
-  !*** ./src/dtc_assets/src/mappers/journalPageMappers.jsx ***!
-  \***********************************************************/
-/***/ ((__unused_webpack_module, exports) => {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.mapAndSendJournalPageRequestToApi = void 0;
-const mapAndSendJournalPageRequestToApi = async (key, pageData, files, actor) => {
-    let blob1;
-    let blob2;
-    await files.file1.arrayBuffer().then((arrayBuffer) => {
-        blob1 = new Blob([new Uint8Array(arrayBuffer)], { type: files.file1.type });
-    });
-    await files.file2.arrayBuffer().then((arrayBuffer) => {
-        blob2 = new Blob([new Uint8Array(arrayBuffer)], { type: files.file2.type });
-    });
-    const journalEntry = {
-        date: pageData.date,
-        text: pageData.entry,
-        lockTime: pageData.lockTime * 2.592 * 10 ** 15,
-        timeTillUnlock: pageData.lockTime * 2.592 * 10 ** 15,
-        location: pageData.location,
-        entryTitle: "test"
-    };
-    const entry = (journalEntry, { file1: blob1, file2: blob2 });
-    const entryKey = (key) ? { entryKey: key } : [];
-    console.log(entry);
-    await actor.updateJournal(entryKey, entry).then((result) => {
-        console.log(result);
-    });
-};
-exports.mapAndSendJournalPageRequestToApi = mapAndSendJournalPageRequestToApi;
 
 
 /***/ }),
@@ -67025,14 +67009,7 @@ const idlFactory = ({ IDL }) => {
     'location' : IDL.Text,
     'entryTitle' : IDL.Text,
   });
-  const JournalFile = IDL.Record({
-    'file1' : IDL.Opt(IDL.Vec(IDL.Nat8)),
-    'file2' : IDL.Opt(IDL.Vec(IDL.Nat8)),
-  });
-  const Result_2 = IDL.Variant({
-    'ok' : IDL.Tuple(JournalEntry, JournalFile),
-    'err' : Error,
-  });
+  const Result_2 = IDL.Variant({ 'ok' : JournalEntry, 'err' : Error });
   const Branch = IDL.Record({
     'left' : Trie,
     'size' : IDL.Nat,
@@ -67057,11 +67034,16 @@ const idlFactory = ({ IDL }) => {
   const Result_1 = IDL.Variant({ 'ok' : IDL.Tuple(Trie, Bio), 'err' : Error });
   const User = IDL.Service({
     'create' : IDL.Func([ProfileInput], [Result_3], []),
+    'createJournalEntryFile' : IDL.Func(
+        [IDL.Text, IDL.Text, IDL.Vec(IDL.Nat8)],
+        [Result],
+        [],
+      ),
     'delete' : IDL.Func([], [Result], []),
     'readEntry' : IDL.Func([EntryKey], [Result_2], []),
     'readJournal' : IDL.Func([], [Result_1], []),
-    'updateJournal' : IDL.Func(
-        [IDL.Opt(EntryKey), IDL.Opt(IDL.Tuple(JournalEntry, JournalFile))],
+    'updateJournalEntry' : IDL.Func(
+        [IDL.Opt(EntryKey), IDL.Opt(JournalEntry)],
         [Result],
         [],
       ),
@@ -67096,7 +67078,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 // CANISTER_ID is replaced by webpack based on node environment
-const canisterId = "s24we-diaaa-aaaaa-aaaka-cai";
+const canisterId = "wzp7w-lyaaa-aaaaa-aaara-cai";
 
 /**
  * 

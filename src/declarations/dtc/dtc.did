@@ -1,13 +1,11 @@
 type User = 
  service {
    create: (ProfileInput) -> (Result_3);
+   createJournalEntryFile: (text, text, blob) -> (Result);
    delete: () -> (Result);
    readEntry: (EntryKey) -> (Result_2);
    readJournal: () -> (Result_1);
-   updateJournal: (opt EntryKey, opt record {
-                                       JournalEntry;
-                                       JournalFile;
-                                     }) -> (Result);
+   updateJournalEntry: (opt EntryKey, opt JournalEntry) -> (Result);
    updateProfile: (ProfileInput) -> (Result);
  };
 type Trie = 
@@ -24,10 +22,7 @@ type Result_3 =
 type Result_2 = 
  variant {
    err: Error;
-   ok: record {
-         JournalEntry;
-         JournalFile;
-       };
+   ok: JournalEntry;
  };
 type Result_1 = 
  variant {
@@ -60,11 +55,6 @@ type Key =
  record {
    hash: Hash;
    key: nat;
- };
-type JournalFile = 
- record {
-   file1: opt blob;
-   file2: opt blob;
  };
 type JournalEntry = 
  record {

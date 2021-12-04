@@ -20,14 +20,7 @@ export const idlFactory = ({ IDL }) => {
     'location' : IDL.Text,
     'entryTitle' : IDL.Text,
   });
-  const JournalFile = IDL.Record({
-    'file1' : IDL.Opt(IDL.Vec(IDL.Nat8)),
-    'file2' : IDL.Opt(IDL.Vec(IDL.Nat8)),
-  });
-  const Result_2 = IDL.Variant({
-    'ok' : IDL.Tuple(JournalEntry, JournalFile),
-    'err' : Error,
-  });
+  const Result_2 = IDL.Variant({ 'ok' : JournalEntry, 'err' : Error });
   const Branch = IDL.Record({
     'left' : Trie,
     'size' : IDL.Nat,
@@ -52,11 +45,16 @@ export const idlFactory = ({ IDL }) => {
   const Result_1 = IDL.Variant({ 'ok' : IDL.Tuple(Trie, Bio), 'err' : Error });
   const User = IDL.Service({
     'create' : IDL.Func([ProfileInput], [Result_3], []),
+    'createJournalEntryFile' : IDL.Func(
+        [IDL.Text, IDL.Text, IDL.Vec(IDL.Nat8)],
+        [Result],
+        [],
+      ),
     'delete' : IDL.Func([], [Result], []),
     'readEntry' : IDL.Func([EntryKey], [Result_2], []),
     'readJournal' : IDL.Func([], [Result_1], []),
-    'updateJournal' : IDL.Func(
-        [IDL.Opt(EntryKey), IDL.Opt(IDL.Tuple(JournalEntry, JournalFile))],
+    'updateJournalEntry' : IDL.Func(
+        [IDL.Opt(EntryKey), IDL.Opt(JournalEntry)],
         [Result],
         [],
       ),

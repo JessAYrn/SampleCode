@@ -142,7 +142,7 @@ actor class User(){
         
     };
 
-    public shared(msg) func readEntry(entryKey: EntryKey) : async Result.Result<(JournalEntry,JournalFile), Error> {
+    public shared(msg) func readEntry(entryKey: EntryKey) : async Result.Result<JournalEntry, Error> {
 
         //Reject Anonymous User
         //if(Principal.toText(msg.caller) == "2vxsx-fae"){
@@ -168,7 +168,7 @@ actor class User(){
 
     };
 
-    public shared(msg) func updateJournal(entryKey : ?EntryKey, entry : ?(JournalEntry, JournalFile)) : async Result.Result<(), Error> {
+    public shared(msg) func updateJournalEntry(entryKey : ?EntryKey, entry : ?JournalEntry) : async Result.Result<(), Error> {
 
         //Reject Anonymous User
         //if(Principal.toText(msg.caller) == "2vxsx-fae"){
@@ -205,15 +205,13 @@ actor class User(){
                             case null {
                                 let journal = await Journal.Journal(callerId);
                                 let journalStatus = await journal.deleteJournalEntry(entryKeyValue.entryKey);
-                                let fileStatus = await journal.deleteJournalEntryFiles(entryKeyValue.entryKey);
-                                return fileStatus;
+                                return journalStatus;
                             };
                             case (?entryValue){
                                 let journal = await Journal.Journal(callerId);
-                                let entryStatus = await journal.updateJournalEntry(entryKeyValue.entryKey, entryValue.0);
-                                let fileStatus = await journal.updateJournalEntryFiles(entryKeyValue.entryKey, entryValue.1);
+                                let entryStatus = await journal.updateJournalEntry(entryKeyValue.entryKey, entryValue);
 
-                                return fileStatus;
+                                return entryStatus;
                             };
                         };
                     };
@@ -222,6 +220,14 @@ actor class User(){
         };
 
      
+    };
+
+    public shared(msg) func createJournalEntryFile(fileId: Text, chunkId: Text, blobChunk: Blob): async Result.Result<(), Error>{
+        let callerId = msg.caller;
+
+        let journal = await Journal.Journal(callerId);
+        let status = await journal.createFile(fileId,chunkId, blobChunk);
+        return status;
     };
 
     //update profile
