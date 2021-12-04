@@ -38,7 +38,6 @@ const FileUpload = (props) => {
 
     const handleUpload = async () => {
         const file = inputRef.current.files[0] || value;
-        setValue(file);
         try{
             if(file.type.includes("image")){
                 setFileType("image");
@@ -46,6 +45,7 @@ const FileUpload = (props) => {
                 setFileType("video");
             }
             setFileSrc(await displayUploadedFile(file));
+            setValue(file);
         } catch(e) {
             console.warn(e.message);
         }

@@ -5,8 +5,8 @@ import Slider from "./Fields/Slider";
 import {types} from "../reducers/journalReducer";
 import  {AppContext} from "../App";
 import "./JournalPage.scss";
-import { mapAndSendJournalPageRequestToApi } from "../mappers/journalPageMappers";
 
+const CHUNK_SIZE = 1024 * 1024;
 
 const JournalPage = (props) => {
 
@@ -29,8 +29,54 @@ const JournalPage = (props) => {
         await actor.readEntry({entryKey: 1}).then((result) => { console.log(result)});
     }, [actor, file1, file2]);
 
+
+
+    const mapAndSendFileToApi = async (fileKey, file) => {
+        const fileSize = file.size;
+        const fileKeyAsApiObject = (fileKey) ? {fileKey}: [];
+
+        const chunks = Math.ceil(fileSize/CHUNK_SIZE);
+        let chunk = 0;
+
+        let fileAsByteArray;
+
+        await file.arrayBuffer().then((arrayBuffer) => {
+            fileAsByteArray = [...new Uint8Array(arrayBuffer)];
+            console.log("file: ",fileAsByteArray);
+        });
+
+
+
+        while(chunk <= chunks){    
+            // await file.arrayBuffer().then((arrayBuffer) => {
+            //     blob = new Blob([...new Uint8Array(arrayBuffer)], {type: file.file1.type });
+            // });
+            
+            const from = chunk * CHUNK_SIZE;
+            const to = from + CHUNK_SIZE;
+
+            const fileChunkAsByteArray = fileAsByteArray.slice(from,to);
+            const fileChunkAsBlob = new Blob(fileChunkAsByteArray, {type: file.type});
+            console.log(fileChunkAsByteArray);
+
+            const fileChunkByteArrayAsApiObject = {file: fileChunkAsBlob}
+
+            //TODO: make updateFiles method in backend and update the updateJournal method to only accept primative data from JournalPage
+
+            // await actor.updateFiles(fileKeyAsApiObject, fileChunkByteArrayAsApiObject).then((result) => {
+            //     console.log(result);
+            // });
+
+            chunk += 1;
+        }
+    
+    };
+
+
+
     const handleSubmit = useCallback(async () => {
-        await mapAndSendJournalPageRequestToApi( null, journalPageData, {file1: file1, file2: file2}, actor);
+        await mapAndSendFileToApi(null, file1);
+        await mapAndSendFileToApi(null, file2);
 
     }, [journalPageData, file1, file2])
     

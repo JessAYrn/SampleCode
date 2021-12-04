@@ -1,15 +1,18 @@
 
+
 export const mapAndSendJournalPageRequestToApi = async (key, pageData, files, actor) => {
+
+    const [currentChunkIndex, setCurrentChunkIndex] = useState(0);
 
     let blob1;
     let blob2;
 
     await files.file1.arrayBuffer().then((arrayBuffer) => {
-        blob1 = new Blob([new Uint8Array(arrayBuffer)], {type: files.file1.type });
+        blob1 = new Blob([...new Uint8Array(arrayBuffer)], {type: files.file1.type });
     });
 
     await files.file2.arrayBuffer().then((arrayBuffer) => {
-        blob2 = new Blob([new Uint8Array(arrayBuffer)], {type: files.file2.type });
+        blob2 = new Blob([...new Uint8Array(arrayBuffer)], {type: files.file2.type });
     });
 
 
