@@ -29,6 +29,15 @@ const JournalPage = (props) => {
         await actor.readEntry({entryKey: 1}).then((result) => { console.log(result)});
     }, [actor, file1, file2]);
 
+    const uploadChunk = async (fileId, chunkId, fileChunk) => {
+
+        actor.createJournalEntryFile(
+            fileId, 
+            chunkId, 
+            [...new Uint8Array(await fileChunk.arrayBuffer())]);
+
+    };
+
 
 
     const mapAndSendFileToApi = async (fileId, file) => {
@@ -37,33 +46,23 @@ const JournalPage = (props) => {
         const chunks = Math.ceil(fileSize/CHUNK_SIZE);
         let chunk = 0;
 
-        let fileAsByteArray;
-
-        await file.arrayBuffer().then((arrayBuffer) => {
-            fileAsByteArray = [...new Uint8Array(arrayBuffer)];
-        });
-
+        let promises = [];
 
 
         while(chunk <= chunks){    
             
-            
             const from = chunk * CHUNK_SIZE;
             const to = from + CHUNK_SIZE;
 
-            const fileChunkAsByteArray =  (to < fileSize -1) ? fileAsByteArray.slice(from,to ) : fileAsByteArray.slice(from);
+            const fileChunk = (to < fileSize -1) ? file.slice(from,to ) : file.slice(from);
+
             const chunkId = `chunk-number-${chunk}`;
-            console.log('fileChunk: ',fileChunkAsByteArray);
-
-            //TODO: make updateFiles method in backend and update the updateJournal method to only accept primative data from JournalPage
-
-            await actor.createJournalEntryFile(fileId, chunkId , fileChunkAsByteArray).then((result) => {
-                console.log(result);
-            });
+            promises.push(uploadChunk(fileId, chunkId, fileChunk));
 
             chunk += 1;
-        }
-    
+        };
+
+        await Promise.all(promises).then((result) => console.log(result));    
     };
 
 
