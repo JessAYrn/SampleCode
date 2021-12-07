@@ -34,7 +34,8 @@ const JournalPage = (props) => {
         actor.createJournalEntryFile(
             fileId, 
             chunkId, 
-            [...new Uint8Array(await fileChunk.arrayBuffer())]);
+            [...new Uint8Array(await fileChunk.arrayBuffer())]
+        );
 
     };
 
@@ -49,7 +50,7 @@ const JournalPage = (props) => {
         let promises = [];
 
 
-        while(chunk <= chunks){    
+        while(chunk <= chunks - 1){    
             
             const from = chunk * CHUNK_SIZE;
             const to = from + CHUNK_SIZE;

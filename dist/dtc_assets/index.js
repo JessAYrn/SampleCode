@@ -64168,31 +64168,28 @@ const JournalPage = (props) => {
     (0, react_1.useEffect)(async () => {
         await actor.readEntry({ entryKey: 1 }).then((result) => { console.log(result); });
     }, [actor, file1, file2]);
-    const mapAndSendFileToApi = async (fileKey, file) => {
+    const uploadChunk = async (fileId, chunkId, fileChunk) => {
+        actor.createJournalEntryFile(fileId, chunkId, [...new Uint8Array(await fileChunk.arrayBuffer())]);
+    };
+    const mapAndSendFileToApi = async (fileId, file) => {
         const fileSize = file.size;
-        const fileKeyAsApiObject = (fileKey) ? { fileKey } : [];
         const chunks = Math.ceil(fileSize / CHUNK_SIZE);
         let chunk = 0;
-        let fileAsByteArray;
-        await file.arrayBuffer().then((arrayBuffer) => {
-            fileAsByteArray = [...new Uint8Array(arrayBuffer)];
-        });
-        while (chunk <= chunks) {
+        let promises = [];
+        while (chunk <= chunks - 1) {
             const from = chunk * CHUNK_SIZE;
             const to = from + CHUNK_SIZE;
-            const fileChunkAsByteArray = (to < fileSize - 1) ? fileAsByteArray.slice(from, to) : fileAsByteArray.slice(from);
-            console.log('fileChunk: ', fileChunkAsByteArray);
-            const fileChunkByteArrayAsApiObject = { file: fileChunkAsByteArray };
-            //TODO: make updateFiles method in backend and update the updateJournal method to only accept primative data from JournalPage
-            await actor.updateFiles(fileKeyAsApiObject, { chunkIndex: chunk }, fileChunkByteArrayAsApiObject).then((result) => {
-                console.log(result);
-            });
+            const fileChunk = (to < fileSize - 1) ? file.slice(from, to) : file.slice(from);
+            const chunkId = `chunk-number-${chunk}`;
+            promises.push(uploadChunk(fileId, chunkId, fileChunk));
             chunk += 1;
         }
+        ;
+        await Promise.all(promises).then((result) => console.log(result));
     };
     const handleSubmit = (0, react_1.useCallback)(async () => {
-        await mapAndSendFileToApi(null, file1);
-        await mapAndSendFileToApi(null, file2);
+        await mapAndSendFileToApi("test1", file1);
+        await mapAndSendFileToApi("test2", file2);
     }, [journalPageData, file1, file2]);
     return (react_1.default.createElement("div", { className: "journalPageContainer" },
         react_1.default.createElement("div", { className: "logoDiv" },
@@ -67078,7 +67075,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 // CANISTER_ID is replaced by webpack based on node environment
-const canisterId = "wzp7w-lyaaa-aaaaa-aaara-cai";
+const canisterId = "vszjv-naaaa-aaaaa-aaa3q-cai";
 
 /**
  * 
