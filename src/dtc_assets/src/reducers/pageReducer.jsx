@@ -3,7 +3,7 @@ export const types = {
     CHANGE_LOCATION: "CHANGE_LOCATION",
     CHANGE_ENTRY: "CHANGE_ENTRY",
     CHANGE_LOCK_TIME: "CHANGE_LOCK_TIME",
-    ADD_JOURNAL_PAGE: "ADD_JOURNAL_PAGE",
+    ADD_PAGE: "ADD_PAGE",
     CHANGE_DOB: "CHANGE_DOB",
     CHANGE_POB: "CHANGE_POB",
     CHANGE_PREFACE: "CHANGE_PREFACE",
@@ -19,7 +19,7 @@ export const initialState = {
         dedications: '',
         preface:''
     },
-    journal: [
+    page: [
         {
             date: 'test',
             location: 'test',
@@ -47,48 +47,48 @@ const changeValue = (state = initialState, action) => {
 
     const {actionType, payload, index } = action;
 
-    let updatedJournalPage;
+    let updatedPage;
     
 
     switch (actionType){
         case types.CHANGE_DATE:
-            updatedJournalPage = {
-                ... state.journal[index],
+            updatedPage = {
+                ... state.page[index],
                 date: payload
             }
-            state.journal[index] = updatedJournalPage;
+            state.page[index] = updatedPage;
             return {
                 ...state
             }
         case types.CHANGE_LOCATION:
-            updatedJournalPage = {
-                ... state.journal[index],
+            updatedPage = {
+                ... state.page[index],
                 location: payload
             }
-            state.journal[index] = updatedJournalPage;
+            state.page[index] = updatedPage;
             return {
                 ...state
             }
         case types.CHANGE_ENTRY:
-            updatedJournalPage = {
-                ... state.journal[index],
+            updatedPage = {
+                ... state.page[index],
                 entry: payload
             }
-            state.journal[index] = updatedJournalPage;
+            state.page[index] = updatedPage;
             return {
                 ...state
             }
         case types.CHANGE_LOCK_TIME:
-            updatedJournalPage = {
-                ... state.journal[index],
+            updatedPage = {
+                ... state.page[index],
                 lockTime: payload
             }
-            state.journal[index] = updatedJournalPage;
+            state.page[index] = updatedPage;
             return {
                 ...state
             }
-        case types.ADD_JOURNAL_PAGE:
-            state.journal.push(freshPage);
+        case types.ADD_PAGE:
+            state.page.push(freshPage);
             return {
                 ...state
             }

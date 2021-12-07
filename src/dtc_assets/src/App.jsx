@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { createContext, useState, useEffect} from 'react';
 import { dtc } from "../../declarations/dtc";
-import Journal from './Components/Journal';
+import Page from './Components/Page';
 import {AuthClient} from "@dfinity/auth-client";
 import LoginPage from './Components/LoginPage';
 import { canisterId, createActor } from '../../declarations/dtc/index';
@@ -59,17 +59,6 @@ const App = () => {
             location : name,    
         };
 
-        // Interact with hello actor, calling the greet method
-        const greeting = await dtc.updateJournal([], [entry]);
-        let msg;
-        if(greeting.ok === null){
-            msg = "Journal Created";
-        } else {
-            msg = "Journal Already Exists"
-        };
-        setGreeting(msg);
-        setPending(false);
-        return false;
     }
 
     return (
@@ -90,7 +79,7 @@ const App = () => {
                 isLoaded &&
                     isAuthenticated ? 
                     <main>
-                        <Journal/>
+                        <Page/>
                         <section id="greeting">{greeting}</section>
                     </main> : <LoginPage/> 
             }

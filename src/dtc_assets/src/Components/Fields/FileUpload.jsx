@@ -1,15 +1,14 @@
 import React, {useRef, useState, useEffect} from 'react';
-import InputBox from './InputBox';
 import "./FileUpload.scss";
 import { useEffect } from '../../../../../dist/dtc_assets';
 
 const FileUpload = (props) => {
     const {
-        label,
-        disabled,
-        dispatchAction,
-        dispatch,
-        index,
+        // label,
+        // disabled,
+        // dispatchAction,
+        // dispatch,
+        // index,
         value,
         setValue
     } = props;
@@ -70,10 +69,7 @@ const FileUpload = (props) => {
                             Your browser does not support the video tag.
                         </video>                
                 }
-                <InputBox
-                    maxLength="34"
-                    label={""} 
-                />
+                
                 {
                     !fileSrc && 
                     <span className="imagePreview__default-display">

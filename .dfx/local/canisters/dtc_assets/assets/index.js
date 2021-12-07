@@ -20750,114 +20750,6 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".imageDiv {\n  max-width: 23rem;\n  ma
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/dtc_assets/src/Components/Fields/InputBox.scss":
-/*!*****************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/dtc_assets/src/Components/Fields/InputBox.scss ***!
-  \*****************************************************************************************************************************************/
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../node_modules/css-loader/dist/runtime/sourceMaps.js */ "./node_modules/css-loader/dist/runtime/sourceMaps.js");
-/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
-// Imports
-
-
-var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
-// Module
-___CSS_LOADER_EXPORT___.push([module.id, ".inputBox {\n  width: 100%;\n}\n.inputBox .label__disabled {\n  font-family: \"Julius Sans One\", sans-serif;\n  font-size: 0.8rem;\n  color: #a3a3a3;\n}\n.inputBox .label__enabled {\n  font-family: \"Julius Sans One\", sans-serif;\n  font-size: 0.95rem;\n  color: black;\n}\n.inputBox .enabled {\n  font-family: \"Merriweather\", serif;\n  outline: 0;\n  border-width: 0 0 1px;\n  border-color: black;\n  width: 100%;\n}\n.inputBox .disabled {\n  font-family: \"Merriweather\", serif;\n  outline: 0;\n  border-width: 0 0 1px;\n  color: #a3a3a3;\n  width: 95%;\n}", "",{"version":3,"sources":["webpack://./src/dtc_assets/src/Components/Fields/InputBox.scss"],"names":[],"mappings":"AAAA;EACI,WAAA;AACJ;AAEQ;EACI,0CAAA;EACA,iBAAA;EACA,cAAA;AAAZ;AAEQ;EACI,0CAAA;EACA,kBAAA;EACA,YAAA;AAAZ;AAGI;EACI,kCAAA;EACA,UAAA;EACA,qBAAA;EACA,mBAAA;EACA,WAAA;AADR;AAII;EACI,kCAAA;EACA,UAAA;EACA,qBAAA;EACA,cAAA;EACA,UAAA;AAFR","sourcesContent":[".inputBox{\n    width: 100%;\n    .label{\n\n        &__disabled{\n            font-family: 'Julius Sans One', sans-serif;\n            font-size: .80rem;\n            color: rgb(163, 163, 163);\n        }\n        &__enabled{\n            font-family: 'Julius Sans One', sans-serif;\n            font-size: .95rem;\n            color: rgb(0, 0, 0);\n        }\n    }\n    .enabled{\n        font-family: 'Merriweather', serif;\n        outline: 0;\n        border-width: 0 0 1px;\n        border-color: rgb(0, 0, 0);\n        width: 100%;\n    }\n    \n    .disabled{\n        font-family: 'Merriweather', serif;\n        outline: 0;\n        border-width: 0 0 1px;\n        color: rgb(163, 163, 163);\n        width: 95%;\n    }\n}\n\n"],"sourceRoot":""}]);
-// Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/dtc_assets/src/Components/Fields/Slider.scss":
-/*!***************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/dtc_assets/src/Components/Fields/Slider.scss ***!
-  \***************************************************************************************************************************************/
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../node_modules/css-loader/dist/runtime/sourceMaps.js */ "./node_modules/css-loader/dist/runtime/sourceMaps.js");
-/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
-// Imports
-
-
-var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
-// Module
-___CSS_LOADER_EXPORT___.push([module.id, ".sliderDiv {\n  width: 90%;\n}\n.sliderDiv .sliderLabelDiv {\n  color: #7a7a7a;\n}\n.sliderDiv .sliderLabelDiv__enabled {\n  text-align: center;\n  font-family: \"Julius Sans One\", sans-serif;\n  font-size: 0.95rem;\n  color: #7a7a7a;\n}\n.sliderDiv .sliderLabelDiv__disabled {\n  text-align: center;\n  font-family: \"Julius Sans One\", sans-serif;\n  font-size: 0.95rem;\n  color: black;\n}\n.sliderDiv .sliderInputDiv {\n  padding-left: 5%;\n  width: 100%;\n}\n.sliderDiv .sliderInputDiv .slider {\n  width: 100%;\n}", "",{"version":3,"sources":["webpack://./src/dtc_assets/src/Components/Fields/Slider.scss"],"names":[],"mappings":"AAAA;EACI,UAAA;AACJ;AAAI;EACI,cAAA;AAER;AADQ;EACI,kBAAA;EACA,0CAAA;EACA,kBAAA;EACA,cAAA;AAGZ;AADQ;EACI,kBAAA;EACA,0CAAA;EACA,kBAAA;EACA,YAAA;AAGZ;AAAI;EACI,gBAAA;EACA,WAAA;AAER;AADQ;EACI,WAAA;AAGZ","sourcesContent":[".sliderDiv{\n    width: 90%;\n    .sliderLabelDiv{\n        color: rgb(122, 122, 122);\n        &__enabled{\n            text-align: center;\n            font-family: 'Julius Sans One', sans-serif;\n            font-size: .95rem;\n            color: rgb(122, 122, 122);\n        }\n        &__disabled{\n            text-align: center;\n            font-family: 'Julius Sans One', sans-serif;\n            font-size: .95rem;\n            color: rgb(0, 0, 0);\n        }\n    }\n    .sliderInputDiv{\n        padding-left: 5%;\n        width:100%;\n        .slider{\n            width: 100%;\n        }\n    }\n}"],"sourceRoot":""}]);
-// Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/dtc_assets/src/Components/Journal.scss":
-/*!*********************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/dtc_assets/src/Components/Journal.scss ***!
-  \*********************************************************************************************************************************/
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/sourceMaps.js */ "./node_modules/css-loader/dist/runtime/sourceMaps.js");
-/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
-// Imports
-
-
-var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
-// Module
-___CSS_LOADER_EXPORT___.push([module.id, ".table {\n  font-family: \"Julius Sans One\", sans-serif;\n  font-size: 1rem;\n  color: #7a7a7a;\n  border-collapse: collapse;\n  width: 100%;\n}\n.table .tableRow {\n  border-bottom: solid #7a7a7a 0.5px;\n  width: 100%;\n  padding-bottom: 0.5rem;\n}\n.table .tableRow .tableCell {\n  text-align: center;\n  padding: 0.5rem;\n}\n\n.addNewEntryButtonDiv {\n  width: 50%;\n  margin-left: 25%;\n}\n.addNewEntryButtonDiv .addNewEntryButton {\n  background-color: #e6e6e6;\n  border-radius: 25px;\n  border-color: #e6e6e6;\n  width: 100%;\n}\n\n.biographyDiv .section1 {\n  width: 33%;\n  float: left;\n  height: 22rem;\n}\n.biographyDiv .section1 .inputBox .input-element-div__dedications .enabled {\n  border-width: 1px 1px 1px !important;\n}\n.biographyDiv .section1 .inputBox .input-element-div__dedications .disabled {\n  border-width: 1px 1px 1px !important;\n}\n.biographyDiv .section2 {\n  width: 66%;\n  float: left;\n  height: 22rem;\n}\n.biographyDiv .prefaceDiv {\n  margin-top: 2rem;\n  width: 100%;\n}\n.biographyDiv .prefaceDiv .inputBox .input-element-div__preface .enabled {\n  border-width: 1px 1px 1px !important;\n}\n.biographyDiv .prefaceDiv .inputBox .input-element-div__preface .disabled {\n  border-width: 1px 1px 1px !important;\n}", "",{"version":3,"sources":["webpack://./src/dtc_assets/src/Components/Journal.scss"],"names":[],"mappings":"AAAA;EACE,0CAAA;EACA,eAAA;EACA,cAAA;EACA,yBAAA;EACA,WAAA;AACF;AAAE;EACE,kCAAA;EACA,WAAA;EACA,sBAAA;AAEJ;AADI;EACE,kBAAA;EACA,eAAA;AAGN;;AAEA;EACE,UAAA;EACA,gBAAA;AACF;AAAE;EACE,yBAAA;EACA,mBAAA;EACA,qBAAA;EACA,WAAA;AAEJ;;AAGI;EACE,UAAA;EACA,WAAA;EACA,aAAA;AAAN;AAIU;EACE,oCAAA;AAFZ;AAKU;EACI,oCAAA;AAHd;AAUI;EACE,UAAA;EACA,WAAA;EACA,aAAA;AARN;AAWI;EACE,gBAAA;EACA,WAAA;AATN;AAaU;EACE,oCAAA;AAXZ;AAcU;EACI,oCAAA;AAZd","sourcesContent":[".table{\n  font-family: 'Julius Sans One', sans-serif;\n  font-size: 1rem;\n  color: rgb(122, 122, 122);\n  border-collapse: collapse;\n  width: 100%;\n  .tableRow{\n    border-bottom: solid rgb(122, 122, 122) .5px;\n    width: 100%;\n    padding-bottom: .5rem;\n    .tableCell{\n      text-align: center;\n      padding: 0.5rem;\n    }\n  }\n}\n\n.addNewEntryButtonDiv{\n  width: 50%;\n  margin-left: 25%;\n  .addNewEntryButton{\n    background-color: rgb(230, 230, 230);\n    border-radius: 25px;\n    border-color: rgb(230, 230, 230);\n    width: 100%;\n  }\n}\n\n.biographyDiv{\n    .section1{\n      width: 33%;\n      float: left;\n      height: 22rem;\n      .inputBox{\n        .input-element-div__dedications{\n          \n          .enabled{\n            border-width: 1px 1px 1px !important;\n          }\n        \n          .disabled{\n              border-width: 1px 1px 1px !important;\n          }\n          \n          \n        }\n      }\n    }\n    .section2{\n      width: 66%;\n      float: left;\n      height: 22rem;\n    }\n\n    .prefaceDiv{\n      margin-top: 2rem;\n      width: 100%;\n      .inputBox{\n        .input-element-div__preface{\n          \n          .enabled{\n            border-width: 1px 1px 1px !important;\n          }\n        \n          .disabled{\n              border-width: 1px 1px 1px !important;\n          }\n          \n          \n        }\n      }\n    }\n  \n}"],"sourceRoot":""}]);
-// Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/dtc_assets/src/Components/JournalPage.scss":
-/*!*************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/dtc_assets/src/Components/JournalPage.scss ***!
-  \*************************************************************************************************************************************/
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/sourceMaps.js */ "./node_modules/css-loader/dist/runtime/sourceMaps.js");
-/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
-// Imports
-
-
-var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
-// Module
-___CSS_LOADER_EXPORT___.push([module.id, ".journalPageContainer .journalText {\n  width: 40%;\n  float: left;\n}\n.journalPageContainer .JournalImages {\n  width: 50%;\n  float: left;\n}\n.journalPageContainer .imageDiv {\n  float: left;\n  margin-left: 4%;\n}\n.journalPageContainer .logoDiv {\n  width: 100%;\n  float: left;\n}\n.journalPageContainer .logoDiv .backButtonImg {\n  margin-top: 3rem;\n  float: left;\n  max-width: 3rem;\n  max-height: 3rem;\n}\n.journalPageContainer .logoDiv .logoImg {\n  float: right;\n  max-width: 10rem;\n  max-height: 10rem;\n}\n.journalPageContainer .input-element-div__entry .enabled {\n  border-width: 1px 1px 1px;\n  height: 20rem;\n}\n.journalPageContainer .input-element-div__entry .disabled {\n  border-width: 1px 1px 1px;\n  height: 20rem;\n}", "",{"version":3,"sources":["webpack://./src/dtc_assets/src/Components/JournalPage.scss"],"names":[],"mappings":"AACI;EACI,UAAA;EACA,WAAA;AAAR;AAGI;EACI,UAAA;EACA,WAAA;AADR;AAII;EACI,WAAA;EACA,eAAA;AAFR;AAII;EACI,WAAA;EACA,WAAA;AAFR;AAGQ;EACI,gBAAA;EACA,WAAA;EACA,eAAA;EACA,gBAAA;AADZ;AAIQ;EACI,YAAA;EACA,gBAAA;EACA,iBAAA;AAFZ;AAOQ;EACI,yBAAA;EACA,aAAA;AALZ;AAOQ;EACI,yBAAA;EACA,aAAA;AALZ","sourcesContent":[".journalPageContainer{\n    .journalText{\n        width: 40%;\n        float: left;\n    }\n\n    .JournalImages{\n        width: 50%;\n        float: left;\n    }\n\n    .imageDiv{\n        float: left;\n        margin-left: 4%;\n    }\n    .logoDiv{\n        width: 100%;\n        float: left;\n        .backButtonImg{\n            margin-top: 3rem;\n            float: left;\n            max-width: 3rem;\n            max-height: 3rem;\n        }\n    \n        .logoImg{\n            float: right;\n            max-width: 10rem;\n            max-height: 10rem;\n        }\n    }\n\n    .input-element-div__entry{\n        .enabled{\n            border-width: 1px 1px 1px;\n            height: 20rem;\n        }\n        .disabled{\n            border-width: 1px 1px 1px;\n            height: 20rem;\n        }\n        \n    }\n}"],"sourceRoot":""}]);
-// Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
-
-
-/***/ }),
-
 /***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/dtc_assets/src/Components/LoginPage.scss":
 /*!***********************************************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/dtc_assets/src/Components/LoginPage.scss ***!
@@ -63072,226 +62964,6 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 /***/ }),
 
-/***/ "./src/dtc_assets/src/Components/Fields/InputBox.scss":
-/*!************************************************************!*\
-  !*** ./src/dtc_assets/src/Components/Fields/InputBox.scss ***!
-  \************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../../../node_modules/style-loader/dist/runtime/styleDomAPI.js */ "./node_modules/style-loader/dist/runtime/styleDomAPI.js");
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../../node_modules/style-loader/dist/runtime/insertBySelector.js */ "./node_modules/style-loader/dist/runtime/insertBySelector.js");
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../../../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js */ "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js");
-/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! !../../../../../node_modules/style-loader/dist/runtime/insertStyleElement.js */ "./node_modules/style-loader/dist/runtime/insertStyleElement.js");
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! !../../../../../node_modules/style-loader/dist/runtime/styleTagTransform.js */ "./node_modules/style-loader/dist/runtime/styleTagTransform.js");
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_InputBox_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../../../../../node_modules/css-loader/dist/cjs.js!../../../../../node_modules/sass-loader/dist/cjs.js!./InputBox.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/dtc_assets/src/Components/Fields/InputBox.scss");
-
-      
-      
-      
-      
-      
-      
-      
-      
-      
-
-var options = {};
-
-options.styleTagTransform = (_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default());
-options.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default());
-
-      options.insert = _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, "head");
-    
-options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
-options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
-
-var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_InputBox_scss__WEBPACK_IMPORTED_MODULE_6__["default"], options);
-
-
-
-
-       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_InputBox_scss__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_InputBox_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_InputBox_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
-
-
-/***/ }),
-
-/***/ "./src/dtc_assets/src/Components/Fields/Slider.scss":
-/*!**********************************************************!*\
-  !*** ./src/dtc_assets/src/Components/Fields/Slider.scss ***!
-  \**********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../../../node_modules/style-loader/dist/runtime/styleDomAPI.js */ "./node_modules/style-loader/dist/runtime/styleDomAPI.js");
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../../node_modules/style-loader/dist/runtime/insertBySelector.js */ "./node_modules/style-loader/dist/runtime/insertBySelector.js");
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../../../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js */ "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js");
-/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! !../../../../../node_modules/style-loader/dist/runtime/insertStyleElement.js */ "./node_modules/style-loader/dist/runtime/insertStyleElement.js");
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! !../../../../../node_modules/style-loader/dist/runtime/styleTagTransform.js */ "./node_modules/style-loader/dist/runtime/styleTagTransform.js");
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_Slider_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../../../../../node_modules/css-loader/dist/cjs.js!../../../../../node_modules/sass-loader/dist/cjs.js!./Slider.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/dtc_assets/src/Components/Fields/Slider.scss");
-
-      
-      
-      
-      
-      
-      
-      
-      
-      
-
-var options = {};
-
-options.styleTagTransform = (_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default());
-options.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default());
-
-      options.insert = _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, "head");
-    
-options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
-options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
-
-var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_Slider_scss__WEBPACK_IMPORTED_MODULE_6__["default"], options);
-
-
-
-
-       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_Slider_scss__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_Slider_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_Slider_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
-
-
-/***/ }),
-
-/***/ "./src/dtc_assets/src/Components/Journal.scss":
-/*!****************************************************!*\
-  !*** ./src/dtc_assets/src/Components/Journal.scss ***!
-  \****************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/styleDomAPI.js */ "./node_modules/style-loader/dist/runtime/styleDomAPI.js");
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/insertBySelector.js */ "./node_modules/style-loader/dist/runtime/insertBySelector.js");
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js */ "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js");
-/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/insertStyleElement.js */ "./node_modules/style-loader/dist/runtime/insertStyleElement.js");
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/styleTagTransform.js */ "./node_modules/style-loader/dist/runtime/styleTagTransform.js");
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_Journal_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../../../../node_modules/css-loader/dist/cjs.js!../../../../node_modules/sass-loader/dist/cjs.js!./Journal.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/dtc_assets/src/Components/Journal.scss");
-
-      
-      
-      
-      
-      
-      
-      
-      
-      
-
-var options = {};
-
-options.styleTagTransform = (_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default());
-options.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default());
-
-      options.insert = _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, "head");
-    
-options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
-options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
-
-var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_Journal_scss__WEBPACK_IMPORTED_MODULE_6__["default"], options);
-
-
-
-
-       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_Journal_scss__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_Journal_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_Journal_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
-
-
-/***/ }),
-
-/***/ "./src/dtc_assets/src/Components/JournalPage.scss":
-/*!********************************************************!*\
-  !*** ./src/dtc_assets/src/Components/JournalPage.scss ***!
-  \********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/styleDomAPI.js */ "./node_modules/style-loader/dist/runtime/styleDomAPI.js");
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/insertBySelector.js */ "./node_modules/style-loader/dist/runtime/insertBySelector.js");
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js */ "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js");
-/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/insertStyleElement.js */ "./node_modules/style-loader/dist/runtime/insertStyleElement.js");
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/styleTagTransform.js */ "./node_modules/style-loader/dist/runtime/styleTagTransform.js");
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_JournalPage_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../../../../node_modules/css-loader/dist/cjs.js!../../../../node_modules/sass-loader/dist/cjs.js!./JournalPage.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/dtc_assets/src/Components/JournalPage.scss");
-
-      
-      
-      
-      
-      
-      
-      
-      
-      
-
-var options = {};
-
-options.styleTagTransform = (_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default());
-options.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default());
-
-      options.insert = _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, "head");
-    
-options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
-options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
-
-var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_JournalPage_scss__WEBPACK_IMPORTED_MODULE_6__["default"], options);
-
-
-
-
-       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_JournalPage_scss__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_JournalPage_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_JournalPage_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
-
-
-/***/ }),
-
 /***/ "./src/dtc_assets/src/Components/LoginPage.scss":
 /*!******************************************************!*\
   !*** ./src/dtc_assets/src/Components/LoginPage.scss ***!
@@ -63693,8 +63365,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.AppContext = void 0;
 const React = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
 const react_1 = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-const dtc_1 = __webpack_require__(/*! ../../declarations/dtc */ "./src/declarations/dtc/index.js");
-const Journal_1 = __importDefault(__webpack_require__(/*! ./Components/Journal */ "./src/dtc_assets/src/Components/Journal.jsx"));
+const Page_1 = __importDefault(__webpack_require__(/*! ./Components/Page */ "./src/dtc_assets/src/Components/Page.jsx"));
 const auth_client_1 = __webpack_require__(/*! @dfinity/auth-client */ "./node_modules/@dfinity/auth-client/lib/esm/index.js");
 const LoginPage_1 = __importDefault(__webpack_require__(/*! ./Components/LoginPage */ "./src/dtc_assets/src/Components/LoginPage.jsx"));
 const index_1 = __webpack_require__(/*! ../../declarations/dtc/index */ "./src/declarations/dtc/index.js");
@@ -63746,19 +63417,6 @@ const App = () => {
             text: name,
             location: name,
         };
-        // Interact with hello actor, calling the greet method
-        const greeting = await dtc_1.dtc.updateJournal([], [entry]);
-        let msg;
-        if (greeting.ok === null) {
-            msg = "Journal Created";
-        }
-        else {
-            msg = "Journal Already Exists";
-        }
-        ;
-        setGreeting(msg);
-        setPending(false);
-        return false;
     };
     return (React.createElement(exports.AppContext.Provider, { value: {
             authClient,
@@ -63774,7 +63432,7 @@ const App = () => {
         isLoaded &&
             isAuthenticated ?
             React.createElement("main", null,
-                React.createElement(Journal_1.default, null),
+                React.createElement(Page_1.default, null),
                 React.createElement("section", { id: "greeting" }, greeting)) : React.createElement(LoginPage_1.default, null),
         !isLoaded &&
             React.createElement("h2", null, " Load Screen ")));
@@ -63811,15 +63469,17 @@ var __importStar = (this && this.__importStar) || function (mod) {
     __setModuleDefault(result, mod);
     return result;
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const react_1 = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-const InputBox_1 = __importDefault(__webpack_require__(/*! ./InputBox */ "./src/dtc_assets/src/Components/Fields/InputBox.jsx"));
 __webpack_require__(/*! ./FileUpload.scss */ "./src/dtc_assets/src/Components/Fields/FileUpload.scss");
 const FileUpload = (props) => {
-    const { label, disabled, dispatchAction, dispatch, index, value, setValue } = props;
+    const { 
+    // label,
+    // disabled,
+    // dispatchAction,
+    // dispatch,
+    // index,
+    value, setValue } = props;
     let inputRef = (0, react_1.useRef)();
     const displayUploadedFile = (inputFile) => {
         const reader = new FileReader();
@@ -63862,351 +63522,11 @@ const FileUpload = (props) => {
                     react_1.default.createElement("source", { src: fileSrc, type: 'video/ogg; codecs="theora, vorbis"' }),
                     react_1.default.createElement("source", { src: fileSrc, type: 'video/webm' }),
                     "Your browser does not support the video tag."),
-            react_1.default.createElement(InputBox_1.default, { maxLength: "34", label: "" }),
             !fileSrc &&
                 react_1.default.createElement("span", { className: "imagePreview__default-display" }, "Image Preview"),
             react_1.default.createElement("input", { id: 'uploadedImaged', type: "file", className: 'imageInputButton', ref: inputRef, onLoad: handleUpload, onChange: handleUpload }))));
 };
 exports["default"] = FileUpload;
-
-
-/***/ }),
-
-/***/ "./src/dtc_assets/src/Components/Fields/InputBox.jsx":
-/*!***********************************************************!*\
-  !*** ./src/dtc_assets/src/Components/Fields/InputBox.jsx ***!
-  \***********************************************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-});
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
-};
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-const react_1 = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-__webpack_require__(/*! ./InputBox.scss */ "./src/dtc_assets/src/Components/Fields/InputBox.scss");
-const InputBox = (props) => {
-    const inputRef = (0, react_1.useRef)();
-    const [disabledOrEnabled, setDisabledOrEnabled] = (0, react_1.useState)("enabled");
-    const { label, maxLength, rows, columns, disabled, divClassName, dispatchAction, dispatch, index, value
-    // dispatchAction //the action that is to take place in order to dispatch the field change to the redux store
-     } = props;
-    const onBlur = () => {
-        setDisabledOrEnabled("disabled");
-    };
-    const onFocus = () => {
-        setDisabledOrEnabled("enabled");
-    };
-    const onChnage = () => {
-        dispatch({
-            payload: inputRef.current.value,
-            actionType: dispatchAction,
-            index: index
-        });
-    };
-    return (react_1.default.createElement("div", { className: 'inputBox' },
-        react_1.default.createElement("div", { className: 'label-element-div ' },
-            react_1.default.createElement("label", { className: "label__" + disabledOrEnabled, htmlFor: 'Label' },
-                " ",
-                label,
-                "  \u00A0 ")),
-        react_1.default.createElement("div", { className: `input-element-div__${(divClassName) ? divClassName : " "}` },
-            react_1.default.createElement("textarea", { rows: rows, cols: columns, maxLength: maxLength, className: disabledOrEnabled, value: value, type: "text", alt: label, ref: inputRef, disabled: disabled, onFocus: onFocus, onBlur: onBlur, onChange: onChnage }))));
-};
-exports["default"] = InputBox;
-
-
-/***/ }),
-
-/***/ "./src/dtc_assets/src/Components/Fields/Slider.jsx":
-/*!*********************************************************!*\
-  !*** ./src/dtc_assets/src/Components/Fields/Slider.jsx ***!
-  \*********************************************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-});
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
-};
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-const react_1 = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-__webpack_require__(/*! ./Slider.scss */ "./src/dtc_assets/src/Components/Fields/Slider.scss");
-const Slider = (props) => {
-    const { min, max, dispatch, dispatchAction, index, value } = props;
-    const inputRef = (0, react_1.useRef)();
-    const [sliderValue, setSliderValue] = (0, react_1.useState)('');
-    const [disabledOrEnabled, setDisabledOrEnabled] = (0, react_1.useState)('disabled');
-    const onBlur = () => {
-        setDisabledOrEnabled("disabled");
-    };
-    const onChange = () => {
-        setSliderValue(inputRef.current.value);
-        dispatch({
-            payload: inputRef.current.value,
-            actionType: dispatchAction,
-            index: index
-        });
-    };
-    const onFocus = () => {
-        setDisabledOrEnabled("enabled");
-    };
-    return (react_1.default.createElement("div", { className: "sliderDiv" },
-        react_1.default.createElement("div", { className: "sliderLabelDiv__" + disabledOrEnabled },
-            react_1.default.createElement("label", { className: "sliderLabel" }, ` Lock Journal For ${sliderValue || '3'} Months`)),
-        react_1.default.createElement("div", { className: "sliderInputDiv" },
-            react_1.default.createElement("input", { type: "range", min: min, max: max, className: "slider", value: sliderValue || "3", id: "myRange", ref: inputRef, onBlur: onBlur, onFocus: onFocus, onChange: onChange }))));
-};
-exports["default"] = Slider;
-
-
-/***/ }),
-
-/***/ "./src/dtc_assets/src/Components/Journal.jsx":
-/*!***************************************************!*\
-  !*** ./src/dtc_assets/src/Components/Journal.jsx ***!
-  \***************************************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-});
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
-};
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-const JournalPage_1 = __importDefault(__webpack_require__(/*! ./JournalPage */ "./src/dtc_assets/src/Components/JournalPage.jsx"));
-const react_1 = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-const journalReducer_1 = __importStar(__webpack_require__(/*! ../reducers/journalReducer */ "./src/dtc_assets/src/reducers/journalReducer.jsx"));
-__webpack_require__(/*! ./Journal.scss */ "./src/dtc_assets/src/Components/Journal.scss");
-const App_1 = __webpack_require__(/*! ../App */ "./src/dtc_assets/src/App.jsx");
-const InputBox_1 = __importDefault(__webpack_require__(/*! ./Fields/InputBox */ "./src/dtc_assets/src/Components/Fields/InputBox.jsx"));
-const Journal = (props) => {
-    const [journalState, dispatch] = (0, react_1.useReducer)(journalReducer_1.default, journalReducer_1.initialState);
-    const [pageIsVisibleArray, setPageIsVisibleArray] = (0, react_1.useState)(journalState.journal.map((page) => false));
-    const [newPageAdded, setNewPageAdded] = (0, react_1.useState)(false);
-    const { actor, authClient, setAuthClient, setActor, setIsLoaded } = (0, react_1.useContext)(App_1.AppContext);
-    (0, react_1.useEffect)(() => {
-        setPageIsVisibleArray(journalState.journal.map((page, index) => {
-            if ((index === journalState.journal.length - 1) && newPageAdded) {
-                setNewPageAdded(false);
-                return true;
-            }
-            else {
-                return false;
-            }
-        }));
-    }, [journalState.journal.length]);
-    (0, react_1.useEffect)(async () => {
-        (actor) ? await actor.readJournal().then((result) => {
-            // if("ok" in result){
-            //     console.log(result.ok);
-            // }
-            console.log(result);
-            console.log("test");
-        }) : () => { };
-    }, [authClient]);
-    const displayJournalTable = () => {
-        const openPage = (e, index) => {
-            setPageIsVisibleArray(pageIsVisibleArray.map((page, mapIndex) => {
-                if (index === mapIndex) {
-                    return true;
-                }
-                else {
-                    return false;
-                }
-            }));
-        };
-        const addJournalPage = () => {
-            dispatch({
-                actionType: journalReducer_1.types.ADD_JOURNAL_PAGE
-            });
-            setNewPageAdded(true);
-            openPage(null, journalState.journal.length - 1);
-        };
-        return (react_1.default.createElement("div", null,
-            react_1.default.createElement("div", { className: 'biographyDiv' },
-                react_1.default.createElement("div", { className: 'section1' },
-                    react_1.default.createElement(InputBox_1.default, { label: "This Journal Belongs To: ", rows: "1", dispatch: dispatch, dispatchAction: journalReducer_1.types.CHANGE_NAME, value: journalState.bio.name }),
-                    react_1.default.createElement(InputBox_1.default, { label: "Date of Birth: ", rows: "1", dispatch: dispatch, dispatchAction: journalReducer_1.types.CHANGE_DOB, value: journalState.bio.dob }),
-                    react_1.default.createElement(InputBox_1.default, { label: "Place of Birth: ", rows: "1", dispatch: dispatch, dispatchAction: journalReducer_1.types.CHANGE_POB, value: journalState.bio.pob }),
-                    react_1.default.createElement(InputBox_1.default, { divClassName: 'dedications', label: "Dedications: ", rows: "8", dispatch: dispatch, dispatchAction: journalReducer_1.types.CHANGE_DEDICATIONS, value: journalState.bio.dedications })),
-                react_1.default.createElement("div", { className: 'section2' },
-                    react_1.default.createElement("img", { src: "dtc-logo-black.png", alt: "TDTC logo" })),
-                react_1.default.createElement("div", { className: 'prefaceDiv' },
-                    react_1.default.createElement(InputBox_1.default, { divClassName: 'preface', label: "Preface: ", rows: "10", dispatch: dispatch, dispatchAction: journalReducer_1.types.CHANGE_PREFACE, value: journalState.bio.preface }))),
-            react_1.default.createElement("table", { className: "table" }, journalState.journal.map((page, index) => {
-                return (react_1.default.createElement("tr", { className: "tableRow " + index },
-                    react_1.default.createElement("td", { className: "tableCell " + index }, page.date),
-                    react_1.default.createElement("td", { className: "tableCell " + index }, page.location),
-                    react_1.default.createElement("td", { className: "tableCell " + index }, page.lockTime),
-                    react_1.default.createElement("td", { className: "tableCell " + index },
-                        " ",
-                        react_1.default.createElement("button", { onClick: (e) => openPage(e, index) }, " open "),
-                        " ")));
-            })),
-            react_1.default.createElement("div", { className: 'addNewEntryButtonDiv' },
-                react_1.default.createElement("button", { className: 'addNewEntryButton', onClick: addJournalPage }, " Create New Entry "))));
-    };
-    const getIndexOfVisiblePage = () => {
-        return pageIsVisibleArray.findIndex(page => page === true);
-    };
-    const closePage = (e, index) => {
-        setPageIsVisibleArray(pageIsVisibleArray.map((page, mapIndex) => {
-            return false;
-        }));
-    };
-    return (react_1.default.createElement("div", null,
-        (getIndexOfVisiblePage() < 0) ?
-            displayJournalTable() :
-            react_1.default.createElement(JournalPage_1.default, { closePage: closePage, index: getIndexOfVisiblePage(), journalPageData: journalState.journal[getIndexOfVisiblePage()], journalReducerDispatchFunction: dispatch }),
-        react_1.default.createElement("button", { className: 'loginButtonDiv', onClick: async () => {
-                await authClient.logout();
-                setIsLoaded(false);
-            } }, " Log Out ")));
-};
-exports["default"] = Journal;
-
-
-/***/ }),
-
-/***/ "./src/dtc_assets/src/Components/JournalPage.jsx":
-/*!*******************************************************!*\
-  !*** ./src/dtc_assets/src/Components/JournalPage.jsx ***!
-  \*******************************************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-});
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
-};
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-const react_1 = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-const FileUpload_1 = __importDefault(__webpack_require__(/*! ./Fields/FileUpload */ "./src/dtc_assets/src/Components/Fields/FileUpload.jsx"));
-const InputBox_1 = __importDefault(__webpack_require__(/*! ./Fields/InputBox */ "./src/dtc_assets/src/Components/Fields/InputBox.jsx"));
-const Slider_1 = __importDefault(__webpack_require__(/*! ./Fields/Slider */ "./src/dtc_assets/src/Components/Fields/Slider.jsx"));
-const journalReducer_1 = __webpack_require__(/*! ../reducers/journalReducer */ "./src/dtc_assets/src/reducers/journalReducer.jsx");
-const App_1 = __webpack_require__(/*! ../App */ "./src/dtc_assets/src/App.jsx");
-__webpack_require__(/*! ./JournalPage.scss */ "./src/dtc_assets/src/Components/JournalPage.scss");
-const CHUNK_SIZE = 1024 * 1024;
-const JournalPage = (props) => {
-    const [file1, setFile1] = (0, react_1.useState)(null);
-    const [file2, setFile2] = (0, react_1.useState)(null);
-    const { journalReducerDispatchFunction, index, journalPageData, closePage } = props;
-    const { actor } = (0, react_1.useContext)(App_1.AppContext);
-    (0, react_1.useEffect)(async () => {
-        await actor.readEntry({ entryKey: 1 }).then((result) => { console.log(result); });
-    }, [actor, file1, file2]);
-    const uploadChunk = async (fileId, chunkId, fileChunk) => {
-        actor.createJournalEntryFile(fileId, chunkId, [...new Uint8Array(await fileChunk.arrayBuffer())]);
-    };
-    const mapAndSendFileToApi = async (fileId, file) => {
-        const fileSize = file.size;
-        const chunks = Math.ceil(fileSize / CHUNK_SIZE);
-        let chunk = 0;
-        let promises = [];
-        while (chunk <= chunks - 1) {
-            const from = chunk * CHUNK_SIZE;
-            const to = from + CHUNK_SIZE;
-            const fileChunk = (to < fileSize - 1) ? file.slice(from, to) : file.slice(from);
-            const chunkId = `chunk-number-${chunk}`;
-            promises.push(uploadChunk(fileId, chunkId, fileChunk));
-            chunk += 1;
-        }
-        ;
-        await Promise.all(promises).then((result) => console.log(result));
-    };
-    const handleSubmit = (0, react_1.useCallback)(async () => {
-        await mapAndSendFileToApi("test1", file1);
-        await mapAndSendFileToApi("test2", file2);
-    }, [journalPageData, file1, file2]);
-    return (react_1.default.createElement("div", { className: "journalPageContainer" },
-        react_1.default.createElement("div", { className: "logoDiv" },
-            react_1.default.createElement("img", { className: 'backButtonImg', src: "back-icon.png", alt: "Back Button", onClick: (e) => closePage(e) }),
-            react_1.default.createElement("img", { className: 'logoImg', src: "dtc-logo-black.png", alt: "Logo" })),
-        react_1.default.createElement(Slider_1.default, { min: 3, max: 120, dispatch: journalReducerDispatchFunction, dispatchAction: journalReducer_1.types.CHANGE_LOCK_TIME, index: index, value: journalPageData.lockTime }),
-        react_1.default.createElement("div", { className: "journalText" },
-            react_1.default.createElement(InputBox_1.default, { label: "Date: ", rows: "1", dispatch: journalReducerDispatchFunction, dispatchAction: journalReducer_1.types.CHANGE_DATE, index: index, value: journalPageData.date }),
-            react_1.default.createElement(InputBox_1.default, { label: "Location: ", rows: "1", dispatch: journalReducerDispatchFunction, dispatchAction: journalReducer_1.types.CHANGE_LOCATION, index: index, value: journalPageData.location }),
-            react_1.default.createElement(InputBox_1.default, { divClassName: "entry", label: "Entry: ", rows: "59", dispatch: journalReducerDispatchFunction, dispatchAction: journalReducer_1.types.CHANGE_ENTRY, index: index, value: journalPageData.entry })),
-        react_1.default.createElement("div", { className: "journalImages" },
-            react_1.default.createElement(FileUpload_1.default, { label: 'file1', value: file1, setValue: setFile1, index: index }),
-            react_1.default.createElement(FileUpload_1.default, { label: 'file2', value: file2, setValue: setFile2, index: index })),
-        react_1.default.createElement("div", null,
-            react_1.default.createElement("button", { type: "submit", onClick: handleSubmit }, " Submit "))));
-};
-exports["default"] = JournalPage;
 
 
 /***/ }),
@@ -64247,7 +63567,7 @@ const LoginPage = (props) => {
     const handleClick = async () => {
         setIsLoaded(false);
         if (loginAttempted) {
-            actor.readJournal().then((result) => {
+            actor.readPage().then((result) => {
                 console.log(result);
                 if ("err" in result) {
                     actor.create({ userName: "JesseTheGreat" }).then((result) => {
@@ -64269,13 +63589,82 @@ const LoginPage = (props) => {
     };
     return (react_1.default.createElement("div", null,
         react_1.default.createElement("div", { className: 'loginPageDiv' },
-            react_1.default.createElement("img", { className: 'logoImg', src: "dtc-logo-black.png", alt: "Logo" }),
             react_1.default.createElement("button", { className: `loginButtonDiv__${(loginAttempted) ? "open" : 'closed'}`, onClick: handleClick },
                 " ",
-                (loginAttempted) ? 'Open Journal' : 'Log In Using Internet Identity',
+                (loginAttempted) ? 'Enter' : 'Log In Using Internet Identity',
                 " "))));
 };
 exports["default"] = LoginPage;
+
+
+/***/ }),
+
+/***/ "./src/dtc_assets/src/Components/Page.jsx":
+/*!************************************************!*\
+  !*** ./src/dtc_assets/src/Components/Page.jsx ***!
+  \************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const react_1 = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+const App_1 = __webpack_require__(/*! ../App */ "./src/dtc_assets/src/App.jsx");
+const FileUpload_1 = __importDefault(__webpack_require__(/*! ./Fields/FileUpload */ "./src/dtc_assets/src/Components/Fields/FileUpload.jsx"));
+const CHUNK_SIZE = 700000;
+const Page = (props) => {
+    const { actor, authClient, setAuthClient, setActor, setIsLoaded } = (0, react_1.useContext)(App_1.AppContext);
+    const [file, setFile] = (0, react_1.useState)(null);
+    const uploadChunk = async (fileId, chunkId, fileChunk) => {
+        actor.createPageEntryFile(fileId, chunkId, [...new Uint8Array(await fileChunk.arrayBuffer())]);
+    };
+    const mapAndSendFileToApi = async (fileId, file) => {
+        const fileSize = file.size;
+        const chunks = Math.ceil(fileSize / CHUNK_SIZE);
+        let chunk = 0;
+        let promises = [];
+        while (chunk <= chunks - 1) {
+            const from = chunk * CHUNK_SIZE;
+            const to = from + CHUNK_SIZE;
+            const fileChunk = (to < fileSize - 1) ? file.slice(from, to) : file.slice(from);
+            const chunkId = `chunk-number-${chunk}`;
+            promises.push(uploadChunk(fileId, chunkId, fileChunk));
+            chunk += 1;
+        }
+        ;
+        await Promise.all(promises).then((result) => console.log(result));
+    };
+    const handleSubmit = (0, react_1.useCallback)(async () => {
+        await mapAndSendFileToApi("test1", file);
+    }, [file]);
+    return (react_1.default.createElement("div", null,
+        react_1.default.createElement(FileUpload_1.default, { value: file, setValue: setFile }),
+        react_1.default.createElement("div", null,
+            react_1.default.createElement("button", { type: "submit", onClick: handleSubmit }, " Submit "))));
+};
+exports["default"] = Page;
 
 
 /***/ }),
@@ -64402,10 +63791,10 @@ exports["default"] = logger;
 
 /***/ }),
 
-/***/ "./src/dtc_assets/src/reducers/journalReducer.jsx":
-/*!********************************************************!*\
-  !*** ./src/dtc_assets/src/reducers/journalReducer.jsx ***!
-  \********************************************************/
+/***/ "./src/dtc_assets/src/reducers/pageReducer.jsx":
+/*!*****************************************************!*\
+  !*** ./src/dtc_assets/src/reducers/pageReducer.jsx ***!
+  \*****************************************************/
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -64417,7 +63806,7 @@ exports.types = {
     CHANGE_LOCATION: "CHANGE_LOCATION",
     CHANGE_ENTRY: "CHANGE_ENTRY",
     CHANGE_LOCK_TIME: "CHANGE_LOCK_TIME",
-    ADD_JOURNAL_PAGE: "ADD_JOURNAL_PAGE",
+    ADD_PAGE: "ADD_PAGE",
     CHANGE_DOB: "CHANGE_DOB",
     CHANGE_POB: "CHANGE_POB",
     CHANGE_PREFACE: "CHANGE_PREFACE",
@@ -64432,7 +63821,7 @@ exports.initialState = {
         dedications: '',
         preface: ''
     },
-    journal: [
+    page: [
         {
             date: 'test',
             location: 'test',
@@ -64455,46 +63844,46 @@ const freshPage = {
 };
 const changeValue = (state = exports.initialState, action) => {
     const { actionType, payload, index } = action;
-    let updatedJournalPage;
+    let updatedPage;
     switch (actionType) {
         case exports.types.CHANGE_DATE:
-            updatedJournalPage = {
-                ...state.journal[index],
+            updatedPage = {
+                ...state.page[index],
                 date: payload
             };
-            state.journal[index] = updatedJournalPage;
+            state.page[index] = updatedPage;
             return {
                 ...state
             };
         case exports.types.CHANGE_LOCATION:
-            updatedJournalPage = {
-                ...state.journal[index],
+            updatedPage = {
+                ...state.page[index],
                 location: payload
             };
-            state.journal[index] = updatedJournalPage;
+            state.page[index] = updatedPage;
             return {
                 ...state
             };
         case exports.types.CHANGE_ENTRY:
-            updatedJournalPage = {
-                ...state.journal[index],
+            updatedPage = {
+                ...state.page[index],
                 entry: payload
             };
-            state.journal[index] = updatedJournalPage;
+            state.page[index] = updatedPage;
             return {
                 ...state
             };
         case exports.types.CHANGE_LOCK_TIME:
-            updatedJournalPage = {
-                ...state.journal[index],
+            updatedPage = {
+                ...state.page[index],
                 lockTime: payload
             };
-            state.journal[index] = updatedJournalPage;
+            state.page[index] = updatedPage;
             return {
                 ...state
             };
-        case exports.types.ADD_JOURNAL_PAGE:
-            state.journal.push(freshPage);
+        case exports.types.ADD_PAGE:
+            state.page.push(freshPage);
             return {
                 ...state
             };
@@ -64562,9 +63951,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const redux_1 = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
-const journalReducer_1 = __importDefault(__webpack_require__(/*! ./journalReducer */ "./src/dtc_assets/src/reducers/journalReducer.jsx"));
+const pageReducer_1 = __importDefault(__webpack_require__(/*! ./pageReducer */ "./src/dtc_assets/src/reducers/pageReducer.jsx"));
 const rootReducer = (0, redux_1.combineReducers)({
-    journal: journalReducer_1.default
+    page: pageReducer_1.default
 });
 exports["default"] = rootReducer;
 
@@ -66998,7 +66387,7 @@ const idlFactory = ({ IDL }) => {
   const Result_3 = IDL.Variant({ 'ok' : AmountAccepted, 'err' : Error });
   const Result = IDL.Variant({ 'ok' : IDL.Null, 'err' : Error });
   const EntryKey = IDL.Record({ 'entryKey' : IDL.Nat });
-  const JournalEntry = IDL.Record({
+  const PageEntry = IDL.Record({
     'date' : IDL.Int,
     'text' : IDL.Text,
     'timeTillUnlock' : IDL.Int,
@@ -67006,7 +66395,7 @@ const idlFactory = ({ IDL }) => {
     'location' : IDL.Text,
     'entryTitle' : IDL.Text,
   });
-  const Result_2 = IDL.Variant({ 'ok' : JournalEntry, 'err' : Error });
+  const Result_2 = IDL.Variant({ 'ok' : PageEntry, 'err' : Error });
   const Branch = IDL.Record({
     'left' : Trie,
     'size' : IDL.Nat,
@@ -67014,8 +66403,8 @@ const idlFactory = ({ IDL }) => {
   });
   const Hash = IDL.Nat32;
   const Key = IDL.Record({ 'key' : IDL.Nat, 'hash' : Hash });
-  List.fill(IDL.Opt(IDL.Tuple(IDL.Tuple(Key, JournalEntry), List)));
-  const AssocList = IDL.Opt(IDL.Tuple(IDL.Tuple(Key, JournalEntry), List));
+  List.fill(IDL.Opt(IDL.Tuple(IDL.Tuple(Key, PageEntry), List)));
+  const AssocList = IDL.Opt(IDL.Tuple(IDL.Tuple(Key, PageEntry), List));
   const Leaf = IDL.Record({ 'size' : IDL.Nat, 'keyvals' : AssocList });
   Trie.fill(
     IDL.Variant({ 'branch' : Branch, 'leaf' : Leaf, 'empty' : IDL.Null })
@@ -67031,16 +66420,16 @@ const idlFactory = ({ IDL }) => {
   const Result_1 = IDL.Variant({ 'ok' : IDL.Tuple(Trie, Bio), 'err' : Error });
   const User = IDL.Service({
     'create' : IDL.Func([ProfileInput], [Result_3], []),
-    'createJournalEntryFile' : IDL.Func(
+    'createPageEntryFile' : IDL.Func(
         [IDL.Text, IDL.Text, IDL.Vec(IDL.Nat8)],
         [Result],
         [],
       ),
     'delete' : IDL.Func([], [Result], []),
     'readEntry' : IDL.Func([EntryKey], [Result_2], []),
-    'readJournal' : IDL.Func([], [Result_1], []),
-    'updateJournalEntry' : IDL.Func(
-        [IDL.Opt(EntryKey), IDL.Opt(JournalEntry)],
+    'readPage' : IDL.Func([], [Result_1], []),
+    'updatePageEntry' : IDL.Func(
+        [IDL.Opt(EntryKey), IDL.Opt(PageEntry)],
         [Result],
         [],
       ),
@@ -67075,7 +66464,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 // CANISTER_ID is replaced by webpack based on node environment
-const canisterId = "vszjv-naaaa-aaaaa-aaa3q-cai";
+const canisterId = "7ugoi-yiaaa-aaaaa-aabaa-cai";
 
 /**
  * 
@@ -67289,7 +66678,7 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"_from":"elliptic@^6.5.2","_id":"elliptic@6.5.4","_inBundle":false,"_integrity":"sha512-iLhC6ULemrljPZb+QutR5TQGB+pdW6KGD5RSegS+8sorOZT+rdQFbsQFJgvN3eRqNALqJer4oQ16YvJHlU8hzQ==","_location":"/elliptic","_phantomChildren":{},"_requested":{"type":"range","registry":true,"raw":"elliptic@^6.5.2","name":"elliptic","escapedName":"elliptic","rawSpec":"^6.5.2","saveSpec":null,"fetchSpec":"^6.5.2"},"_requiredBy":["/secp256k1"],"_resolved":"https://registry.npmjs.org/elliptic/-/elliptic-6.5.4.tgz","_shasum":"da37cebd31e79a1367e941b592ed1fbebd58abbb","_spec":"elliptic@^6.5.2","_where":"/Users/jessewilliams/Code/Digital-Time-Capsule/node_modules/secp256k1","author":{"name":"Fedor Indutny","email":"fedor@indutny.com"},"bugs":{"url":"https://github.com/indutny/elliptic/issues"},"bundleDependencies":false,"dependencies":{"bn.js":"^4.11.9","brorand":"^1.1.0","hash.js":"^1.0.0","hmac-drbg":"^1.0.1","inherits":"^2.0.4","minimalistic-assert":"^1.0.1","minimalistic-crypto-utils":"^1.0.1"},"deprecated":false,"description":"EC cryptography","devDependencies":{"brfs":"^2.0.2","coveralls":"^3.1.0","eslint":"^7.6.0","grunt":"^1.2.1","grunt-browserify":"^5.3.0","grunt-cli":"^1.3.2","grunt-contrib-connect":"^3.0.0","grunt-contrib-copy":"^1.0.0","grunt-contrib-uglify":"^5.0.0","grunt-mocha-istanbul":"^5.0.2","grunt-saucelabs":"^9.0.1","istanbul":"^0.4.5","mocha":"^8.0.1"},"files":["lib"],"homepage":"https://github.com/indutny/elliptic","keywords":["EC","Elliptic","curve","Cryptography"],"license":"MIT","main":"lib/elliptic.js","name":"elliptic","repository":{"type":"git","url":"git+ssh://git@github.com/indutny/elliptic.git"},"scripts":{"lint":"eslint lib test","lint:fix":"npm run lint -- --fix","test":"npm run lint && npm run unit","unit":"istanbul test _mocha --reporter=spec test/index.js","version":"grunt dist && git add dist/"},"version":"6.5.4"}');
+module.exports = JSON.parse('{"_from":"elliptic@^6.5.2","_id":"elliptic@6.5.4","_inBundle":false,"_integrity":"sha512-iLhC6ULemrljPZb+QutR5TQGB+pdW6KGD5RSegS+8sorOZT+rdQFbsQFJgvN3eRqNALqJer4oQ16YvJHlU8hzQ==","_location":"/elliptic","_phantomChildren":{},"_requested":{"type":"range","registry":true,"raw":"elliptic@^6.5.2","name":"elliptic","escapedName":"elliptic","rawSpec":"^6.5.2","saveSpec":null,"fetchSpec":"^6.5.2"},"_requiredBy":["/secp256k1"],"_resolved":"https://registry.npmjs.org/elliptic/-/elliptic-6.5.4.tgz","_shasum":"da37cebd31e79a1367e941b592ed1fbebd58abbb","_spec":"elliptic@^6.5.2","_where":"/Users/jessewilliams/Code/DTC/node_modules/secp256k1","author":{"name":"Fedor Indutny","email":"fedor@indutny.com"},"bugs":{"url":"https://github.com/indutny/elliptic/issues"},"bundleDependencies":false,"dependencies":{"bn.js":"^4.11.9","brorand":"^1.1.0","hash.js":"^1.0.0","hmac-drbg":"^1.0.1","inherits":"^2.0.4","minimalistic-assert":"^1.0.1","minimalistic-crypto-utils":"^1.0.1"},"deprecated":false,"description":"EC cryptography","devDependencies":{"brfs":"^2.0.2","coveralls":"^3.1.0","eslint":"^7.6.0","grunt":"^1.2.1","grunt-browserify":"^5.3.0","grunt-cli":"^1.3.2","grunt-contrib-connect":"^3.0.0","grunt-contrib-copy":"^1.0.0","grunt-contrib-uglify":"^5.0.0","grunt-mocha-istanbul":"^5.0.2","grunt-saucelabs":"^9.0.1","istanbul":"^0.4.5","mocha":"^8.0.1"},"files":["lib"],"homepage":"https://github.com/indutny/elliptic","keywords":["EC","Elliptic","curve","Cryptography"],"license":"MIT","main":"lib/elliptic.js","name":"elliptic","repository":{"type":"git","url":"git+ssh://git@github.com/indutny/elliptic.git"},"scripts":{"lint":"eslint lib test","lint:fix":"npm run lint -- --fix","test":"npm run lint && npm run unit","unit":"istanbul test _mocha --reporter=spec test/index.js","version":"grunt dist && git add dist/"},"version":"6.5.4"}');
 
 /***/ })
 

@@ -18,8 +18,7 @@ const LoginPage = (props) => {
             setIsLoaded(false);
 
             if(loginAttempted){
-                actor.readJournal().then((result) => {
-                    console.log(result);
+                actor.readPage().then((result) => {
                     if("err" in result){
                         actor.create({userName: "JesseTheGreat"}).then((result) => {
                             if("err" in result){
@@ -43,8 +42,7 @@ const LoginPage = (props) => {
 
         <div>
             <div className={'loginPageDiv'}>
-            <img className={'logoImg'}src="dtc-logo-black.png" alt="Logo"/>
-            <button className={`loginButtonDiv__${(loginAttempted) ? "open" : 'closed'}`} onClick={handleClick}> {(loginAttempted) ? 'Open Journal' : 'Log In Using Internet Identity'} </button>
+            <button className={`loginButtonDiv__${(loginAttempted) ? "open" : 'closed'}`} onClick={handleClick}> {(loginAttempted) ? 'Enter' : 'Log In Using Internet Identity'} </button>
             </div>
         </div>
     );

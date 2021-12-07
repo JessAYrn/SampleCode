@@ -1,11 +1,11 @@
 type User = 
  service {
    create: (ProfileInput) -> (Result_3);
-   createJournalEntryFile: (text, text, blob) -> (Result);
+   createPageEntryFile: (text, text, blob) -> (Result);
    delete: () -> (Result);
    readEntry: (EntryKey) -> (Result_2);
-   readJournal: () -> (Result_1);
-   updateJournalEntry: (opt EntryKey, opt JournalEntry) -> (Result);
+   readPage: () -> (Result_1);
+   updatePageEntry: (opt EntryKey, opt PageEntry) -> (Result);
    updateProfile: (ProfileInput) -> (Result);
  };
 type Trie = 
@@ -22,7 +22,7 @@ type Result_3 =
 type Result_2 = 
  variant {
    err: Error;
-   ok: JournalEntry;
+   ok: PageEntry;
  };
 type Result_1 = 
  variant {
@@ -38,11 +38,20 @@ type Result =
    ok;
  };
 type ProfileInput = record {userName: text;};
+type PageEntry = 
+ record {
+   date: int;
+   entryTitle: text;
+   location: text;
+   lockTime: int;
+   "text": text;
+   timeTillUnlock: int;
+ };
 type List = 
  opt record {
        record {
          Key;
-         JournalEntry;
+         PageEntry;
        };
        List;
      };
@@ -55,15 +64,6 @@ type Key =
  record {
    hash: Hash;
    key: nat;
- };
-type JournalEntry = 
- record {
-   date: int;
-   entryTitle: text;
-   location: text;
-   lockTime: int;
-   "text": text;
-   timeTillUnlock: int;
  };
 type Hash = nat32;
 type Error = 
@@ -93,7 +93,7 @@ type AssocList =
  opt record {
        record {
          Key;
-         JournalEntry;
+         PageEntry;
        };
        List;
      };

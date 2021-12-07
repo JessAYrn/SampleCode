@@ -1,8 +1,8 @@
 import { combineReducers } from "redux";
-import journalReducer from "./journalReducer";
+import pageReducer from "./pageReducer";
 
 const rootReducer = combineReducers({
-    journal: journalReducer
+    page: pageReducer
 });
 
 export default rootReducer;

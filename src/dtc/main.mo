@@ -4,7 +4,7 @@ import Nat "mo:base/Nat";
 import Result "mo:base/Result";
 import Principal "mo:base/Principal"; 
 import Time "mo:base/Time";
-import Journal "Journal";
+import Page "Page";
 import Cycles "mo:base/ExperimentalCycles";
 
 actor class User(){
@@ -26,12 +26,12 @@ actor class User(){
         entryKey: Nat;
     };
 
-    type JournalFile = {
+    type PageFile = {
         file1: ?Blob;
         file2: ?Blob;
     };
 
-    type JournalEntry = {
+    type PageEntry = {
         entryTitle: Text;
         text: Text;
         location: Text;
@@ -96,9 +96,9 @@ actor class User(){
             case null {
 
                 Cycles.add(100_000_000_000);
-                let journal = await Journal.Journal(callerId);
+                let page = await Page.Page(callerId);
                 Cycles.add(100_000_000_000);
-                let amountAccepted = await journal.wallet_receive();
+                let amountAccepted = await page.wallet_receive();
                 profiles := newProfiles;
                 //No need to write return when attribute of a varient is being returned
                 return #ok(amountAccepted);
@@ -110,8 +110,8 @@ actor class User(){
         };
     };
 
-    //read Journal
-    public shared(msg) func readJournal () : async Result.Result<(Trie.Trie<Nat,JournalEntry>, Bio), Error> {
+    //read Page
+    public shared(msg) func readPage () : async Result.Result<(Trie.Trie<Nat,PageEntry>, Bio), Error> {
 
         //Reject Anonymous User
         //if(Principal.toText(msg.caller) == "2vxsx-fae"){
@@ -131,18 +131,18 @@ actor class User(){
                 return #err(#NotFound);
             };
             case(? v){
-                let journal = await Journal.Journal(callerId); 
-                let userJournal = await journal.readJournal();
-                return userJournal;
+                let page = await Page.Page(callerId); 
+                let userPage = await page.readPage();
+                return userPage;
                 
             };
         };
 
-        // need to replace Journal with Journal(callerId)
+        // need to replace Page with Page(callerId)
         
     };
 
-    public shared(msg) func readEntry(entryKey: EntryKey) : async Result.Result<JournalEntry, Error> {
+    public shared(msg) func readEntry(entryKey: EntryKey) : async Result.Result<PageEntry, Error> {
 
         //Reject Anonymous User
         //if(Principal.toText(msg.caller) == "2vxsx-fae"){
@@ -160,15 +160,15 @@ actor class User(){
                 #err(#NotAuthorized)
             };
             case(? v){
-                let journal = await Journal.Journal(callerId);
-                let entry = await journal.readJournalEntry(entryKey.entryKey);
+                let page = await Page.Page(callerId);
+                let entry = await page.readPageEntry(entryKey.entryKey);
                 return entry;
             };
         };
 
     };
 
-    public shared(msg) func updateJournalEntry(entryKey : ?EntryKey, entry : ?JournalEntry) : async Result.Result<(), Error> {
+    public shared(msg) func updatePageEntry(entryKey : ?EntryKey, entry : ?PageEntry) : async Result.Result<(), Error> {
 
         //Reject Anonymous User
         //if(Principal.toText(msg.caller) == "2vxsx-fae"){
@@ -194,8 +194,8 @@ actor class User(){
                                 #err(#NoInputGiven)
                             };
                             case(?entryValue){
-                                let journal = await Journal.Journal(callerId);
-                                let status = await journal.createEntry(entryValue);
+                                let page = await Page.Page(callerId);
+                                let status = await page.createEntry(entryValue);
                                 return status;
                             };
                         };
@@ -203,13 +203,13 @@ actor class User(){
                     case (? entryKeyValue){
                         switch(entry){
                             case null {
-                                let journal = await Journal.Journal(callerId);
-                                let journalStatus = await journal.deleteJournalEntry(entryKeyValue.entryKey);
-                                return journalStatus;
+                                let page = await Page.Page(callerId);
+                                let pageStatus = await page.deletePageEntry(entryKeyValue.entryKey);
+                                return pageStatus;
                             };
                             case (?entryValue){
-                                let journal = await Journal.Journal(callerId);
-                                let entryStatus = await journal.updateJournalEntry(entryKeyValue.entryKey, entryValue);
+                                let page = await Page.Page(callerId);
+                                let entryStatus = await page.updatePageEntry(entryKeyValue.entryKey, entryValue);
 
                                 return entryStatus;
                             };
@@ -222,11 +222,11 @@ actor class User(){
      
     };
 
-    public shared(msg) func createJournalEntryFile(fileId: Text, chunkId: Text, blobChunk: Blob): async Result.Result<(), Error>{
+    public shared(msg) func createPageEntryFile(fileId: Text, chunkId: Text, blobChunk: Blob): async Result.Result<(), Error>{
         let callerId = msg.caller;
 
-        let journal = await Journal.Journal(callerId);
-        let status = await journal.createFile(fileId,chunkId, blobChunk);
+        let page = await Page.Page(callerId);
+        let status = await page.createFile(fileId,chunkId, blobChunk);
         return status;
     };
 

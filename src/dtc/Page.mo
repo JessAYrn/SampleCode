@@ -10,10 +10,10 @@ import Nat64 "mo:base/Nat64";
 import Time "mo:base/Time";
 
 
-shared(msg) actor class Journal (principal : Principal){
+shared(msg) actor class Page (principal : Principal){
     let callerId = msg.caller;
 
-    type JournalEntry = {
+    type PageEntry = {
         entryTitle: Text;
         text: Text;
         location: Text;
@@ -22,7 +22,7 @@ shared(msg) actor class Journal (principal : Principal){
         timeTillUnlock: Int;
     }; 
 
-    type JournalFile = {
+    type PageFile = {
         file: Trie.Trie<Text, Blob>;
     };
 
@@ -49,7 +49,7 @@ shared(msg) actor class Journal (principal : Principal){
     // and it has been initialized as empty. hence the Trie.empty()
 
 
-    private stable var journal : Trie.Trie<Nat, JournalEntry> = Trie.empty();
+    private stable var page : Trie.Trie<Nat, PageEntry> = Trie.empty();
 
     private stable var files : Trie.Trie2D<Text,Text,Blob> = Trie.empty();
 
@@ -62,7 +62,7 @@ shared(msg) actor class Journal (principal : Principal){
         biography = "";
     };
 
-    private stable var numberOfJournalEntries : Nat = 0;
+    private stable var numberOfPageEntries : Nat = 0;
 
     private var capacity = 1000000000000000000;
 
@@ -85,17 +85,17 @@ shared(msg) actor class Journal (principal : Principal){
         { accepted = Nat64.fromNat(accepted) };
     };
 
-    public func createEntry( journalEntry : JournalEntry) : async Result.Result<(), Error> {
-        numberOfJournalEntries += 1;
+    public func createEntry( pageEntry : PageEntry) : async Result.Result<(), Error> {
+        numberOfPageEntries += 1;
         
-        let (newJournal, oldJournal) = Trie.put(
-            journal,
-            natKey(numberOfJournalEntries),
+        let (newPage, oldPage) = Trie.put(
+            page,
+            natKey(numberOfPageEntries),
             Nat.equal,
-            journalEntry
+            pageEntry
         );
 
-        journal := newJournal;
+        page := newPage;
 
         #ok(());
             
@@ -130,13 +130,13 @@ shared(msg) actor class Journal (principal : Principal){
         };
     };
 
-    public func readJournal() : async Result.Result<(Trie.Trie<Nat,JournalEntry>, Bio),Error> {
-        return #ok((journal, biography));
+    public func readPage() : async Result.Result<(Trie.Trie<Nat,PageEntry>, Bio),Error> {
+        return #ok((page, biography));
     };
 
-    public func readJournalEntry(key : Nat): async Result.Result<JournalEntry, Error> {
+    public func readPageEntry(key : Nat): async Result.Result<PageEntry, Error> {
         let entry = Trie.find(
-            journal,
+            page,
             natKey(key),
             Nat.equal
         );
@@ -152,7 +152,7 @@ shared(msg) actor class Journal (principal : Principal){
         }
     };
 
-    public func readJournalFile (fileId : Text) : async Result.Result<(Trie.Trie<Text,Blob>),Error> {
+    public func readPageFile (fileId : Text) : async Result.Result<(Trie.Trie<Text,Blob>),Error> {
 
         let file = Trie.find(
             files,
@@ -172,10 +172,10 @@ shared(msg) actor class Journal (principal : Principal){
 
 
 
-    public func updateJournalEntry(key: Nat, journalEntry: JournalEntry) : async Result.Result<(),Error> {
+    public func updatePageEntry(key: Nat, pageEntry: PageEntry) : async Result.Result<(),Error> {
 
         let entry = Trie.find(
-            journal,
+            page,
             natKey(key),
             Nat.equal
         );
@@ -185,14 +185,14 @@ shared(msg) actor class Journal (principal : Principal){
                 #err(#NotFound);
             };
             case (? v){
-                let (newJournal, oldEntryValue) = Trie.put(
-                    journal,
+                let (newPage, oldEntryValue) = Trie.put(
+                    page,
                     natKey(key),
                     Nat.equal,
-                    journalEntry
+                    pageEntry
                 );
 
-                journal := newJournal;
+                page := newPage;
 
                 #ok(());
 
@@ -201,7 +201,7 @@ shared(msg) actor class Journal (principal : Principal){
 
     };
 
-    public func updateJournalEntryFile(fileId: Text, chunkId: Text, blobChunk : Blob) : async Result.Result<(),Error> {
+    public func updatePageEntryFile(fileId: Text, chunkId: Text, blobChunk : Blob) : async Result.Result<(),Error> {
 
         let file = Trie.find(
             files,
@@ -233,9 +233,9 @@ shared(msg) actor class Journal (principal : Principal){
 
 
 
-    public func deleteJournalEntry(key: Nat) : async Result.Result<(),Error> {
+    public func deletePageEntry(key: Nat) : async Result.Result<(),Error> {
         let entry = Trie.find(
-            journal,
+            page,
             natKey(key),
             Nat.equal,
         );
@@ -245,14 +245,14 @@ shared(msg) actor class Journal (principal : Principal){
                 #err(#NotFound);
             };
             case (? v){
-                let updatedJournal = Trie.replace(
-                    journal,
+                let updatedPage = Trie.replace(
+                    page,
                     natKey(key),
                     Nat.equal,
                     null
                 );
 
-                journal := updatedJournal.0;
+                page := updatedPage.0;
                 #ok(());
 
             };
@@ -260,7 +260,7 @@ shared(msg) actor class Journal (principal : Principal){
 
     };
 
-    public func deleteJournalEntryFile(fileId: Text) : async Result.Result<(),Error> {
+    public func deletePageEntryFile(fileId: Text) : async Result.Result<(),Error> {
         let entryFiles = Trie.find(
             files,
             textKey(fileId),
