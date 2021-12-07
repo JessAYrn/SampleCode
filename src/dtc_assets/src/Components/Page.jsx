@@ -11,11 +11,14 @@ const Page = (props) => {
     const [file, setFile] = useState(null);
 
     const uploadChunk = async (fileId, chunkId, fileChunk) => {
-
+        const arrayBuffer = await fileChunk.arrayBuffer();
+        console.log('ArrayBuffer: ', arrayBuffer );
+        const uint8Array = Array.from(new Uint8Array(arrayBuffer));
+        console.log("Uint8Array being sent to backend: ",uint8Array);
         actor.createPageEntryFile(
             fileId, 
             chunkId, 
-            [...new Uint8Array(await fileChunk.arrayBuffer())]
+            uint8Array
         );
 
     };
