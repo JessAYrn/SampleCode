@@ -1,4 +1,4 @@
-# Digital-Time-Capsule
+DTC
 
 in order to get the test Internet_Identity canister to work, you must do the following steps:
 
@@ -20,9 +20,9 @@ In a different terminal, run the following command to install the Internet Ident
 
 II_ENV=development dfx deploy --no-wallet --argument '(null)'
 
-## Running the Digital-Time-Capsule canister Locally
+## Running the project locally
 
-in the Digital-Time-Capsule project 
+in the DTC project 
 
 in the webpack.config.js file, be sure that the II_URL property uses the proper canister ID. it should use the canister ID of the local internet-identity canister. you find this in the termial where you deployed the local internet-identity repo. 
 
@@ -32,7 +32,7 @@ delete the /dist file,
 delete the /.dfx file,
 delete the /src/declarations file
 
-after deleting these files, run the following commands in the Digital-Time-Capsule terminal: 
+after deleting these files, run the following commands in the DTC terminal: 
 
 npm i
 
@@ -47,3 +47,4 @@ dfx deploy
 then: 
 
 npm start
+# DTC
