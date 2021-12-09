@@ -15,9 +15,9 @@ const Page = (props) => {
         console.log('ArrayBuffer: ', arrayBuffer );
         const uint8Array = Array.from(new Uint8Array(arrayBuffer));
         console.log("Uint8Array being sent to backend: ",uint8Array);
-        actor.createPageEntryFile(
-            fileId, 
-            chunkId, 
+        return actor.createPageEntryFile(
+            fileId,
+            chunkId,
             uint8Array
         );
 
@@ -32,8 +32,8 @@ const Page = (props) => {
         let promises = [];
 
 
-        while(chunk <= chunks - 1){    
-            
+        while(chunk <= chunks - 1){
+
             const from = chunk * CHUNK_SIZE;
             const to = from + CHUNK_SIZE;
 
@@ -45,7 +45,8 @@ const Page = (props) => {
             chunk += 1;
         };
 
-        await Promise.all(promises).then((result) => console.log(result));    
+        const results = await Promise.all(promises);
+        console.log('Upload done', results);
     };
 
 
@@ -67,8 +68,8 @@ const Page = (props) => {
             </div>
 
 
-            
-            
+
+
         </div>
     );
 
